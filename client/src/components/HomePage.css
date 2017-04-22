@@ -1,0 +1,46 @@
+.jumboHome{
+	border-radius: 0 !important;
+	background-color: black !important;
+	padding: 0 1em !important;
+	margin-bottom: 0 !important;
+}
+.homeContainerOne{
+	color: white;
+	padding: 15em 10% 0 10% !important;
+	text-align: center;
+}
+.hp-title{
+	font-family: Montserrat, sans-serif;
+	font-size: 4.7em;
+	font-weight: bold;
+}
+.hp-title-p{
+	font-weight: lighter;
+	padding: 0 1em;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+.getStart{
+	margin-top: 2em;
+	padding: .65em 5em !important;
+}
+.filler{
+	margin-top: 15em;
+}
+.stepDiv{
+	border-bottom: 1px solid;
+	text-align: center;
+	padding: 0 1em;
+	margin-left: 10em !important;
+	margin-right: 10em !important;
+}
+.homeImage{
+	padding: 0 !important;
+}
+.stepImg{
+	padding-bottom: 1.5em;
+}
+.stepBox:nth-child(-n+2){
+	border-right: 1px solid;
+}
