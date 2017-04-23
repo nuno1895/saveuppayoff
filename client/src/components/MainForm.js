@@ -113,7 +113,9 @@ class MainForm extends Component {
          debt3:'',
          debt4:''
        },
-        section: 'pay'
+        section: 'pay',
+        prevSection: '',
+        nextSection: ''
     };
 
     // binding our methods which get passed as callbacks
@@ -599,6 +601,18 @@ class MainForm extends Component {
     );
   }
 
+  renderSectionResults() {
+    return (
+    
+    );
+  }
+
+  renderBudgetResults() {
+    return (
+
+    );
+  }
+
   resultRedirect() {
     window.location = '/results';
   }
@@ -608,50 +622,56 @@ class MainForm extends Component {
     if (this.state.section === 'pay') {
       return this.renderPay();
     } 
-    else if(this.state.section === 'food'){
+    else if (this.state.section === 'food') {
       return this.renderFood();
     }
-    else if(this.state.section === 'clothing'){
+    else if (this.state.section === 'clothing') {
       return this.renderClothing();
     }
-    else if(this.state.section === 'utilities'){
+    else if (this.state.section === 'utilities') {
       return this.renderUtilities();
     }
-    else if(this.state.section === 'housing'){
+    else if (this.state.section === 'housing') {
       return this.renderHousing();
     }
-    else if(this.state.section === 'savings'){
+    else if (this.state.section === 'savings') {
       return this.renderSavings();
     }
-    else if(this.state.section === 'medical'){
+    else if (this.state.section === 'medical') {
       return this.renderMedical();
     }
-    else if(this.state.section === 'insurance'){
+    else if (this.state.section === 'insurance') {
       return this.renderInsurance();
     }
-    else if(this.state.section === 'transportation'){
+    else if (this.state.section === 'transportation') {
       return this.renderTransportation();
     }
-    else if(this.state.section === 'personal'){
+    else if (this.state.section === 'personal') {
       return this.renderPersonal();
     }
-    else if(this.state.section === 'miscellaneous'){
+    else if (this.state.section === 'miscellaneous') {
       return this.renderMiscellaneous();
     }
-     else if(this.state.section === 'entertainment'){
+     else if (this.state.section === 'entertainment') {
       return this.renderEntertainment();
     }
-    else if(this.state.section === 'carDebt'){
+    else if (this.state.section === 'carDebt') {
       return this.renderCarDebt();
     }
-    else if(this.state.section === 'creditCardDebt'){
+    else if (this.state.section === 'creditCardDebt') {
       return this.renderCreditCardDebt();
     }
-    else if(this.state.section === 'studentDebt'){
+    else if (this.state.section === 'studentDebt') {
       return this.renderStudentDebt();
     }
-    else if(this.state.section === 'miscellaneousDebt'){
+    else if (this.state.section === 'miscellaneousDebt') {
       return this.renderMiscellaneousDebt();
+    }
+    else if (this.state.section === 'sectionResults') {
+      return this.renderSectionResults();
+    }
+    else if (this.state.section === 'budgetResults') {
+      return this.renderBudgetResults();
     }
     else
       return this.renderPay();
