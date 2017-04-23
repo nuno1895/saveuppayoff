@@ -38,7 +38,7 @@ app.use('/users', users);
 var connection = mysql.createConnection({
  host     : 'localhost',
  user     : 'root',
- password : 'Avernus#1',
+ password : 'root',
  database : 'saveup_db',
 });
 
