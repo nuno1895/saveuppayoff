@@ -603,7 +603,7 @@ class MainForm extends Component {
   renderSectionResults() {
     return (
       <div className='sectionResults'>
-        <h1>SectionResults</h1>
+        <h1>Section Result for {this.state.prevSection}</h1>
         <br />
         <br />
         <button onClick={() => this.setState({section: this.state.prevSection})}>Back</button>
@@ -619,7 +619,7 @@ class MainForm extends Component {
         <br />
         <br />
         <button onClick={() => this.setState({section: this.state.prevSection})}>Back</button>
-        <button onClick={() => this.resultRedirect()}>Next</button>
+        <button onClick={() => this.resultRedirect()}>Submit Form</button>
       </div> 
     );
   }
