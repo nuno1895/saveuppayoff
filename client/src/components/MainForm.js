@@ -65,10 +65,10 @@ class MainForm extends Component {
         bus:'',
         train:'',
         newCarFund:'',
-        othertransportation:''
+        otherTransportation:''
       },
       personal: {
-        educationTution:'',
+        educationTuition:'',
         childCare:'',
         hairCareCosmetics:'',
         bookSupplies:'',
@@ -82,8 +82,8 @@ class MainForm extends Component {
       miscellaneous: {
         miscellaneous:'',
         otherPersonal:'',
-        otherPersonal1:'',
-        otherPersonal2:''
+        otherPersonal2:'',
+        otherPersonal3:''
       },
       entertainment: {
         entertainment: '',
@@ -388,7 +388,7 @@ class MainForm extends Component {
           <br />
           <br />
           <label>Other Transportation:</label>
-          <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'othertransportation') } value={this.state.transportation.othertransportation} />
+          <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'otherTransportation') } value={this.state.transportation.otherTransportation} />
           <br />
           <br />
           <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})}>Back</button>
@@ -403,7 +403,7 @@ class MainForm extends Component {
         <h1> Personal </h1>
           <br />
           <label>Tution & Eduction:</label>
-          <Input onChange={(event) => this.handleInputChange(event, 'personal', 'educationTution') } value={this.state.personal.educationTution} />
+          <Input onChange={(event) => this.handleInputChange(event, 'personal', 'educationTuition') } value={this.state.personal.educationTuition} />
           <br />
           <br />
           <label>Child Care:</label>
@@ -462,11 +462,11 @@ class MainForm extends Component {
           <br />
           <br />
           <label>Other Personal:</label>
-          <Input onChange={(event) => this.handleInputChange(event, 'miscellaneous', 'otherPersonal1') } value={this.state.miscellaneous.otherPersonal1} />
+          <Input onChange={(event) => this.handleInputChange(event, 'miscellaneous', 'otherPersonal2') } value={this.state.miscellaneous.otherPersonal2} />
           <br />
           <br />
           <label>Other Personal:</label>
-          <Input onChange={(event) => this.handleInputChange(event, 'miscellaneous', 'otherPersonal2') } value={this.state.miscellaneous.otherPersonal2} />
+          <Input onChange={(event) => this.handleInputChange(event, 'miscellaneous', 'otherPersonal3') } value={this.state.miscellaneous.otherPersonal3} />
           <br />
           <br />
           <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})}>Back</button>
