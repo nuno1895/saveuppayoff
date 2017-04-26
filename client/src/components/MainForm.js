@@ -115,7 +115,8 @@ class MainForm extends Component {
       },
       section: 'pay',
       prevSection: '',
-      nextSection: ''
+      nextSection: '',
+      budget: 0
     };
     // binding our methods which get passed as callbacks
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -131,6 +132,7 @@ class MainForm extends Component {
   
   getSalary() {
     console.log('Your salary is' + this.state.pay.frequency * this.state.pay.takeHome);
+    this.setState({ budget: this.state.pay.takeHome * this.state.pay.frequency});
   }
 
   renderPay() {
@@ -150,7 +152,7 @@ class MainForm extends Component {
         <Input onChange={(event) => this.handleInputChange(event, 'pay', 'frequency') } value={this.state.pay.frequency} />
         <br />
         <br />
-        <button onClick={() => this.setState({section: 'food'})}>Next</button>
+        <button onClick={() => this.setState({section: 'food', budget: this.state.pay.takeHome*this.state.pay.frequency})}>Next</button>
       </div>
     );
   }
@@ -600,10 +602,22 @@ class MainForm extends Component {
     );
   }
 
+  testCallback(dataFromChild) {
+    console.log("stuff");
+  }
+
   renderSectionResults() {
+    let prevFormSection = this.state.prevSection;
+    console.log(prevFormSection);
+    let sectionData = this.state[prevFormSection];
+    console.log(sectionData);
+
     return (
       <div className='sectionResults'>
         <h1>Section Result for {this.state.prevSection}</h1>
+        <br />
+        <br />
+        <Results formSectionTitle={prevFormSection} formSectionData={sectionData} budget={this.state.budget}/>
         <br />
         <br />
         <button onClick={() => this.setState({section: this.state.prevSection})}>Back</button>
@@ -618,6 +632,9 @@ class MainForm extends Component {
         <h1>BudgetResults</h1>
         <br />
         <br />
+        <Results />
+        <br />
+        <br />
         <button onClick={() => this.setState({section: this.state.prevSection})}>Back</button>
         <button onClick={() => this.resultRedirect()}>Submit Form</button>
       </div> 
@@ -629,7 +646,6 @@ class MainForm extends Component {
   }
 
   renderForm() {
-
     if (this.state.section === 'pay') {
       return this.renderPay();
     } 
@@ -663,7 +679,7 @@ class MainForm extends Component {
     else if (this.state.section === 'miscellaneous') {
       return this.renderMiscellaneous();
     }
-     else if (this.state.section === 'entertainment') {
+    else if (this.state.section === 'entertainment') {
       return this.renderEntertainment();
     }
     else if (this.state.section === 'carDebt') {
