@@ -7,10 +7,10 @@ Based on grade and catergory, this will give advice on that to do, grade A use n
 */}
 
 function Advice(props) {
-
+let adviceOne = Advice.food;
 	var Advice = {
 	  food: {
-        1 : ["Great Job Your a Food Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        first : ["Great Job Your a Food Budget RockStar, However still look at this area, to see if there are any other potential savings"],
         2 : [
         		"Download coupons... Couponing doesn’t require circulars and scissors anymore. Visit Coupons.com, SmartSource.com or redplum.com,  couponmom.com , the savings racks up",
         		 "Reduce the amount of times you are eating out by a few times a week", 
@@ -23,9 +23,10 @@ function Advice(props) {
         		 "Plan Your Meals around Sales",
         		 "Use everything in the Fridge",
         		 "Learn the price range of the items you buy most frequently so that you’ll be able to recognize when they hit their lowest and stock up then",
-                 "Seriously Don't Eat Out",
+             ], 
+             3:[    "Seriously Don't Eat Out",
                  "Shop by unit price. Many grocery stores list a cost per unit of each item, such as the price per ounce or pound. Use these stickers when comparison shopping for the same product, just in a different size.",
-                 "Do your own slicing and dicing. Prepackaged and single-serving foods are easy mark-up territory"
+                 "Do your own slicing and dicing. Prepackaged and single-serving foods are easy mark-up territory",
                  "Brown Bag all of your Lunches, If buying lunch at work costs $5, but making lunch at home costs only $2.50, then in a year, you could afford to create a $500 emergency fund and still have money left over",
                  "Photograph your receipt. You can earn cash-back on your groceries with apps like Ibotta, SavingsStar and Checkout51",
                  "Use Frozen Mixed Vegetables Instead of Fresh Frozen vegetables are underrated.",
@@ -55,7 +56,7 @@ function Advice(props) {
         		 "Don't buy dry clean only",
         		 "If you can’t afford it, you’ve got to skip it",
                  "Track the items you want. Easily scour the web for the lowest price on those shoes or that suit with InvisibleHand, a browser extension that automatically finds the cheapest rate on whatever item you’re looking at. You can also use price tracking tools like CamelCamelCamel or PriceZombie to see the highest and lowest prices an item is currently selling for, as well as its price history.",
-                 "Be very wary of store credit cards. Retailers roll out all kinds of tempting offers to get you to open a credit card with them, but these retailer-branded credit cards have much higher APRs than standard credit cards—23.2% vs. 15%, according to creditcards.com"
+                 "Be very wary of store credit cards. Retailers roll out all kinds of tempting offers to get you to open a credit card with them, but these retailer-branded credit cards have much higher APRs than standard credit cards—23.2% vs. 15%, according to creditcards.com",
                  "Avoid handling the merchandise. Research shows your willingness to pay more increases as you spend more time looking at and physically holding objects",
                  "Don’t do flash sales",
                  "Sell what you don’t wear",
@@ -81,7 +82,7 @@ function Advice(props) {
            		 "Set your water heater at 120 degrees, The Environmental Protection Agency estimates that a heater set at 140 degrees or higher can waste $36 to $61 annually in standby heat losses to keep water at that temperature, and more than $400 to bring fresh water up to that high temperature",
            		 "Use reusable AC and furnace filters, sing a permanent filter, you'll save money in the long run, cut your utility bill and prolong the life of your HVAC unit. If the disposable AC filters that must be changed every 3 months are around $4 each, you can recoup the $20 to $40 cost of a permanent filter in as little as 15 months.",
            		 "Cable, it's not a necessity, cutting it completely out is a huge savings",
-           		 "Cable alternatives, Library (free), Online Network Channels (free), YouTube/Vimeo (free), Hulu ($8 per month), Netflix ($8 per month), Amazon Prime Video ($99 per year), Sling TV ($20 per month)"
+           		 "Cable alternatives, Library (free), Online Network Channels (free), YouTube/Vimeo (free), Hulu ($8 per month), Netflix ($8 per month), Amazon Prime Video ($99 per year), Sling TV ($20 per month)",
                  "Do not rent your cable equiptment if you can, buy what you can, for instance you can buy a good router for $60 versus $10 dollars a month.",
                  "Do your meter and utility bill match up?, check you might find some issues",
                  "Buy Energy Star-certified products",
@@ -118,7 +119,7 @@ function Advice(props) {
           		 "Garage sale, eBay or Craigslist!, sell whatever you don't need to build up your fund",
           		 "Once your emergency fund and debt is payoff now worry on college and retirement",
           		 "Try to go to 15% on your retirement fund",
-          		 "Shop around for Collge saving funds, look for low cost and high return plans, or create your own 529 plan"
+          		 "Shop around for Collge saving funds, look for low cost and high return plans, or create your own 529 plan",
           		 "Do your reseach!!"
 
           		]
@@ -174,7 +175,7 @@ function Advice(props) {
       	   "Buy discounted gas gift cards",
       	   "Calm your driving habits",
       	   "Roll your windows down versus turning on the air, it helps with gas",
-      	   "Buy monthly or weekly passes for the Bus/Train versus single"
+      	   "Buy monthly or weekly passes for the Bus/Train versus single",
       	   "Avoid toll roads, if you can", 
       	   "Download gas-saving apps",
       	   "Look for local transportation incentives, some cities and states offer it",
@@ -215,11 +216,11 @@ function Advice(props) {
        	   "Do a first-pass at your budget, make sure you that you can commit",
        	   "Attack your debt, we mean attack it, throw everything at, get an extra job to do it, whatever it takes",
        	   "Lowest balance to highest, so you are eliminating a bill everytime you pay something off, once that bill is eliminated, take that amount you were using from the bill you paid off an now throw all that money into the new lowest balance bill and keep doing it until you have zero debt",
-       	   "dont try to focus on every bill at once, pay the absolute minimum on all except the ones you are focusing on"
+       	   "dont try to focus on every bill at once, pay the absolute minimum on all except the ones you are focusing on",
        	   "Throw any excess cash at your debt, anything extra goes into paying off this debt",
        	   "Pick up a side hustle",
        	   "Ask for lower interest rates on your credit cards — and negotiate other bills",
-       	   "Avoid balance transfers becuase you still have to pay a might need to pay a balance transfer fee of around 3% for the privilege, what happens if you dont pay it down in the 12-15 months of the zero/lower interest, you now just added an addtiondal 3% on top of what you owned, pay it off instead"
+       	   "Avoid balance transfers becuase you still have to pay a might need to pay a balance transfer fee of around 3% for the privilege, what happens if you dont pay it down in the 12-15 months of the zero/lower interest, you now just added an addtiondal 3% on top of what you owned, pay it off instead",
        	   "Ask for lower interest rates on your credit cards — and negotiate other bills",
        	   "Your car is a debt get that paid off too, having a car payment is not a way of life, once you pay off your car it becomes an asset versus a debt",
        	   "Never lease a car, it is too easy to get into another lease, go over in miles, or roll over negative equity, meaning you roll over extra costs from a privious deal, better pay off your car and not have a payment until you have to get another care. ",

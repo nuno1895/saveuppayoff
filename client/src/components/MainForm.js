@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './MainForm.css';
 import Input from './Input';
 import Results from './Results';
+import {
+  Button
+} from 'reactstrap';
 
 class MainForm extends Component {
   constructor() {
@@ -152,7 +155,7 @@ class MainForm extends Component {
         <Input onChange={(event) => this.handleInputChange(event, 'pay', 'frequency') } value={this.state.pay.frequency} />
         <br />
         <br />
-        <button onClick={() => this.setState({section: 'food', budget: this.state.pay.takeHome*this.state.pay.frequency})}>Next</button>
+        <Button onClick={() => this.setState({section: 'food', budget: this.state.pay.takeHome*this.state.pay.frequency})}>Next</Button>
       </div>
     );
   }
@@ -170,8 +173,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'food', 'eatingOut') } value={this.state.food.eatingOut} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'pay'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'pay'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})}>Next</Button>
       </div>
     );
   }
@@ -193,8 +196,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'clothing', 'dryCleaning') } value={this.state.clothing.dryCleaning} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'clothing', nextSection: 'utilities'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'clothing', nextSection: 'utilities'})}>Next</Button>
       </div>
     );
   }
@@ -232,8 +235,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'cable') } value={this.state.utilities.cable} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'clothing', nextSection: 'utilities'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'utilities', nextSection: 'housing'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'clothing', nextSection: 'utilities'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'utilities', nextSection: 'housing'})}>Next</Button>
       </div>
     );
   }
@@ -263,8 +266,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'dues') } value={this.state.housing.dues} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'utilities', nextSection: 'housing'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'housing', nextSection: 'savings'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'utilities', nextSection: 'housing'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'housing', nextSection: 'savings'})}>Next</Button>
       </div>
     );
   }
@@ -286,8 +289,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'savings', 'college') } value={this.state.savings.college} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'housing', nextSection: 'savings'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'savings', nextSection: 'medical'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'housing', nextSection: 'savings'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'savings', nextSection: 'medical'})}>Next</Button>
       </div>
     );
   }
@@ -321,8 +324,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'otherMedical3') } value={this.state.medical.otherMedical3} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'savings', nextSection: 'medical'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'medical', nextSection: 'insurance'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'savings', nextSection: 'medical'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'medical', nextSection: 'insurance'})}>Next</Button>
       </div>
     );
   }
@@ -356,8 +359,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'longTermInsurance') } value={this.state.insurance.longTermInsurance} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'medical', nextSection: 'insurance'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'medical', nextSection: 'insurance'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})}>Next</Button>
       </div>
     );
   }
@@ -391,8 +394,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'otherTransportation') } value={this.state.transportation.otherTransportation} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'transportation', nextSection: 'personal'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'transportation', nextSection: 'personal'})}>Next</Button>
       </div>
     );
   }
@@ -442,8 +445,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'petSupplies') } value={this.state.personal.petSupplies} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'transportation', nextSection: 'personal'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'transportation', nextSection: 'personal'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})}>Next</Button>
       </div>
     );
   }
@@ -469,8 +472,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'miscellaneous', 'otherPersonal3') } value={this.state.miscellaneous.otherPersonal3} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'miscellaneous', nextSection: 'entertainment'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'miscellaneous', nextSection: 'entertainment'})}>Next</Button>
       </div>
     );
   }
@@ -488,8 +491,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'entertainment', 'vacation') } value={this.state.entertainment.vacation} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'miscellaneous', nextSection: 'entertainment'})}>Back</button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'entertainment', nextSection: 'carDebt'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'miscellaneous', nextSection: 'entertainment'})}>Back</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'entertainment', nextSection: 'carDebt'})}>Next</Button>
       </div>
     );
   }
@@ -507,8 +510,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'carDebt', 'carPayment2') } value={this.state.carDebt.carPayment2} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'entertainment', nextSection: 'carDebt'})}>Back </button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'carDebt', nextSection: 'creditCardDebt'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'entertainment', nextSection: 'carDebt'})}>Back </Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'carDebt', nextSection: 'creditCardDebt'})}>Next</Button>
       </div>
     );
   }
@@ -542,8 +545,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'creditCardDebt', 'creditCard6') } value={this.state.creditCardDebt.creditCard6} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'carDebt', nextSection: 'creditCardDebt'})}>Back </button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'creditCardDebt', nextSection: 'studentDebt'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'carDebt', nextSection: 'creditCardDebt'})}>Back </Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'creditCardDebt', nextSection: 'studentDebt'})}>Next</Button>
       </div>
     );
   }
@@ -569,8 +572,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'studentDebt', 'studentLoan4') } value={this.state.studentDebt.studentLoan4} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'creditCardDebt', nextSection: 'studentDebt'})}>Back </button>
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'studentDebt', nextSection: 'miscellaneousDebt'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'creditCardDebt', nextSection: 'studentDebt'})}>Back </Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'studentDebt', nextSection: 'miscellaneousDebt'})}>Next</Button>
       </div>
     );
   }
@@ -596,8 +599,8 @@ class MainForm extends Component {
           <Input onChange={(event) => this.handleInputChange(event, 'miscellaneousDebt', 'debt4') } value={this.state.miscellaneousDebt.debt4} />
           <br />
           <br />
-          <button onClick={() => this.setState({section: 'sectionResults', prevSection: 'studentDebt', nextSection: 'miscellaneousDebt'})}>Back</button>
-          <button onClick= {() => this.setState({section: 'sectionResults', prevSection: 'miscellaneousDebt', nextSection: 'budgetResults'})}>Next</button>
+          <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'studentDebt', nextSection: 'miscellaneousDebt'})}>Back</Button>
+          <Button onClick= {() => this.setState({section: 'sectionResults', prevSection: 'miscellaneousDebt', nextSection: 'budgetResults'})}>Next</Button>
       </div>
     );
   }
@@ -614,14 +617,14 @@ class MainForm extends Component {
 
     return (
       <div className='sectionResults'>
-        <h1>Section Result for {this.state.prevSection}</h1>
+        {/*<h1>Section Result for {this.state.prevSection}</h1>
         <br />
-        <br />
+        <br />*/}
         <Results formSectionTitle={prevFormSection} formSectionData={sectionData} budget={this.state.budget}/>
         <br />
         <br />
-        <button onClick={() => this.setState({section: this.state.prevSection})}>Back</button>
-        <button onClick={() => this.setState({section: this.state.nextSection})}>Next</button>
+        <Button onClick={() => this.setState({section: this.state.prevSection})}>Back</Button>
+        <Button onClick={() => this.setState({section: this.state.nextSection})}>Next</Button>
       </div>
     );
   }
@@ -635,8 +638,8 @@ class MainForm extends Component {
         <Results />
         <br />
         <br />
-        <button onClick={() => this.setState({section: this.state.prevSection})}>Back</button>
-        <button onClick={() => this.resultRedirect()}>Submit Form</button>
+        <Button onClick={() => this.setState({section: this.state.prevSection})}>Back</Button>
+        <Button onClick={() => this.resultRedirect()}>Submit Form</Button>
       </div> 
     );
   }
