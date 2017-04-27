@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grader from './Grader';
+import './Results.css';
 // import Calculations from './Calculations';
 
 // Percentages for grades:
@@ -21,7 +22,7 @@ class Results extends Component {
 		if (formSection === 'food') {
 			// Food: 5-15%
 			let totalFoodExpense = parseInt(formSectionData.groceries) + parseInt(formSectionData.eatingOut);
-			let percentOfBudget = (totalFoodExpense * 100)/parseInt(budget);
+			let percentOfBudgetFood = (totalFoodExpense * 100)/parseInt(budget);
 			// for (var i = 0; i < formSectionData.length; i++) {
 			// 	totalFoodExpense += formSectionData[i];
 			// 	console.log("HERE: " + totalFoodExpense);
@@ -29,11 +30,12 @@ class Results extends Component {
 
 			return (
 				<div>
-					<h2>Food Grade</h2>
-					<p>Your total food expense: {totalFoodExpense}</p>
-					<p>Your budget: {budget}</p>
-					<p>Your food expense is {percentOfBudget}% of your budget</p>
-					<Grader budgetPercent={percentOfBudget} />
+					<h2>Your Budget Grade For Food</h2>
+					<p>Total food expense: {totalFoodExpense}</p>
+					<p>Out of your total budget: {budget}</p>
+					<p>Your total food expense is {percentOfBudgetFood}% of your budget</p>
+					<Grader budgetPercent={percentOfBudgetFood} />
+          {<Grader advice />}
 				</div>
 			);
 		} 
@@ -47,10 +49,10 @@ class Results extends Component {
 
       return (
         <div>
-          <h2>Clothing Grade</h2>
-          <p>Your total clothing expense: {totalClothingExpense}</p>
-          <p>Your budget: {budget}</p>
-          <p>Your clothing expense is {percentOfBudget}% of your budget</p>
+          <h2>Your Budget Grade For Clothing</h2>
+          <p>Total clothing expense: {totalClothingExpense}</p>
+          <p>Out of your total budget: {budget}</p>
+          <p>Your total clothing expense is {percentOfBudget}% of your budget</p>
           <Grader budgetPercent={percentOfBudget} />
         </div>
       );
@@ -65,10 +67,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Utilities Grade</h2>
-        <p>Your total utility expense: {totalUtilityExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your utility expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Utilities</h2>
+        <p>Total utility expense: {totalUtilityExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total utility expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -83,10 +85,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Housing Grade</h2>
-        <p>Your total housing expense: {totalHousingExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your housing expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Housing</h2>
+        <p>Total housing expense: {totalHousingExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total housing expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -101,10 +103,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Savings Grade</h2>
-        <p>Your total savings expense: {totalSavingsExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your savings expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Savings</h2>
+        <p>Total savings expense: {totalSavingsExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total savings expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -119,10 +121,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Medical Grade</h2>
-        <p>Your total medical expense: {totalMedicalExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your medical expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Medical</h2>
+        <p>Total medical expense: {totalMedicalExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total medical expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -137,10 +139,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Insurance Grade</h2>
-        <p>Your total insurance expense: {totalInsuranceExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your insurance expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Insurance</h2>
+        <p>Total insurance expense: {totalInsuranceExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total insurance expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -155,10 +157,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Transportation Grade</h2>
-        <p>Your total transportation expense: {totalTransportationExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your transportation expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Transportation</h2>
+        <p>Total transportation expense: {totalTransportationExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total transportation expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -173,10 +175,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Personal Grade</h2>
-        <p>Your total personal expense: {totalPersonalExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your personal expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Personal</h2>
+        <p>Total personal expense: {totalPersonalExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total personal expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -191,10 +193,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Miscellaneous Grade</h2>
-        <p>Your total miscellaneous expense: {totalMiscellaneousExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your miscellaneous expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Miscellaneous</h2>
+        <p>Total miscellaneous expense: {totalMiscellaneousExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total miscellaneous expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -209,10 +211,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Entertainment Grade</h2>
-        <p>Your total Entertainment expense: {totalEntertainmentExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your Entertainment expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Entertainment</h2>
+        <p>Total Entertainment expense: {totalEntertainmentExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total Entertainment expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -227,10 +229,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Car Debt Grade</h2>
-        <p>Your total Car Debt expense: {totalCarDebtExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your Car Debt expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Car Debt</h2>
+        <p>Total Car Debt expense: {totalCarDebtExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total Car Debt expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -245,10 +247,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Credit Card Debt Grade</h2>
-        <p>Your total Credit Card Debt expense: {totalCreditCardDebtExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your Credit Card Debt expense is {percentOfBudget}% of your budget</p>
+        <h2>Credit Your Budget Grade For Card Debt</h2>
+        <p>Total Credit Card Debt expense: {totalCreditCardDebtExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total Credit Card Debt expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -263,10 +265,10 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Student Debt Grade</h2>
-        <p>Your total Student Debt expense: {totalStudentDebtExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your Student Debt expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Student Debt</h2>
+        <p>Total Student Debt expense: {totalStudentDebtExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total Student Debt expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
@@ -281,19 +283,24 @@ class Results extends Component {
 
     return (
       <div>
-        <h2>Miscellaneous Debt Grade</h2>
-        <p>Your total Miscellaneous Debt expense: {totalMiscellaneousDebtExpense}</p>
-        <p>Your budget: {budget}</p>
-        <p>Your Miscellaneous Debt expense is {percentOfBudget}% of your budget</p>
+        <h2>Your Budget Grade For Miscellaneous Debt</h2>
+        <p>Total Miscellaneous Debt expense: {totalMiscellaneousDebtExpense}</p>
+        <p>Out of your total budget: {budget}</p>
+        <p>Your total Miscellaneous Debt expense is {percentOfBudget}% of your budget</p>
         <Grader budgetPercent={percentOfBudget} />
       </div>
       );
     }
-      else if (formSection === 'sectionResults') {
-      return "stuff";
+    else if (formSection === 'sectionResults') {
+          return "stuff";
     }
     else if (formSection === 'budgetResults') {
-      return "stuff";
+      return (
+        <div>
+        console.log(this.props.totalFoodExpense);
+        <p>{this.props.totalFoodExpense}</p>
+        </div>
+        );
     }
   }
 
@@ -303,7 +310,9 @@ class Results extends Component {
     console.log(this.props.budget);
     return (
       <div>
-        <h1>Results</h1>
+        <h1>RESULTS</h1>
+        <br />
+        <br />
         {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget)}
       </div>
     );
