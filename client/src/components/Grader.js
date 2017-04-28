@@ -16,13 +16,12 @@ import React, { Component } from 'react';
 
 class Grader extends Component {
 	render() {
-		let percent = this.props.budgetPercent;
+		let percent = this.props.percentDifference;
 		
 		if (percent < 2) {
-				return (
-				<h2>You got an A++</h2>
+			return (
+				<h2>You got an A+</h2>
 			);
-
 		} else if (percent >= 2 && percent <= 4) {
 			return (
 				<h2>You got an A-</h2>

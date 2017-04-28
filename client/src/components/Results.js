@@ -2,30 +2,14 @@ import React, { Component } from 'react';
 import Grader from './Grader';
 // import Calculations from './Calculations';
 
-// Percentages for grades:
-
-// Food: 5-15% 
-// Savings: 10-15% 
-// Clothing: 2-7% 
-// Housing: 25-35% 
-// Transportation: 10-15% 
-// Utilities: 5-10% 
-// Medical: 5-10% 
-// Insurance: 10-25% 
-// Recreation: 2-3% 
-// Debts: 0% 
-// Personal 5-10%
-
 class Results extends Component {
 	calculationFunc(formSection, formSectionData, budget) {
 		if (formSection === 'food') {
 			// Food: 5-15%
 			let totalFoodExpense = parseInt(formSectionData.groceries) + parseInt(formSectionData.eatingOut);
 			let percentOfBudget = (totalFoodExpense * 100)/parseInt(budget);
-			// for (var i = 0; i < formSectionData.length; i++) {
-			// 	totalFoodExpense += formSectionData[i];
-			// 	console.log("HERE: " + totalFoodExpense);
-			// };
+      let suggestedBudgetPercent = 15;
+      let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
 			return (
 				<div>
@@ -33,17 +17,17 @@ class Results extends Component {
 					<p>Your total food expense: {totalFoodExpense}</p>
 					<p>Your budget: {budget}</p>
 					<p>Your food expense is {percentOfBudget}% of your budget</p>
-					<Grader budgetPercent={percentOfBudget} />
+          <p>Generally food expenditure should be between 5% - 15%</p>
+					<Grader percentDifference={percentDifference} />
 				</div>
 			);
-		} 
+		}
 		else if (formSection === 'clothing') {
+      // Clothing: 2-7% 
       let totalClothingExpense = parseInt(formSectionData.clothingAdult) + parseInt(formSectionData.clothingKids) + parseInt(formSectionData.dryCleaning);
       let percentOfBudget = (totalClothingExpense * 100)/parseInt(budget);
-      // for (var i = 0; i < formSectionData.length; i++) {
-      //  totalClothingExpense += formSectionData[i];
-      //  console.log("HERE: " + totalClothingExpense);
-      // };
+      let suggestedBudgetPercent = 7;
+      let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
       return (
         <div>
@@ -51,17 +35,16 @@ class Results extends Component {
           <p>Your total clothing expense: {totalClothingExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your clothing expense is {percentOfBudget}% of your budget</p>
-          <Grader budgetPercent={percentOfBudget} />
+          <Grader percentDifference={percentDifference} />
         </div>
       );
     }
     else if (formSection === 'utilities') {
+    // Utilities: 5-10% 
     let totalUtilityExpense = parseInt(formSectionData.electricity) + parseInt(formSectionData.mobilePhone) + parseInt(formSectionData.gas) + parseInt(formSectionData.trash) + parseInt(formSectionData.water) + parseInt(formSectionData.internet) + parseInt(formSectionData.cable);
     let percentOfBudget = (totalUtilityExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalUtilityExpense += formSectionData[i];
-    //  console.log("HERE: " + totalUtilityExpense);
-    // };
+    let suggestedBudgetPercent = 10;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -69,17 +52,16 @@ class Results extends Component {
         <p>Your total utility expense: {totalUtilityExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your utility expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'housing') {
+    // Housing: 25-35% 
     let totalHousingExpense = parseInt(formSectionData.mortgageRent) + parseInt(formSectionData.secondMortgage) + parseInt(formSectionData.taxes) + parseInt(formSectionData.repairsMaint) + parseInt(formSectionData.dues);
     let percentOfBudget = (totalHousingExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalHousingExpense += formSectionData[i];
-    //  console.log("HERE: " + totalHousingExpense);
-    // };
+    let suggestedBudgetPercent = 35;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -87,17 +69,16 @@ class Results extends Component {
         <p>Your total housing expense: {totalHousingExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your housing expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'savings') {
+    // Savings: 10-15% 
     let totalSavingsExpense = parseInt(formSectionData.emergency) + parseInt(formSectionData.retirement) + parseInt(formSectionData.college);
     let percentOfBudget = (totalSavingsExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalSavingsExpense += formSectionData[i];
-    //  console.log("HERE: " + totalSavingsExpense);
-    // };
+    let suggestedBudgetPercent = 15;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -105,17 +86,16 @@ class Results extends Component {
         <p>Your total savings expense: {totalSavingsExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your savings expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'medical') {
+    // Medical: 5-10% 
     let totalMedicalExpense = parseInt(formSectionData.medications) + parseInt(formSectionData.doctorBills) + parseInt(formSectionData.hospitalBills) + parseInt(formSectionData.otherMedical) + parseInt(formSectionData.otherMedical2) + parseInt(formSectionData.otherMedical3);
     let percentOfBudget = (totalMedicalExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalMedicalExpense += formSectionData[i];
-    //  console.log("HERE: " + totalMedicalExpense);
-    // };
+    let suggestedBudgetPercent = 10;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -123,17 +103,16 @@ class Results extends Component {
         <p>Your total medical expense: {totalMedicalExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your medical expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'insurance') {
+    // Insurance: 10-25% 
     let totalInsuranceExpense = parseInt(formSectionData.lifeInsurance) + parseInt(formSectionData.healthInsurance) + parseInt(formSectionData.autoInsurance) + parseInt(formSectionData.homeRentalInsurance) + parseInt(formSectionData.disabilityInsurance) + parseInt(formSectionData.longTermInsurance);
     let percentOfBudget = (totalInsuranceExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalInsuranceExpense += formSectionData[i];
-    //  console.log("HERE: " + totalInsuranceExpense);
-    // };
+    let suggestedBudgetPercent = 25;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -141,17 +120,16 @@ class Results extends Component {
         <p>Your total insurance expense: {totalInsuranceExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your insurance expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'transportation') {
+    // Transportation: 10-15%
     let totalTransportationExpense = parseInt(formSectionData.carGas) + parseInt(formSectionData.carRepairs) + parseInt(formSectionData.bus) + parseInt(formSectionData.train) + parseInt(formSectionData.newCarFund) + parseInt(formSectionData.otherTransportation);
     let percentOfBudget = (totalTransportationExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalTransportationExpense += formSectionData[i];
-    //  console.log("HERE: " + totalTransportationExpense);
-    // };
+    let suggestedBudgetPercent = 15;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -159,17 +137,16 @@ class Results extends Component {
         <p>Your total transportation expense: {totalTransportationExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your transportation expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'personal') {
+    // Personal 5-7%
     let totalPersonalExpense = parseInt(formSectionData.educationTuition) + parseInt(formSectionData.childCare) + parseInt(formSectionData.hairCareCosmetics) + parseInt(formSectionData.bookSupplies) + parseInt(formSectionData.alimony) + parseInt(formSectionData.pocketMoney) + parseInt(formSectionData.subscriptions) + parseInt(formSectionData.babySupplies) + parseInt(formSectionData.petSupplies);
     let percentOfBudget = (totalPersonalExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalPersonalExpense += formSectionData[i];
-    //  console.log("HERE: " + totalPersonalExpense);
-    // };
+    let suggestedBudgetPercent = 7;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -177,17 +154,16 @@ class Results extends Component {
         <p>Your total personal expense: {totalPersonalExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your personal expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'miscellaneous') {
+    // Miscellaneous 2-3%
     let totalMiscellaneousExpense = parseInt(formSectionData.miscellaneous) + parseInt(formSectionData.otherPersonal) + parseInt(formSectionData.otherPersonal2) + parseInt(formSectionData.otherPersonal3);
     let percentOfBudget = (totalMiscellaneousExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalMiscellaneousExpense += formSectionData[i];
-    //  console.log("HERE: " + totalMiscellaneousExpense);
-    // };
+    let suggestedBudgetPercent = 3;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -195,17 +171,16 @@ class Results extends Component {
         <p>Your total miscellaneous expense: {totalMiscellaneousExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your miscellaneous expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'entertainment') {
+    // Recreation: 2-3% 
     let totalEntertainmentExpense = parseInt(formSectionData.entertainment) + parseInt(formSectionData.vacation);
     let percentOfBudget = (totalEntertainmentExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalEntertainmentExpense += formSectionData[i];
-    //  console.log("HERE: " + totalEntertainmentExpense);
-    // };
+    let suggestedBudgetPercent = 3;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -213,17 +188,16 @@ class Results extends Component {
         <p>Your total Entertainment expense: {totalEntertainmentExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your Entertainment expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'carDebt') {
+    // Debts: 0% 
     let totalCarDebtExpense = parseInt(formSectionData.carPayment1) + parseInt(formSectionData.carPayment2);
     let percentOfBudget = (totalCarDebtExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalCarDebtExpense += formSectionData[i];
-    //  console.log("HERE: " + totalCarDebtExpense);
-    // };
+    let suggestedBudgetPercent = 0;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -231,17 +205,16 @@ class Results extends Component {
         <p>Your total Car Debt expense: {totalCarDebtExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your Car Debt expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'creditCardDebt') {
+    // Debts: 0% 
     let totalCreditCardDebtExpense = parseInt(formSectionData.creditCard1) + parseInt(formSectionData.creditCard2) + parseInt(formSectionData.creditCard3)  + parseInt(formSectionData.creditCard4)  + parseInt(formSectionData.creditCard5)  + parseInt(formSectionData.creditCard6)  + parseInt(formSectionData.creditCard6);
     let percentOfBudget = (totalCreditCardDebtExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalCreditCardDebtExpense += formSectionData[i];
-    //  console.log("HERE: " + totalCreditCardDebtExpense);
-    // };
+    let suggestedBudgetPercent = 0;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -249,17 +222,16 @@ class Results extends Component {
         <p>Your total Credit Card Debt expense: {totalCreditCardDebtExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your Credit Card Debt expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'studentDebt') {
+    // Debts: 0% 
     let totalStudentDebtExpense = parseInt(formSectionData.studentLoan1) + parseInt(formSectionData.studentLoan2) + parseInt(formSectionData.studentLoan3) + parseInt(formSectionData.studentLoan4);
     let percentOfBudget = (totalStudentDebtExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalStudentDebtExpense += formSectionData[i];
-    //  console.log("HERE: " + totalStudentDebtExpense);
-    // };
+    let suggestedBudgetPercent = 0;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -267,17 +239,16 @@ class Results extends Component {
         <p>Your total Student Debt expense: {totalStudentDebtExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your Student Debt expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
     }
     else if (formSection === 'miscellaneousDebt') {
+    // Debts: 0% 
     let totalMiscellaneousDebtExpense = parseInt(formSectionData.debt1) + parseInt(formSectionData.debt2) + parseInt(formSectionData.debt3) + parseInt(formSectionData.debt4);
     let percentOfBudget = (totalMiscellaneousDebtExpense * 100)/parseInt(budget);
-    // for (var i = 0; i < formSectionData.length; i++) {
-    //  totalMiscellaneousDebtExpense += formSectionData[i];
-    //  console.log("HERE: " + totalMiscellaneousDebtExpense);
-    // };
+    let suggestedBudgetPercent = 0;
+    let percentDifference = percentOfBudget - suggestedBudgetPercent;
 
     return (
       <div>
@@ -285,12 +256,9 @@ class Results extends Component {
         <p>Your total Miscellaneous Debt expense: {totalMiscellaneousDebtExpense}</p>
         <p>Your budget: {budget}</p>
         <p>Your Miscellaneous Debt expense is {percentOfBudget}% of your budget</p>
-        <Grader budgetPercent={percentOfBudget} />
+        <Grader percentDifference={percentDifference} />
       </div>
       );
-    }
-      else if (formSection === 'sectionResults') {
-      return "stuff";
     }
     else if (formSection === 'budgetResults') {
       return "stuff";
