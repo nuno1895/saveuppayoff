@@ -11,7 +11,7 @@ class Results extends Component {
       let percentOfBudget = (totalFoodExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -31,7 +31,7 @@ class Results extends Component {
       let percentOfBudget = (totalClothingExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 7;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -50,7 +50,7 @@ class Results extends Component {
       let percentOfBudget = (totalUtilityExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 10;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -69,7 +69,7 @@ class Results extends Component {
       let percentOfBudget = (totalHousingExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 35;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -88,7 +88,7 @@ class Results extends Component {
       let percentOfBudget = (totalSavingsExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -107,7 +107,7 @@ class Results extends Component {
       let percentOfBudget = (totalMedicalExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 10;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -126,7 +126,7 @@ class Results extends Component {
       let percentOfBudget = (totalInsuranceExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 25;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -145,7 +145,7 @@ class Results extends Component {
       let percentOfBudget = (totalTransportationExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -164,7 +164,7 @@ class Results extends Component {
       let percentOfBudget = (totalPersonalExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 7;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -183,7 +183,7 @@ class Results extends Component {
       let percentOfBudget = (totalMiscellaneousExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 3;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -202,7 +202,7 @@ class Results extends Component {
       let percentOfBudget = (totalEntertainmentExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 3;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -221,7 +221,7 @@ class Results extends Component {
       let percentOfBudget = (totalCarDebtExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -240,7 +240,7 @@ class Results extends Component {
       let percentOfBudget = (totalCreditCardDebtExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -259,7 +259,7 @@ class Results extends Component {
       let percentOfBudget = (totalStudentDebtExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>
@@ -278,7 +278,7 @@ class Results extends Component {
       let percentOfBudget = (totalMiscellaneousDebtExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference);
+      let grade = grader(percentDifference, formSection);
 
       return (
         <div>

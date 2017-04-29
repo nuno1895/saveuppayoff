@@ -22,104 +22,114 @@ class MainForm extends Component {
       },
       clothing: {
         clothingAdult: '',
-        clothingKids:'',
-        dryCleaning:''
+        clothingKids: '',
+        dryCleaning: ''
       },
       utilities: {
         electricity: '',
-        mobilePhone:'',
-        gas:'',
+        mobilePhone: '',
+        gas: '',
         trash: '',
-        water:'',
-        internet:'',
-        cable:''
+        water: '',
+        internet: '',
+        cable: ''
       },
       housing: {
         mortgageRent: '',
-        secondMortgage:'',
-        taxes:'',
+        secondMortgage: '',
+        taxes: '',
         repairsMaint: '',
-        dues:'',
+        dues: '',
       },
       savings: {
         emergency: '',
-        retirement:'',
-        college:''
+        retirement: '',
+        college: ''
       },
       medical: {
-        medications:'',
-        doctorBills:'',
-        hospitalBills:'',
-        otherMedical:'',
-        otherMedical2:'',
-        otherMedical3:''
+        medications: '',
+        doctorBills: '',
+        hospitalBills: '',
+        otherMedical: '',
+        otherMedical2: '',
+        otherMedical3: ''
       },
       insurance: {
-        lifeInsurance:'',
-        healthInsurance:'',
-        autoInsurance:'',
-        homeRentalInsurance:'',
-        disabilityInsurance:'',
-        longTermInsurance:''
+        lifeInsurance: '',
+        healthInsurance: '',
+        autoInsurance: '',
+        homeRentalInsurance: '',
+        disabilityInsurance: '',
+        longTermInsurance: ''
       },
       transportation: {
-        carGas:'',
-        carRepairs:'',
-        bus:'',
-        train:'',
-        newCarFund:'',
-        otherTransportation:''
+        carGas: '',
+        carRepairs: '',
+        bus: '',
+        train: '',
+        newCarFund: '',
+        otherTransportation: ''
       },
       personal: {
-        educationTuition:'',
-        childCare:'',
-        hairCareCosmetics:'',
-        bookSupplies:'',
-        childSupport:'',
-        alimony:'',
-        pocketMoney:'',
-        subscriptions:'',
-        babySupplies:'',
-        petSupplies:''
+        educationTuition: '',
+        childCare: '',
+        hairCareCosmetics: '',
+        bookSupplies: '',
+        childSupport: '',
+        alimony: '',
+        pocketMoney: '',
+        subscriptions: '',
+        babySupplies: '',
+        petSupplies: ''
       },
       miscellaneous: {
-        miscellaneous:'',
-        otherPersonal:'',
-        otherPersonal2:'',
-        otherPersonal3:''
+        miscellaneous: '',
+        otherPersonal: '',
+        otherPersonal2: '',
+        otherPersonal3: ''
       },
       entertainment: {
         entertainment: '',
-        vacation:''
+        vacation: ''
       },
       carDebt: {
-        carPayment1:'',
-        carPayment2:''
+        carPayment1: '',
+        carPayment2: ''
       }, 
       creditCardDebt: {
-        creditCard1:'',
-        creditCard2:'',
-        creditCard3:'',
-        creditCard4:'',
-        creditCard5:'',
-        creditCard6:''
+        creditCard1: '',
+        creditCard2: '',
+        creditCard3: '',
+        creditCard4: '',
+        creditCard5: '',
+        creditCard6: ''
       },
       studentDebt: {
-        studentLoan1:'',
-        studentLoan2:'',
-        studentLoan3:'',
+        studentLoan1: '',
+        studentLoan2: '',
+        studentLoan3: '',
         studentLoan4: ''
       },
-      miscellaneousDebt : {
-        debt1:'',
-        debt2:'',
-        debt3:'',
-        debt4:''
+      miscellaneousDebt: {
+        debt1: '',
+        debt2: '',
+        debt3: '',
+        debt4: ''
       },
       section: 'pay',
       prevSection: '',
       nextSection: '',
-      budget: 0
+      budget: 0,
+      sectionGrades: {
+        food: '',
+        clothing: '',
+        utilities: '',
+        housing: '',
+        savings: '',
+        medical: '',
+        insurance: '',
+
+      }
     };
     // binding our methods which get passed as callbacks
     this.handleInputChange = this.handleInputChange.bind(this);
