@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import grader from './Grader';
 import Advice from './Advice';
+import AdviceView from './AdviceView';
 import './Results.css';
 // import Calculations from './Calculations';
 
@@ -29,14 +30,14 @@ class Results extends Component {
           <p>Your food expense is {percentOfBudget}% of your budget</p>
           <p>Generally food expenditure should be between 5% - 15%</p>
           <p>Your current grade is {grade}</p>
-          <p>advice: {foodAdvice}</p>
+          
 
-         {/* <ul>
-            {foodAdvice.map((advice, ind) => <Advice 
+         <ul>
+            {foodAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}
-          </ul> */}
+          </ul> 
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
