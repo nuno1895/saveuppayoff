@@ -13,7 +13,13 @@ class Results extends Component {
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
-      let foodAdvice = Advice.clothing[1][0];
+      let foodAdvice;
+
+      if (grade == "A+") {
+          foodAdvice = Advice.food[1][0];
+      } else {
+          foodAdvice = Advice.food[2];
+      }
 
       return (
         <div>
@@ -23,7 +29,14 @@ class Results extends Component {
           <p>Your food expense is {percentOfBudget}% of your budget</p>
           <p>Generally food expenditure should be between 5% - 15%</p>
           <p>Your current grade is {grade}</p>
-          <p>Advice: {foodAdvice} </p>
+          <p>advice: {foodAdvice}</p>
+
+         {/* <ul>
+            {foodAdvice.map((advice, ind) => <Advice 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul> */}
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
