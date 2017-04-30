@@ -1,5 +1,5 @@
-// import React, { Component } from 'react';
-// import Advice from './Advice';
+import React, { Component } from 'react';
+import Advice from './Advice';
 
 // A+: Not over any % 
 // A-: 2-4% 

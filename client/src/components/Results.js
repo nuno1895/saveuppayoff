@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import grader from './Grader';
+import Advice from './Advice';
 import './Results.css';
 // import Calculations from './Calculations';
 
@@ -12,6 +13,7 @@ class Results extends Component {
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let foodAdvice = Advice.clothing[1][0];
 
       return (
         <div>
@@ -21,6 +23,7 @@ class Results extends Component {
           <p>Your food expense is {percentOfBudget}% of your budget</p>
           <p>Generally food expenditure should be between 5% - 15%</p>
           <p>Your current grade is {grade}</p>
+          <p>Advice: {foodAdvice} </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
