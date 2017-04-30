@@ -292,7 +292,7 @@ class Results extends Component {
       );
     }
     else if (formSection === 'budgetResults') {
-      return "stuff";
+      return (<div><p>hello</p></div>);
     }
   }
 
@@ -303,6 +303,7 @@ class Results extends Component {
     return (
       <div>
         <h1>Results</h1>
+        <h2>Advice goes here</h2>
         {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget)}
       </div>
     );
