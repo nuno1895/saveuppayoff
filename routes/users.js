@@ -8,7 +8,7 @@ var isEmpty = require('lodash/isEmpty');
 
 
 function validateInput(data) {
-  let errors = {};
+  var errors = {};
   
   if(!Validator.isEmail(data.email)){
     errors.email = "Email is invalid";
@@ -41,7 +41,7 @@ function validateInput(data) {
 }
 
 router.post('/', (req, res) => {
-  const { errors, isValid } = validateInput(req.body);
+  var { errors, isValid } = validateInput(req.body);
 
   if (!isValid) {
     res.status(400).json(errors);
