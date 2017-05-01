@@ -49,6 +49,13 @@ class Results extends Component {
       let suggestedBudgetPercent = 7;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let clothingAdvice;
+
+      if (grade == "A+") {
+          clothingAdvice = Advice.clothing[1][0];
+      } else {
+          clothingAdvice = Advice.clothing[2];
+      }
 
       return (
         <div>
@@ -57,6 +64,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your clothing expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+             {clothingAdvice.map((advice, ind) => <AdviceView 
+               key={ind} 
+               advice={advice}
+               />)}
+           </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -68,6 +81,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 10;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let utilitiesAdvice;
+      if (grade == "A+") {
+          utilitiesAdvice = Advice.utilities[1][0];
+      } else {
+          utilitiesAdvice = Advice.utilities[2];
+      }
 
       return (
         <div>
@@ -76,6 +95,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your utility expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+             {utilitiesAdvice.map((advice, ind) => <AdviceView 
+               key={ind} 
+               advice={advice}
+               />)}
+           </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -87,6 +112,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 35;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let housingAdvice;
+      if (grade == "A+") {
+          housingAdvice = Advice.housing[1][0];
+      } else {
+          housingAdvice = Advice.housing[2];
+      }
 
       return (
         <div>
@@ -95,6 +126,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your housing expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+             {housingAdvice.map((advice, ind) => <AdviceView 
+               key={ind} 
+               advice={advice}
+               />)}
+           </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -106,6 +143,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let savingsAdvice;
+      if (grade == "A+") {
+          savingsAdvice = Advice.savings[1][0];
+      } else {
+          savingsAdvice = Advice.savings[2];
+      }
 
       return (
         <div>
@@ -114,6 +157,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your savings expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+           <ul>
+             {savingsAdvice.map((advice, ind) => <AdviceView 
+               key={ind} 
+               advice={advice}
+               />)}
+           </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -125,6 +174,13 @@ class Results extends Component {
       let suggestedBudgetPercent = 10;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let medicalAdvice;
+      if (grade == "A+") {
+          medicalAdvice = Advice.medical[1][0];
+      } else {
+          medicalAdvice = Advice.medical[2];
+      }
+
 
       return (
         <div>
@@ -133,6 +189,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your medical expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {medicalAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -144,6 +206,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 25;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let insuranceAdvice;
+      if (grade == "A+") {
+          insuranceAdvice = Advice.insurance[1][0];
+      } else {
+          insuranceAdvice = Advice.insurance[2];
+      }
 
       return (
         <div>
@@ -152,6 +220,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your insurance expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {insuranceAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -163,6 +237,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 15;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let transportationAdvice;
+      if (grade == "A+") {
+          transportationAdvice = Advice.transportation[1][0];
+      } else {
+          transportationAdvice = Advice.transportation[2];
+      }
 
       return (
         <div>
@@ -171,6 +251,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your transportation expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {transportationAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -182,6 +268,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 7;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let personalAdvice;
+      if (grade == "A+") {
+          personalAdvice = Advice.personal[1][0];
+      } else {
+          personalAdvice = Advice.personal[2];
+      }
 
       return (
         <div>
@@ -190,6 +282,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your personal expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {personalAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -201,6 +299,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 3;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let miscellaneousAdvice;
+      if (grade == "A+") {
+          miscellaneousAdvice = Advice.personal[1][0];
+      } else {
+          miscellaneousAdvice = Advice.personal[2];
+      }
 
       return (
         <div>
@@ -209,6 +313,13 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your miscellaneous expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {miscellaneousAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
+
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -220,6 +331,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 3;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let entertainmentAdvice;
+      if (grade == "A+") {
+          entertainmentAdvice = Advice.entertainment[1][0];
+      } else {
+          entertainmentAdvice = Advice.entertainment[2];
+      }
 
       return (
         <div>
@@ -228,6 +345,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your Entertainment expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {entertainmentAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -239,6 +362,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let carDebtAdvice;
+      if (grade == "A+") {
+          carDebtAdvice = Advice.debt[1][0];
+      } else {
+          carDebtAdvice = Advice.debt[2];
+      }
 
       return (
         <div>
@@ -247,6 +376,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your Car Debt expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {carDebtAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -258,6 +393,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let creditCardDebtAdvice;
+      if (grade == "A+") {
+          creditCardDebtAdvice = Advice.debt[1][0];
+      } else {
+          creditCardDebtAdvice = Advice.debt[2];
+      }
 
       return (
         <div>
@@ -266,6 +407,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your Credit Card Debt expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {creditCardDebtAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -277,6 +424,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let studentDebtAdvice;
+      if (grade == "A+") {
+          studentDebtAdvice = Advice.debt[1][0];
+      } else {
+          studentDebtAdvice = Advice.debt[2];
+      }
 
       return (
         <div>
@@ -285,6 +438,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your Student Debt expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {studentDebtAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -296,6 +455,12 @@ class Results extends Component {
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
+      let miscellaneousDebtAdvice;
+      if (grade == "A+") {
+          miscellaneousDebtAdvice = Advice.debt[1][0];
+      } else {
+          miscellaneousDebtAdvice = Advice.debt[2];
+      }
 
       return (
         <div>
@@ -304,6 +469,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your Miscellaneous Debt expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
+          <ul>
+            {miscellaneousDebtAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+              />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
