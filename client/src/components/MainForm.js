@@ -150,8 +150,11 @@ class MainForm extends Component {
 
   renderPay() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+      <div className="cardTop">
       <h1> Your Pay </h1>
+      </div>
+      <div className="debtContainer">
         <br />
         <label>Current Month:</label>
         <select onChange={(event) => this.handleInputChange(event, 'pay', 'month') } value={this.state.pay.month}>
@@ -181,13 +184,17 @@ class MainForm extends Component {
         <br />
         <Button onClick={() => this.setState({section: 'food', budget: this.state.pay.takeHome*this.state.pay.frequency})} disabled={!this.state.pay.month, !this.state.pay.takeHome, !this.state.pay.frequency}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderFood() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Food </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Groceries:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'food', 'groceries') } value={this.state.food.groceries} />
@@ -200,13 +207,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'pay'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})} disabled={!this.state.food.groceries, !this.state.food.eatingOut}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderClothing() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Clothing </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Clothes For Adult:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'clothing', 'clothingAdult') } value={this.state.clothing.clothingAdult} />
@@ -223,13 +234,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'clothing', nextSection: 'utilities'})} disabled={!this.state.clothing.clothingAdult, !this.state.clothing.clothingKids, !this.state.clothing.dryCleaning}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderUtilities() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Utilities </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Electricity:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'electricity') } value={this.state.utilities.electricity} />
@@ -262,13 +277,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'clothing', nextSection: 'utilities'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'utilities', nextSection: 'housing'})} disabled={!this.state.utilities.electricity, !this.state.utilities.mobilePhone, !this.state.utilities.gas, !this.state.utilities.trash, !this.state.utilities.water, !this.state.utilities.internet, !this.state.utilities.cable}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderHousing() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Housing </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Mortgage or Rent:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'mortgageRent') } value={this.state.housing.mortgageRent} />
@@ -293,13 +312,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'utilities', nextSection: 'housing'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'housing', nextSection: 'savings'})} disabled={!this.state.housing.mortgageRent, !this.state.housing.secondMortgage, !this.state.housing.taxes, !this.state.housing.repairsMaint, !this.state.housing.dues}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderSavings() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1>Savings</h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Emergency Savings:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'savings', 'emergency') } value={this.state.savings.emergency} />
@@ -316,13 +339,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'housing', nextSection: 'savings'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'savings', nextSection: 'medical'})} disabled={!this.state.savings.emergency, !this.state.savings.retirement, !this.state.savings.college}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderMedical() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Medical </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Medications:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'medications') } value={this.state.medical.medications} />
@@ -351,13 +378,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'savings', nextSection: 'medical'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'medical', nextSection: 'insurance'})} disabled={!this.state.medical.hospitalBills, !this.state.medical.otherMedical, !this.state.medical.otherMedical2, !this.state.medical.otherMedical3}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderInsurance() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Insurance </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Life Insurance:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'lifeInsurance') } value={this.state.insurance.lifeInsurance} />
@@ -386,13 +417,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'medical', nextSection: 'insurance'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})} disabled={!this.state.insurance.lifeInsurance, !this.state.insurance.healthInsurance, !this.state.insurance.autoInsurance, !this.state.insurance.homeRentalInsurance, !this.state.insurance.disabilityInsurance, !this.state.insurance.longTermInsurance}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderTransportation() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Transportation </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Gas for Car:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'carGas') } value={this.state.transportation.carGas} />
@@ -421,13 +456,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'insurance', nextSection: 'transportation'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'transportation', nextSection: 'personal'})} disabled={!this.state.transportation.carGas, !this.state.transportation.carRepairs, !this.state.transportation.bus, !this.state.transportation.train, !this.state.transportation.newCarFund, !this.state.transportation.otherTransportation}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderPersonal() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Personal </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Tution & Eduction:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'educationTuition') } value={this.state.personal.educationTuition} />
@@ -472,13 +511,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'transportation', nextSection: 'personal'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})} disabled={!this.state.personal.educationTuition, !this.state.personal.childCare, !this.state.personal.hairCareCosmetics, !this.state.personal.bookSupplies, !this.state.personal.childSupport, !this.state.personal.alimony, !this.state.personal.pocketMoney, !this.state.personal.subscriptions, !this.state.personal.babySupplies, !this.state.personal.petSupplies}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderMiscellaneous() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Miscellaneous </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Miscellaneous:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'miscellaneous', 'miscellaneous') } value={this.state.miscellaneous.miscellaneous} />
@@ -499,13 +542,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'personal', nextSection: 'miscellaneous'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'miscellaneous', nextSection: 'entertainment'})} disabled={!this.state.miscellaneous.miscellaneous, !this.state.miscellaneous.otherPersonal, !this.state.miscellaneous.otherPersonal2, !this.state.miscellaneous.otherPersonal3}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderEntertainment() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Entertainment </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Entertainment:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'entertainment', 'entertainment') } value={this.state.entertainment.entertainment} />
@@ -518,13 +565,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'miscellaneous', nextSection: 'entertainment'})}>Back</Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'entertainment', nextSection: 'carDebt'})} disabled={!this.state.entertainment.entertainment, !this.state.entertainment.vacation}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderCarDebt() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Car Debt </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Car Payment #1:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'carDebt', 'carPayment1') } value={this.state.carDebt.carPayment1} />
@@ -537,13 +588,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'entertainment', nextSection: 'carDebt'})}>Back </Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'carDebt', nextSection: 'creditCardDebt'})} disabled={this.state.carDebt.carPayment1, !this.state.carDebt.carPayment2}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderCreditCardDebt() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Credit Card Debt </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Credit Card #1:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'creditCardDebt', 'creditCard1') } value={this.state.creditCardDebt.creditCard1} />
@@ -572,13 +627,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'carDebt', nextSection: 'creditCardDebt'})}>Back </Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'creditCardDebt', nextSection: 'studentDebt'})} disabled={!this.state.creditCardDebt.CreditCard1, !this.state.creditCardDebt.creditCard2, !this.state.creditCardDebt.creditCard3, !this.state.creditCardDebt.creditCard4, !this.state.creditCardDebt.creditCard5, !this.state.creditCardDebt.creditCard6}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderStudentDebt() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Student Debt </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Student Loan #1:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'studentDebt', 'studentLoan1') } value={this.state.studentDebt.studentLoan1} />
@@ -599,13 +658,17 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'creditCardDebt', nextSection: 'studentDebt'})}>Back </Button>
           <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'studentDebt', nextSection: 'miscellaneousDebt'})} disabled={!this.state.studentDebt.studentLoan1, !this.state.studentDebt.studentLoan2, !this.state.studentDebt.studentLoan3, !this.state.studentDebt.studentLoan4}>Next</Button>
       </div>
+      </div>
     );
   }
 
   renderMiscellaneousDebt() {
     return (
-      <div className="debtContainer">
+      <div className="container">
+        <div className="cardTop">
         <h1> Miscellaneous Debt </h1>
+        </div>
+        <div className="debtContainer">
           <br />
           <label>Miscellaneous Debt #1:</label>
           <Input onChange={(event) => this.handleInputChange(event, 'miscellaneousDebt', 'debt1') } value={this.state.miscellaneousDebt.debt1} />
@@ -626,6 +689,7 @@ class MainForm extends Component {
           <Button className="backBtn" onClick={() => this.setState({section: 'sectionResults', prevSection: 'studentDebt', nextSection: 'miscellaneousDebt'})}>Back</Button>
           <Button onClick= {() => this.setState({section: 'sectionResults', prevSection: 'miscellaneousDebt', nextSection: 'budgetResults'})} disabled={!this.state.miscellaneousDebt.debt1, !this.state.miscellaneousDebt.debt2, !this.state.miscellaneousDebt.debt3, !this.state.miscellaneousDebt.debt4}>Next</Button>
       </div>
+      </div>
     );
   }
 
@@ -641,7 +705,10 @@ class MainForm extends Component {
 
     return (
       <div className='sectionResults'>
-        {/*<h1>Section Result for {this.state.prevSection}</h1>
+        {/*<div className="cardTop">
+        <h1>Section Result for {this.state.prevSection}</h1>
+        </div>
+        <div className="debtContainer">
         <br />
         <br />*/}
         <Results formSectionTitle={prevFormSection} formSectionData={sectionData} budget={this.state.budget}/>
@@ -655,8 +722,12 @@ class MainForm extends Component {
 
   renderBudgetResults() {
     return (
+      <div className="container">
       <div className='budgetResults'>
+        <div className="cardTop">
         <h1>BudgetResults</h1>
+        </div>
+        <div className="debtContainer">
         <br />
         <br />
         <Results />
@@ -664,7 +735,9 @@ class MainForm extends Component {
         <br />
         <Button onClick={() => this.setState({section: this.state.prevSection})}>Back</Button>
         <Button onClick={() => this.resultRedirect()}>Submit Form</Button>
+      </div>
       </div> 
+      </div>
     );
   }
 
