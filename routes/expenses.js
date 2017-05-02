@@ -77,10 +77,10 @@ router.get('/', function(req, res, next) {
     expense: "Other Medical Bills"
   }, {
     id: 'otherMedical2',
-    expense: "Other Medical Bills"
+    expense: "Other Medical Bills 2"
   }, {
     id: 'otherMedical3',
-    expense: "Other Medical Bills"
+    expense: "Other Medical Bills 3"
   }, {
     id: 'lifeInsurance',
     expense: "Life Insurance"
@@ -135,9 +135,6 @@ router.get('/', function(req, res, next) {
   }, {
     id: 'alimony',
     expense: "Alimony"
-  }, {
-    id: 'pocketMoney',
-    expense: "Pocket Money"
   }, {
     id: 'pocketMoney',
     expense: "Pocket Money"
