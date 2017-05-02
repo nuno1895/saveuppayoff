@@ -12,9 +12,10 @@ class MonthlyExpenses extends React.Component {
         this.state = { 
             expenses : [],
             currentExpenseId : '',
-            spent : ''
+            spent : '',
+            newExp : []
         };
-        this.handleDollarChange = this.handleDollarChange.bind(this);
+        this.handleNewExpenses = this.handleNewExpenses.bind(this);
     }
 //     handleFormRefresh = (params) => {
 //   this.setState({ params }, this.componentDidMount)
@@ -29,20 +30,53 @@ class MonthlyExpenses extends React.Component {
         });
     }
 
-    handleChange = (event) => {
-        this.setState({currentExpenseId: event.target.value});
+    // handleChange = (event) => {
+    //     event.preventDefault();
 
+    //     this.setState({currentExpenseId: event.target.value});
+
+    // }
+
+    handleNewExpenses = (event) => {
+        // this.setState({currentExpenseId: event.target.value});
+        // event.preventDefault();
+
+        let newExp = this.state.newExp;
+        newExp.push(this.state.currentExpenseId, this.state.spent);
+        let currentExpenseId = '';
+        let spent = '';
+
+        this.setState({
+            currentExpenseId : 'none',
+            spent,
+            newExp
+        })
     }
 
-    handleDollarChange = (event) => {
-        this.setState({spent: event.target.value});
-        console.log('dollar');
-    }
-    handleAddExpense = (event) => {
-        this.setState({currentExpenseId: 'none'});
-                console.log('add')
+    handleInputCangeExp = (evt) => {
+        evt.preventDefault();
 
+        this.setState({
+            currentExpenseId : evt.target.value,
+        })
     }
+    handleInputCangeSpent = (evt) => {
+        evt.preventDefault();
+
+        this.setState({
+            spent : evt.target.value,
+        })
+    }
+
+    // handleDollarChange = (event) => {
+    //     this.setState({spent: event.target.value});
+    //     console.log('dollar');
+    // }
+    // handleAddExpense = (event) => {
+    //     this.setState({currentExpenseId: 'none'});
+    //             console.log('add')
+
+    // }
 
     render() {
         return (
@@ -51,7 +85,8 @@ class MonthlyExpenses extends React.Component {
                 
                     <h1> What are your Expenses This Month?? </h1>
                     <br />
-                    <select value={this.state.currentExpenseId || "none"} onChange={this.handleChange}>
+                    <select value={this.state.currentExpenseId || "none"}
+                    onChange={this.handleInputCangeExp} value={this.state.currentExpenseId}>
                         <option disabled value="none">Select an Option</option>
                             {this.state.expenses.map((expense, index) => (
                         <option key={index} key={expense.id} value={expense.id} {...expense}>
@@ -63,17 +98,25 @@ class MonthlyExpenses extends React.Component {
                     <br />
                     <br />
                     <label>Amount Spent:</label>
-                    <Input onChange={this.handleDollarChange}/>
+                    <Input onChange={this.handleInputCangeSpent} value={this.state.spent}/>
                     <br />
                     <br />
                     <h5>Buttons Need Routes and onClick functions</h5>
                     <Button className="submitExp" /*onClick={}*/>Submit</Button>
-                    <Button className="addExp" onClick={this.handleAddExpense} onClick={this.handleDollarChange} >Add Another Expense</Button>
+                    <Button className="addExp" onClick={this.handleNewExpenses} >Add Another Expense</Button>
                         
                         {/*<Button className="backBtn" onClick={() => this.setState({section: 'pay'})}>Back</Button>
                                             <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})} disabled={!this.state.food.groceries, !this.state.food.eatingOut}>Next</Button>*/}
                 </div>
-                <p>{this.spent}</p>
+
+                <p>{this.state.spent}</p>
+                <p>{this.state.currentExpenseId}</p>
+
+                <p>{this.state.newExp}</p>
+                {this.state.newExp.map((currentExpense, index) => (
+                    <p key={index} key={currentExpense.currentExpenseId} value={currentExpense.currentExpenseId} {...currentExpense}>
+                    {" "} {currentExpense.currentExpenseId} {currentExpense.spent}</p>))}
+                
             </div>
         );
     }
