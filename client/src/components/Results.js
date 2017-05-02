@@ -16,8 +16,8 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let foodAdvice;
 
-      if (grade == "A+") {
-          foodAdvice = Advice.food[1][0];
+      if (grade === "A+") {
+          foodAdvice = Advice.food[1];
       } else {
           foodAdvice = Advice.food[2];
       }
@@ -32,13 +32,13 @@ class Results extends Component {
           <p>Your current grade is {grade}</p>
           
 
-         <ul>
+           <ul>
             {foodAdvice.map((advice, ind) => <AdviceView 
-              key={ind} 
-              advice={advice}
-              />)}
+               key={ind} 
+               advice={advice}
+               />)}
           </ul> 
-          {/*<Grader percentDifference={percentDifference} />*/}
+          
         </div>
       );
     }
@@ -52,7 +52,7 @@ class Results extends Component {
       let clothingAdvice;
 
       if (grade == "A+") {
-          clothingAdvice = Advice.clothing[1][0];
+          clothingAdvice = Advice.clothing[1];
       } else {
           clothingAdvice = Advice.clothing[2];
       }
@@ -83,7 +83,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let utilitiesAdvice;
       if (grade == "A+") {
-          utilitiesAdvice = Advice.utilities[1][0];
+          utilitiesAdvice = Advice.utilities[1];
       } else {
           utilitiesAdvice = Advice.utilities[2];
       }
@@ -114,7 +114,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let housingAdvice;
       if (grade == "A+") {
-          housingAdvice = Advice.housing[1][0];
+          housingAdvice = Advice.housing[1];
       } else {
           housingAdvice = Advice.housing[2];
       }
@@ -145,7 +145,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let savingsAdvice;
       if (grade == "A+") {
-          savingsAdvice = Advice.savings[1][0];
+          savingsAdvice = Advice.savings[1];
       } else {
           savingsAdvice = Advice.savings[2];
       }
@@ -176,7 +176,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let medicalAdvice;
       if (grade == "A+") {
-          medicalAdvice = Advice.medical[1][0];
+          medicalAdvice = Advice.medical[1];
       } else {
           medicalAdvice = Advice.medical[2];
       }
@@ -208,7 +208,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let insuranceAdvice;
       if (grade == "A+") {
-          insuranceAdvice = Advice.insurance[1][0];
+          insuranceAdvice = Advice.insurance[1];
       } else {
           insuranceAdvice = Advice.insurance[2];
       }
@@ -239,7 +239,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let transportationAdvice;
       if (grade == "A+") {
-          transportationAdvice = Advice.transportation[1][0];
+          transportationAdvice = Advice.transportation[1];
       } else {
           transportationAdvice = Advice.transportation[2];
       }
@@ -270,7 +270,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let personalAdvice;
       if (grade == "A+") {
-          personalAdvice = Advice.personal[1][0];
+          personalAdvice = Advice.personal[1];
       } else {
           personalAdvice = Advice.personal[2];
       }
@@ -301,7 +301,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let miscellaneousAdvice;
       if (grade == "A+") {
-          miscellaneousAdvice = Advice.personal[1][0];
+          miscellaneousAdvice = Advice.personal[1];
       } else {
           miscellaneousAdvice = Advice.personal[2];
       }
@@ -333,7 +333,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let entertainmentAdvice;
       if (grade == "A+") {
-          entertainmentAdvice = Advice.entertainment[1][0];
+          entertainmentAdvice = Advice.entertainment[1];
       } else {
           entertainmentAdvice = Advice.entertainment[2];
       }
@@ -364,7 +364,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let carDebtAdvice;
       if (grade == "A+") {
-          carDebtAdvice = Advice.debt[1][0];
+          carDebtAdvice = Advice.debt[1];
       } else {
           carDebtAdvice = Advice.debt[2];
       }
@@ -395,7 +395,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let creditCardDebtAdvice;
       if (grade == "A+") {
-          creditCardDebtAdvice = Advice.debt[1][0];
+          creditCardDebtAdvice = Advice.debt[1];
       } else {
           creditCardDebtAdvice = Advice.debt[2];
       }
@@ -426,7 +426,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let studentDebtAdvice;
       if (grade == "A+") {
-          studentDebtAdvice = Advice.debt[1][0];
+          studentDebtAdvice = Advice.debt[1];
       } else {
           studentDebtAdvice = Advice.debt[2];
       }
@@ -457,7 +457,7 @@ class Results extends Component {
       let grade = grader(percentDifference, formSection);
       let miscellaneousDebtAdvice;
       if (grade == "A+") {
-          miscellaneousDebtAdvice = Advice.debt[1][0];
+          miscellaneousDebtAdvice = Advice.debt[1];
       } else {
           miscellaneousDebtAdvice = Advice.debt[2];
       }
