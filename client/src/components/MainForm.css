@@ -1,4 +1,4 @@
-.container{
+.cardContainer{
 	border: 1px solid;
 	margin: 2em 18em;
 	padding: 0 !important;
@@ -12,6 +12,7 @@
 	letter-spacing: 5px;
 }
 .debtContainer{
+	background-color: whitesmoke;
 	padding: 1em 1em;
 }
 .backBtn{
@@ -23,3 +24,6 @@
 	margin-top: 2em;
 	padding: .65em 5em !important;
 }
+
+
+/*just trying to make this push up*/

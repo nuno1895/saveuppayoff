@@ -150,7 +150,7 @@ class MainForm extends Component {
 
   renderPay() {
     return (
-      <div className="container">
+      <div className="cardContainer">
       <div className="cardTop">
       <h1> Your Pay </h1>
       </div>
@@ -190,7 +190,7 @@ class MainForm extends Component {
 
   renderFood() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Food </h1>
         </div>
@@ -213,7 +213,7 @@ class MainForm extends Component {
 
   renderClothing() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Clothing </h1>
         </div>
@@ -240,7 +240,7 @@ class MainForm extends Component {
 
   renderUtilities() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Utilities </h1>
         </div>
@@ -283,7 +283,7 @@ class MainForm extends Component {
 
   renderHousing() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Housing </h1>
         </div>
@@ -318,7 +318,7 @@ class MainForm extends Component {
 
   renderSavings() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1>Savings</h1>
         </div>
@@ -345,7 +345,7 @@ class MainForm extends Component {
 
   renderMedical() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Medical </h1>
         </div>
@@ -384,7 +384,7 @@ class MainForm extends Component {
 
   renderInsurance() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Insurance </h1>
         </div>
@@ -423,7 +423,7 @@ class MainForm extends Component {
 
   renderTransportation() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Transportation </h1>
         </div>
@@ -462,7 +462,7 @@ class MainForm extends Component {
 
   renderPersonal() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Personal </h1>
         </div>
@@ -517,7 +517,7 @@ class MainForm extends Component {
 
   renderMiscellaneous() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Miscellaneous </h1>
         </div>
@@ -548,7 +548,7 @@ class MainForm extends Component {
 
   renderEntertainment() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Entertainment </h1>
         </div>
@@ -571,7 +571,7 @@ class MainForm extends Component {
 
   renderCarDebt() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Car Debt </h1>
         </div>
@@ -594,7 +594,7 @@ class MainForm extends Component {
 
   renderCreditCardDebt() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Credit Card Debt </h1>
         </div>
@@ -633,7 +633,7 @@ class MainForm extends Component {
 
   renderStudentDebt() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Student Debt </h1>
         </div>
@@ -664,7 +664,7 @@ class MainForm extends Component {
 
   renderMiscellaneousDebt() {
     return (
-      <div className="container">
+      <div className="cardContainer">
         <div className="cardTop">
         <h1> Miscellaneous Debt </h1>
         </div>
@@ -722,7 +722,7 @@ class MainForm extends Component {
 
   renderBudgetResults() {
     return (
-      <div className="container">
+      <div className="cardContainer">
       <div className='budgetResults'>
         <div className="cardTop">
         <h1>BudgetResults</h1>

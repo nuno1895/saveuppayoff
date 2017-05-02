@@ -84,7 +84,7 @@ class MonthlyExpenses extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="cardContainer">
                 <div>
                     <div className="cardTop">
                     <h1> What are your Expenses This Month?? </h1>

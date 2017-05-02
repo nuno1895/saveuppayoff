@@ -1,4 +1,4 @@
-.container{
+.cardContainer{
 	text-align: center;
 	border: 1px solid;
 	margin: 2em 18em;
@@ -13,6 +13,7 @@
 	letter-spacing: 5px;
 }
 .expenseContainer{
+	background-color: whitesmoke;
 	padding: 1em 1em;
 }
 .submitExp{
