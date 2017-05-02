@@ -25,13 +25,13 @@ display: block;
 }
 .nav-item{
 	padding: .34em .3em;
-	color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.73);
 	margin: 3.5px;
 }
 
 nav a {
 	margin-right: 3.5%;
-	color: rgba(255, 255, 255, 0.5) !important;
+	color: rgba(255, 255, 255, 0.73) !important;
 }
 .loginNav{
 	margin-right: 3px !important;

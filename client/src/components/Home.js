@@ -10,6 +10,7 @@ import Results from './Results'
 import HomePage from './HomePage'
 import LoginForm from './login/LoginForm'
 import SingupPage from './signup/SignupPage'
+import Info from './Info'
 
 const Home = (props) => (
 <Router>
@@ -21,6 +22,7 @@ const Home = (props) => (
 		<Route path="/mainform" component={App} />
 		<Route path="/name" component={Name} />
 		<Route path="/results" component={Results} />
+		<Route path="/info" component={Info} />
 	</div>
 </Router>
 )
