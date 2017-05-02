@@ -16,6 +16,7 @@ var PORT = process.env.PORT || 3001;
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var expenses = require('./routes/expenses');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/expenses', expenses);
 
 //adding mysql
 var connection = mysql.createConnection({
@@ -48,6 +50,14 @@ app.get('/users', function(req, res) {
 
     connection.query(query, function(err, users) {
         res.json(users);
+    });
+});
+app.get('/expenses', function(req, res) {
+  
+    var query = "SELECT * FROM expenses"
+
+    connection.query(query, function(err, expenses) {
+        res.json(expenses);
     });
 });
 
