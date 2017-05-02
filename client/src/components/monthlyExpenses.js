@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import './monthlyExpenses.css';
+
 import {
   Button
 } from 'reactstrap';
@@ -82,18 +84,20 @@ class MonthlyExpenses extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <div>
-                
+                    <div className="cardTop">
                     <h1> What are your Expenses This Month?? </h1>
+                    </div>
+                    <div className="expenseContainer">
                     <br />
                     <select value={this.state.currentExpenseId || "none"}
-                    onChange={this.handleInputCangeExp} value={this.state.currentExpenseId}>
-                        <option disabled value="none">Select an Option</option>
-                            {this.state.expenses.map((expense, index) => (
-                        <option key={index} key={expense.id} value={expense.id} {...expense}>
-                           {" "}{expense.expense}
-                        </option>
+                        onChange={this.handleInputCangeExp} value={this.state.currentExpenseId}>
+                            <option disabled value="none">Select an Option</option>
+                                {this.state.expenses.map((expense, index) => (
+                            <option key={index} key={expense.id} value={expense.id} {...expense}>
+                               {" "}{expense.expense}
+                            </option>
                        ))}
                      </select>
 
@@ -104,12 +108,14 @@ class MonthlyExpenses extends React.Component {
                     <br />
                     <br />
                     <h5>Buttons Need Routes and onClick functions</h5>
-                    <Button className="submitExp" /*onClick={}*/>Submit</Button>
-                    <Button className="addExp" onClick={this.handleNewExpenses} >Add Another Expense</Button>
+                    <Button className="btn submitExp" /*onClick={}*/>Submit</Button>
+                    <Button className="btn addExp" onClick={this.handleNewExpenses} >Add Another Expense</Button>
                         
                         {/*<Button className="backBtn" onClick={() => this.setState({section: 'pay'})}>Back</Button>
                                             <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})} disabled={!this.state.food.groceries, !this.state.food.eatingOut}>Next</Button>*/}
+                    </div>
                 </div>
+
 
                 <p>{this.state.spent}</p>
                 <p>{this.state.currentExpenseId}</p>

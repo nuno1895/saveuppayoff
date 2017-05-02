@@ -1,4 +1,5 @@
 .container{
+	text-align: center;
 	border: 1px solid;
 	margin: 2em 18em;
 	padding: 0 !important;
@@ -11,10 +12,10 @@
 	font-family: Montserrat, sans-serif;
 	letter-spacing: 5px;
 }
-.debtContainer{
+.expenseContainer{
 	padding: 1em 1em;
 }
-.backBtn{
+.submitExp{
 	margin-right: 2em;
 }
 .btn{
