@@ -16,7 +16,9 @@ class MonthlyExpenses extends React.Component {
             newExp : []
         };
         this.handleNewExpenses = this.handleNewExpenses.bind(this);
-    }
+        this.handleInputCangeExp = this.handleInputCangeExp.bind(this);
+        this.handleInputCangeSpent = this.handleInputCangeSpent.bind(this);
+    } 
 //     handleFormRefresh = (params) => {
 //   this.setState({ params }, this.componentDidMount)
 // } 
