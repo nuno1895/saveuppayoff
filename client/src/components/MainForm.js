@@ -18,7 +18,8 @@ class MainForm extends Component {
       },
       food: {
         groceries: '',
-        eatingOut: ''
+        eatingOut: '',
+        budget: ''
       },
       clothing: {
         clothingAdult: '',
@@ -142,7 +143,7 @@ class MainForm extends Component {
     newState[type][field] = event.target.value;
     this.setState(newState);
   }
-  
+
   getSalary() {
     console.log('Your salary is' + this.state.pay.frequency * this.state.pay.takeHome);
     this.setState({ budget: this.state.pay.takeHome * this.state.pay.frequency});
@@ -205,10 +206,10 @@ class MainForm extends Component {
           <br />
           <br />
           <Button className="backBtn" onClick={() => this.setState({section: 'pay'})}>Back</Button>
-          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing'})} disabled={!this.state.food.groceries, !this.state.food.eatingOut}>Next</Button>
+          <Button onClick={() => this.setState({section: 'sectionResults', prevSection: 'food', nextSection: 'clothing', budget: this.state.food.groceries*this.state.food.eatingOut})} disabled={!this.state.food.groceries, !this.state.food.eatingOut}>Next</Button>
       </div>
       </div>
-    );
+    );  
   }
 
   renderClothing() {

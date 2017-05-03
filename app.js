@@ -44,6 +44,17 @@ var connection = mysql.createConnection({
  database : 'saveup_db',
 });
 
+app.post('/Results', function(req, res) {
+  // Get sent data.
+  var food = req.body;
+  console.log(req.body);
+  // Do a MySQL query.
+  var query = connection.query('INSERT INTO types SET ?', food,  function(err, result) {
+    // Neat!
+  });
+  res.end('Success');
+});
+
 app.get('/users', function(req, res) {
 	
     var query = "SELECT * FROM users"

@@ -22,6 +22,18 @@ class Results extends Component {
           foodAdvice = Advice.food[2];
       }
 
+      fetch('/Results', { 
+        method: 'POST',
+        data: {
+            total: this.totalFoodExpense
+          }
+        })
+        .then(function(response) {
+          return response.json()
+        }).then(function(body) {
+          console.log(body);
+        });
+
       return (
         <div>
           <h2>Food Grade</h2>
