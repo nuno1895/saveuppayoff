@@ -1,0 +1,42 @@
+ .footerContainer{
+      color: white;
+      background-color: rgb(51,82,110);
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-shadow: 1px 1px black;
+ }
+ .footer {
+      text-align: left !important;
+      border-top: 1px solid #E7E7E7;
+      text-align: center;
+      padding: 5em 13em 2em;
+
+  }
+
+.footerLeft{
+      text-align: left;
+}
+.footerLeft h4{
+      padding-bottom: 1em;
+}
+a{
+      color: white !important;
+      font-size: .85em;
+}
+p{
+      font-size: .85em;
+}
+.footerTopics{
+      font-size: .9em !important;
+      letter-spacing: 2px;
+
+}
+.footerCopy p{
+      color: rgba(201, 201, 201, 1);
+      margin-bottom: 0 !important;
+      border-style: solid;
+      border-top-color: rgba(66, 101, 133, 1);
+      font-size: .75em !important;
+      padding: 2.5em 16em;
+}

@@ -1,29 +1,4 @@
-// import './Nav.css';
-// import React, { Component } from 'react';
-// import {
-//   NavLink
-// } from 'react-router-dom'
-// import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
-
-// class Nav extends Component {
-//   render() {
-//     return (
-//       <div className="navBar">
-//         <nav>
-//           <div className="logo">Our Logo</div>
-//           <div className="navigation">
-//           <NavLink exact to="/">HOME</NavLink>
-//           <NavLink to="/name">NAME</NavLink>
-//           <NavLink to="/results">RESULTS</NavLink>
-//         </div> {/*end navigation*/}
-//         </nav> 
-//       </div>
-//     );
-//   }
-// }
-
-// export default Nav;
 
 
 import './Nav.css';
@@ -38,14 +13,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Container,
-  Row,
-  Col,
-  Jumbotron,
-  Button,
   Dropdown,
-  DropdownToggle,
-  DropdownItem,
   DropdownMenu
 } from 'reactstrap';
 
