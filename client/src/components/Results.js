@@ -23,7 +23,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Food Grade</h2>
           <p>Your total food expense: {totalFoodExpense}</p>
           <p>Your budget: {budget}</p>
@@ -58,7 +58,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Clothing Grade</h2>
           <p>Your total clothing expense: {totalClothingExpense}</p>
           <p>Your budget: {budget}</p>
@@ -89,7 +89,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Utilities Grade</h2>
           <p>Your total utility expense: {totalUtilityExpense}</p>
           <p>Your budget: {budget}</p>
@@ -120,7 +120,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Housing Grade</h2>
           <p>Your total housing expense: {totalHousingExpense}</p>
           <p>Your budget: {budget}</p>
@@ -151,7 +151,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Savings Grade</h2>
           <p>Your total savings expense: {totalSavingsExpense}</p>
           <p>Your budget: {budget}</p>
@@ -183,7 +183,7 @@ class Results extends Component {
 
 
       return (
-        <div>
+        <div className="container">
           <h2>Medical Grade</h2>
           <p>Your total medical expense: {totalMedicalExpense}</p>
           <p>Your budget: {budget}</p>
@@ -214,7 +214,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Insurance Grade</h2>
           <p>Your total insurance expense: {totalInsuranceExpense}</p>
           <p>Your budget: {budget}</p>
@@ -245,7 +245,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Transportation Grade</h2>
           <p>Your total transportation expense: {totalTransportationExpense}</p>
           <p>Your budget: {budget}</p>
@@ -276,7 +276,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Personal Grade</h2>
           <p>Your total personal expense: {totalPersonalExpense}</p>
           <p>Your budget: {budget}</p>
@@ -307,7 +307,7 @@ class Results extends Component {
       }
 
       return (
-        <div>
+        <div className="container">
           <h2>Entertainment Grade</h2>
           <p>Your total Entertainment expense: {totalEntertainmentExpense}</p>
           <p>Your budget: {budget}</p>
@@ -337,7 +337,7 @@ class Results extends Component {
           debtAdvice = Advice.debt[2];
       }
       return (
-        <div>
+        <div className="container">
           <h2>Debt Grade</h2>
           <p>Your total Debt expense: {debtExpense}</p>
           <p>Your budget: {budget}</p>

@@ -148,6 +148,7 @@ class MainForm extends Component {
       <div className="debtContainer">
         <br />
         <label>Current Month:</label>
+        <br />
         <select onChange={(event) => this.handleInputChange(event, 'pay', 'month') } value={this.state.pay.month}>
           <option value="january">January</option>
           <option value="february">February</option>
@@ -166,10 +167,12 @@ class MainForm extends Component {
         <br />
         <br />
         <label>Weekly Take Home:</label>
+        <br />
         <Input onChange={(event) => this.handleInputChange(event, 'pay', 'takeHome') } value={this.state.pay.takeHome} />
         <br />
         <br />
         <label>How Often do you get payed every Month:</label>
+        <br />
         <Input onChange={(event) => this.handleInputChange(event, 'pay', 'frequency') } value={this.state.pay.frequency} />
         <br />
         <br />
@@ -188,10 +191,12 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Groceries:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'food', 'groceries') } value={this.state.food.groceries} />
           <br />
           <br />
           <label>Eating Out:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'food', 'eatingOut') } value={this.state.food.eatingOut} />
           <br />
           <br />
@@ -211,14 +216,17 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Clothes For Adult:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'clothing', 'clothingAdult') } value={this.state.clothing.clothingAdult} />
           <br />
           <br />
           <label>Clothing For Kids:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'clothing', 'clothingKids') } value={this.state.clothing.clothingKids} />
           <br />
           <br />
           <label>Laundry/Dry Clothing:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'clothing', 'dryCleaning') } value={this.state.clothing.dryCleaning} />
           <br />
           <br />
@@ -238,30 +246,37 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Electricity:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'electricity') } value={this.state.utilities.electricity} />
           <br />
           <br />
           <label>Mobile Phone:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'mobilePhone') } value={this.state.utilities.mobilePhone} />
           <br />
           <br />
           <label>Gas:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'gas') } value={this.state.utilities.gas} />
           <br />
           <br />
           <label>Trash:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'trash') } value={this.state.utilities.trash} />
           <br />
           <br />
           <label>Water:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'water') } value={this.state.utilities.water} />
           <br />
           <br />
           <label>Internet:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'internet') } value={this.state.utilities.internet} />
           <br />
           <br />
           <label>Cable:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'utilities', 'cable') } value={this.state.utilities.cable} />
           <br />
           <br />
@@ -281,22 +296,27 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Mortgage or Rent:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'mortgageRent') } value={this.state.housing.mortgageRent} />
           <br />
           <br />
           <label>Second Mortgage:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'secondMortgage') } value={this.state.housing.secondMortgage} />
           <br />
           <br />
           <label>Taxes:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'taxes') } value={this.state.housing.taxes} />
           <br />
           <br />
           <label>Repairs & Maintance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'repairsMaint') } value={this.state.housing.repairsMaint} />
           <br />
           <br />
           <label>Housing Dues or Maintance Fees:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'housing', 'dues') } value={this.state.housing.dues} />
           <br />
           <br />
@@ -316,14 +336,17 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Emergency Savings:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'savings', 'emergency') } value={this.state.savings.emergency} />
           <br />
           <br />
           <label>Retirement:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'savings', 'retirement') } value={this.state.savings.retirement} />
           <br />
           <br />
           <label>College:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'savings', 'college') } value={this.state.savings.college} />
           <br />
           <br />
@@ -343,26 +366,32 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Medications:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'medications') } value={this.state.medical.medications} />
           <br />
           <br />
           <label>Doctor Bills:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'doctorBills') } value={this.state.medical.doctorBills} />
           <br />
           <br />
           <label>Hospital Bills:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'hospitalBills') } value={this.state.medical.hospitalBills} />
           <br />
           <br />
-          <label>Other Medical:</label>
+          <label>Other Medical # 1:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'otherMedical') } value={this.state.medical.otherMedical} />
           <br />
           <br />
-          <label>Other Medical:</label>
+          <label>Other Medical # 2:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'otherMedical2') } value={this.state.medical.otherMedical2} />
           <br />
           <br />
-          <label>Other Medical:</label>
+          <label>Other Medical # 3:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'medical', 'otherMedical3') } value={this.state.medical.otherMedical3} />
           <br />
           <br />
@@ -382,26 +411,32 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Life Insurance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'lifeInsurance') } value={this.state.insurance.lifeInsurance} />
           <br />
           <br />
           <label>Health Insurance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'healthInsurance') } value={this.state.insurance.healthInsurance} />
           <br />
           <br />
           <label>Auto Insurance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'autoInsurance') } value={this.state.insurance.autoInsurance} />
           <br />
           <br />
           <label>Home or Rental Insurance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'homeRentalInsurance') } value={this.state.insurance.homeRentalInsurance} />
           <br />
           <br />
           <label>Disability Insurance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'disabilityInsurance') } value={this.state.insurance.disabilityInsurance} />
           <br />
           <br />
           <label>Long Term Insurance:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'insurance', 'longTermInsurance') } value={this.state.insurance.longTermInsurance} />
           <br />
           <br />
@@ -421,26 +456,32 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Gas for Car:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'carGas') } value={this.state.transportation.carGas} />
           <br />
           <br />
           <label>Car Repairs:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'carRepairs') } value={this.state.transportation.carRepairs} />
           <br />
           <br />
           <label>Bus:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'bus') } value={this.state.transportation.bus}  />
           <br />
           <br />
           <label>Train:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'train') } value={this.state.transportation.train} />
           <br />
           <br />
           <label>New Car Fund:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'newCarFund') } value={this.state.transportation.newCarFund} />
           <br />
           <br />
           <label>Other Transportation:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'transportation', 'otherTransportation') } value={this.state.transportation.otherTransportation} />
           <br />
           <br />
@@ -460,54 +501,67 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Tution & Eduction:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'educationTuition') } value={this.state.personal.educationTuition} />
           <br />
           <br />
           <label>Child Care:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'childCare') } value={this.state.personal.childCare} />
           <br />
           <br />
           <label>Hair Care & Cosmetics:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'hairCareCosmetics') } value={this.state.personal.hairCareCosmetics} />
           <br />
           <br />
           <label>Book Supplies:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'bookSupplies') } value={this.state.personal.bookSupplies} />
           <br />
           <br />
           <label>Child Support:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'childSupport') } value={this.state.personal.childSupport} />
           <br />
           <br />
           <label>Alimony:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'alimony') } value={this.state.personal.alimony} />
           <br />
           <br />
           <label>Pocket Money:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'pocketMoney') } value={this.state.personal.pocketMoney} />
           <br />
           <br />
           <label>Subscriptions:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'subscriptions') } value={this.state.personal.subscriptions} />
           <br />
           <br />
           <label>Baby Supplies:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'babySupplies') } value={this.state.personal.babySupplies} />
           <br />
           <br />
           <label>Pet Supplies:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'petSupplies') } value={this.state.personal.petSupplies} />
           <br />
           <br />
           <label>Other Personal Expense:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'otherPersonal') } value={this.state.personal.otherPersonal} />
           <br />
           <br />
           <label>Other Personal Expense #2:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'otherPersonal2') } value={this.state.personal.otherPersonal2} />
           <br />
           <br />
           <label>Other Personal Expense #3:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'personal', 'otherPersonal3') } value={this.state.personal.otherPersonal3} />
           <br />
           <br />
@@ -528,10 +582,12 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Entertainment:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'entertainment', 'entertainment') } value={this.state.entertainment.entertainment} />
           <br />
           <br />
           <label>Vacation:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'entertainment', 'vacation') } value={this.state.entertainment.vacation} />
           <br />
           <br />
@@ -551,66 +607,82 @@ class MainForm extends Component {
         <div className="debtContainer">
           <br />
           <label>Car Payment #1:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'carPayment1') } value={this.state.debt.carPayment1} />
           <br />
           <br />
           <label>Car Payment #2:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'carPayment2') } value={this.state.debt.carPayment2} />
           <br />
           <br />
           <label>Credit Card #1:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'creditCard1') } value={this.state.debt.creditCard1} />
           <br />
           <br />
           <label>Credit Card #2:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'creditCard2') } value={this.state.debt.creditCard2} />
           <br />
           <br />
           <label>Credit Card #3:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'creditCard3') } value={this.state.debt.creditCard3} />
           <br />
           <br />
           <label>Credit Card #4:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'creditCard4') } value={this.state.debt.creditCard4} />
           <br />
           <br />
           <label>Credit Card #5:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'creditCard5') } value={this.state.debt.creditCard5} />
           <br />
           <br />
           <label>Credit Card #6:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'creditCard6') } value={this.state.debt.creditCard6} />
           <br />
           <br />
           <label>Student Loan #1:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'studentLoan1') } value={this.state.debt.studentLoan1} />
           <br />
           <br />
           <label>Student Loan #2:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'studentLoan2') } value={this.state.debt.studentLoan2} />
           <br />
           <br />
           <label>Student Loan #3:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'studentLoan3') } value={this.state.debt.studentLoan3} />
           <br />
           <br />
           <label>Student Loan #4:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'studentLoan4') } value={this.state.debt.studentLoan4} />
           <br />
           <br />
           <label>Miscellaneous Debt #1:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'debt1') } value={this.state.debt.debt1} />
           <br />
           <br />
           <label>Miscellaneous Debt #2:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'debt2') } value={this.state.debt.debt2} />
           <br />
           <br />
           <label>Miscellaneous Debt #3:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'debt3') } value={this.state.debt.debt3} />
           <br />
           <br />
           <label>Miscellaneous Debt #4:</label>
+          <br />
           <Input onChange={(event) => this.handleInputChange(event, 'debt', 'debt4') } value={this.state.debt.debt4} />
           <br />
           <br />
