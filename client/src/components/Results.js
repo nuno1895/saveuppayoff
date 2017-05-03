@@ -292,38 +292,6 @@ class Results extends Component {
         </div>
       );
     }
-    else if (formSection === 'miscellaneous') {
-      // Miscellaneous 2-3%
-      let totalMiscellaneousExpense = parseInt(formSectionData.miscellaneous) + parseInt(formSectionData.otherPersonal) + parseInt(formSectionData.otherPersonal2) + parseInt(formSectionData.otherPersonal3);
-      let percentOfBudget = (totalMiscellaneousExpense * 100)/parseInt(budget);
-      let suggestedBudgetPercent = 3;
-      let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference, formSection);
-      let miscellaneousAdvice;
-      if (grade == "A+") {
-          miscellaneousAdvice = Advice.personal[1];
-      } else {
-          miscellaneousAdvice = Advice.personal[2];
-      }
-
-      return (
-        <div>
-          <h2>Miscellaneous Grade</h2>
-          <p>Your total miscellaneous expense: {totalMiscellaneousExpense}</p>
-          <p>Your budget: {budget}</p>
-          <p>Your miscellaneous expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
-            {miscellaneousAdvice.map((advice, ind) => <AdviceView 
-              key={ind} 
-              advice={advice}
-              />)}
-          </ul>
-
-          {/*<Grader percentDifference={percentDifference} />*/}
-        </div>
-      );
-    }
     else if (formSection === 'entertainment') {
       // Recreation: 2-3% 
       let totalEntertainmentExpense = parseInt(formSectionData.entertainment) + parseInt(formSectionData.vacation);
@@ -355,122 +323,28 @@ class Results extends Component {
         </div>
       );
     }
-    else if (formSection === 'carDebt') {
+    else if (formSection === 'debt') {
       // Debts: 0% 
-      let totalCarDebtExpense = parseInt(formSectionData.carPayment1) + parseInt(formSectionData.carPayment2);
-      let percentOfBudget = (totalCarDebtExpense * 100)/parseInt(budget);
+      let debtExpense = parseInt(formSectionData.carPayment1) + parseInt(formSectionData.carPayment2) + parseInt(formSectionData.creditCard1) + parseInt(formSectionData.creditCard2) + parseInt(formSectionData.creditCard3) + parseInt(formSectionData.creditCard4) + parseInt(formSectionData.creditCard5) + parseInt(formSectionData.creditCard6) + parseInt(formSectionData.studentLoan1) + parseInt(formSectionData.studentLoan2) + parseInt(formSectionData.studentLoan3) + parseInt(formSectionData.studentLoan4) + parseInt(formSectionData.debt1) + parseInt(formSectionData.debt2) + parseInt(formSectionData.debt3) + parseInt(formSectionData.debt4);
+      let percentOfBudget = (debtExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
-      let carDebtAdvice;
+      let debtAdvice;
       if (grade == "A+") {
-          carDebtAdvice = Advice.debt[1];
+          debtAdvice = Advice.debt[1];
       } else {
-          carDebtAdvice = Advice.debt[2];
+          debtAdvice = Advice.debt[2];
       }
-
       return (
         <div>
-          <h2>Car Debt Grade</h2>
-          <p>Your total Car Debt expense: {totalCarDebtExpense}</p>
+          <h2>Debt Grade</h2>
+          <p>Your total Debt expense: {debtExpense}</p>
           <p>Your budget: {budget}</p>
-          <p>Your Car Debt expense is {percentOfBudget}% of your budget</p>
+          <p>Your Debt expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
           <ul>
-            {carDebtAdvice.map((advice, ind) => <AdviceView 
-              key={ind} 
-              advice={advice}
-              />)}
-          </ul>
-          {/*<Grader percentDifference={percentDifference} />*/}
-        </div>
-      );
-    }
-    else if (formSection === 'creditCardDebt') {
-      // Debts: 0% 
-      let totalCreditCardDebtExpense = parseInt(formSectionData.creditCard1) + parseInt(formSectionData.creditCard2) + parseInt(formSectionData.creditCard3)  + parseInt(formSectionData.creditCard4)  + parseInt(formSectionData.creditCard5)  + parseInt(formSectionData.creditCard6)  + parseInt(formSectionData.creditCard6);
-      let percentOfBudget = (totalCreditCardDebtExpense * 100)/parseInt(budget);
-      let suggestedBudgetPercent = 0;
-      let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference, formSection);
-      let creditCardDebtAdvice;
-      if (grade == "A+") {
-          creditCardDebtAdvice = Advice.debt[1];
-      } else {
-          creditCardDebtAdvice = Advice.debt[2];
-      }
-
-      return (
-        <div>
-          <h2>Credit Card Debt Grade</h2>
-          <p>Your total Credit Card Debt expense: {totalCreditCardDebtExpense}</p>
-          <p>Your budget: {budget}</p>
-          <p>Your Credit Card Debt expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
-            {creditCardDebtAdvice.map((advice, ind) => <AdviceView 
-              key={ind} 
-              advice={advice}
-              />)}
-          </ul>
-          {/*<Grader percentDifference={percentDifference} />*/}
-        </div>
-      );
-    }
-    else if (formSection === 'studentDebt') {
-      // Debts: 0% 
-      let totalStudentDebtExpense = parseInt(formSectionData.studentLoan1) + parseInt(formSectionData.studentLoan2) + parseInt(formSectionData.studentLoan3) + parseInt(formSectionData.studentLoan4);
-      let percentOfBudget = (totalStudentDebtExpense * 100)/parseInt(budget);
-      let suggestedBudgetPercent = 0;
-      let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference, formSection);
-      let studentDebtAdvice;
-      if (grade == "A+") {
-          studentDebtAdvice = Advice.debt[1];
-      } else {
-          studentDebtAdvice = Advice.debt[2];
-      }
-
-      return (
-        <div>
-          <h2>Student Debt Grade</h2>
-          <p>Your total Student Debt expense: {totalStudentDebtExpense}</p>
-          <p>Your budget: {budget}</p>
-          <p>Your Student Debt expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
-            {studentDebtAdvice.map((advice, ind) => <AdviceView 
-              key={ind} 
-              advice={advice}
-              />)}
-          </ul>
-          {/*<Grader percentDifference={percentDifference} />*/}
-        </div>
-      );
-    }
-    else if (formSection === 'miscellaneousDebt') {
-      // Debts: 0% 
-      let totalMiscellaneousDebtExpense = parseInt(formSectionData.debt1) + parseInt(formSectionData.debt2) + parseInt(formSectionData.debt3) + parseInt(formSectionData.debt4);
-      let percentOfBudget = (totalMiscellaneousDebtExpense * 100)/parseInt(budget);
-      let suggestedBudgetPercent = 0;
-      let percentDifference = percentOfBudget - suggestedBudgetPercent;
-      let grade = grader(percentDifference, formSection);
-      let miscellaneousDebtAdvice;
-      if (grade == "A+") {
-          miscellaneousDebtAdvice = Advice.debt[1];
-      } else {
-          miscellaneousDebtAdvice = Advice.debt[2];
-      }
-
-      return (
-        <div>
-          <h2>Miscellaneous Debt Grade</h2>
-          <p>Your total Miscellaneous Debt expense: {totalMiscellaneousDebtExpense}</p>
-          <p>Your budget: {budget}</p>
-          <p>Your Miscellaneous Debt expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
-            {miscellaneousDebtAdvice.map((advice, ind) => <AdviceView 
+            {debtAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}

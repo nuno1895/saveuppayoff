@@ -148,17 +148,14 @@ router.get('/', function(req, res, next) {
     id: 'petSupplies',
     expense: "Pet Supplies"
   }, {
-    id: 'miscellaneous',
-    expense: "Miscellaneous"
-  }, {
     id: 'otherPersonal',
-    expense: "Other Personal"
+    expense: "Other Personal 1"
   }, {
     id: 'otherPersonal2',
-    expense: "Other Personal"
+    expense: "Other Personal 2"
   }, {
     id: 'otherPersonal3',
-    expense: "Other Personal"
+    expense: "Other Personal 3"
   }, {
     id: 'entertainment',
     expense: "Entertainment"
@@ -170,7 +167,7 @@ router.get('/', function(req, res, next) {
     expense: "Car Payment"
   }, {
     id: 'carPayment2',
-    expense: "Car Payment"
+    expense: "Car Payment 2"
   }, {
     id: 'creditCard1',
     expense: "Credit Card 1"
