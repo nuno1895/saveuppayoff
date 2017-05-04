@@ -98,7 +98,7 @@ app.use(function(req, res, next) {
  });
 
 app.get("/budget", function(req, res) {
-  res.json("It worked");
+  res.json(this.state.pay);
 });
 
 
