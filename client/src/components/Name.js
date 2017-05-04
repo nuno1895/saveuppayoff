@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import MonthlyExpenses from './monthlyExpenses'
 
 class Name extends Component {
   render() {
     return (
-      <h2>Nuno Tavares</h2>
+      <MonthlyExpenses />
     );
   }
 }

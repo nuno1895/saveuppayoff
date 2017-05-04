@@ -1,0 +1,27 @@
+.cardContainer{
+	text-align: center;
+	border: 1px solid;
+	margin: 2em 18em;
+	padding: 0 !important;
+}
+.cardTop{
+	border-bottom: 1px solid;
+	padding: 1em 0 !important;
+	background-color: rgb(92,184,92) !important; 
+	color: white;
+	font-family: Montserrat, sans-serif;
+	letter-spacing: 5px;
+}
+.expenseContainer{
+	background-color: whitesmoke;
+	padding: 1em 1em;
+}
+.submitExp{
+	margin-right: 2em;
+}
+.btn{
+	color: white !important;
+	background-color: rgb(92,184,92) !important;
+	margin-top: 2em;
+	padding: .65em 5em !important;
+}
