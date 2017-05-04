@@ -16,11 +16,13 @@ class Footer extends Component {
                   <div className='footer'>
                      <Row>
                        <Col xs="6" className="footerLeft">
-                       	<h4>Logo Goes Here</h4>
+                       	<img className="smallLogoImg" src={require('../../public/images/logoSmallest.png')} mode='fit' />
 
-                       	<p><strong>Address: </strong></p>
-                       	<p><strong>Phone: </strong></p>
-                       	<p><strong>Email: </strong></p>
+
+                       
+                       	<p>
+                        <img className="emailIcon" src={require('../../public/images/arroba(1).png')} mode='fit' />
+                        <strong>Email: </strong></p>
                        	<br />
                        	<p>facebook twitter google pinterest instgram incons</p>
                        </Col>

@@ -37,7 +37,9 @@ class App extends Component {
       <div className="navBar">
         <Navbar color="inverse" inverse toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">Our Logo Here</NavbarBrand>
+          <NavbarBrand href="/">
+          <img className="smallLogoImg" src={require('../../public/images/logoSmall.png')} mode='fit' />
+          </NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>

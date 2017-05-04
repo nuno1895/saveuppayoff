@@ -97,6 +97,11 @@ app.use(function(req, res, next) {
    next();
  });
 
+app.get("/budget", function(req, res) {
+  res.json("It worked");
+});
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
