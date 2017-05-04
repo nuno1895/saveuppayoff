@@ -29,9 +29,17 @@ display: block;
 	margin: 3.5px;
 }
 
+.toolsDrop:hover{
+	color: rgb(32,194,84) !important;
+	border-bottom: 1px solid;
+}
+
 nav a {
 	margin-right: 3.5%;
 	color: rgba(255, 255, 255, 0.73) !important;
+}
+nav a:hover{
+	color: rgb(32,194,84) !important;
 }
 .loginNav{
 	margin-right: 3px !important;

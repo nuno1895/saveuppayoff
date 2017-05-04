@@ -1,8 +1,15 @@
+.phantom {
+  display: block;
+  padding: 20px;
+  height: 60px;
+  width: 100%;
+}
  .footerContainer{
       color: white;
       background-color: rgb(51,82,110);
       left: 0;
       bottom: 0;
+      min-height: 20em;
       width: 100%;
       text-shadow: 1px 1px black;
  }
@@ -12,6 +19,9 @@
       text-align: center;
       padding: 5em 13em 2em;
   }
+.whiteLogoImg{
+      padding-bottom: 2em;
+}
 .emailIcon{
       padding-right: .5em;
 }
@@ -24,6 +34,10 @@
 }
 .footer a{
       color: white !important;
+      font-size: .85em;
+}
+.footer a:hover{
+      color: rgb(32,194,84) !important;
       font-size: .85em;
 }
 .footer p{

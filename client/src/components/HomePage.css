@@ -41,6 +41,10 @@ body{
 .homeImage{
 	padding: 0 !important;
 }
+
+.processline{
+	width: 100%;
+}
 .stepImg{
 	padding-bottom: 1.5em;
 }
@@ -99,8 +103,8 @@ body{
 }
 .stepDivSolutions{
 	padding: 0 1em;
-	margin-left: 10em !important;
-	margin-right: 10em !important;
+	margin-left: 13em !important;
+	margin-right: 13em !important;
 }
 .solutionsP{
 	font-size: .85em;

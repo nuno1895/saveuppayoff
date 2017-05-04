@@ -53,6 +53,7 @@ class App extends Component {
               </NavItem>
               <Dropdown className="nav-item" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                 <span
+                  className="toolsDrop"
                   onClick={this.toggle}
                   data-toggle="dropdown"
                   aria-haspopup="true"

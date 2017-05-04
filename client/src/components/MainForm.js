@@ -12,6 +12,7 @@ class MainForm extends Component {
     super();
     // Creating a giant state object to hold all of our form data
     this.state = {
+      isLoggedIn: false,
       pay: {
         month: '',
         takeHome: '',
@@ -148,6 +149,9 @@ class MainForm extends Component {
   }
 
   renderPay() {
+    
+    if('isLoggedIn'){
+
     return (
       <div className="cardContainer">
       <div className="cardTop">
@@ -188,6 +192,7 @@ class MainForm extends Component {
       </div>
       </div>
     );
+  } return(<p>not logged in</p>)
   }
 
   renderFood() {
