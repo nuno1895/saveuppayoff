@@ -6,7 +6,7 @@ import './Results.css';
 // import Calculations from './Calculations';
 
 class Results extends Component {
-  calculationFunc(formSection, formSectionData, budget) {
+  calculationFunc(formSection, formSectionData, budget, gradeCallBack) {
     if (formSection === 'food') {
       // Food: 5-15%
       let totalFoodExpense = parseInt(formSectionData.groceries) + parseInt(formSectionData.eatingOut);
@@ -15,6 +15,10 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let foodAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
 
       if (grade === "A+") {
           foodAdvice = Advice.food[1];
@@ -31,12 +35,11 @@ class Results extends Component {
           <p>Generally food expenditure should be between 5% - 15%</p>
           <p>Your current grade is {grade}</p>
           
-
-           <ul>
+          <ul>
             {foodAdvice.map((advice, ind) => <AdviceView 
-               key={ind} 
-               advice={advice}
-               />)}
+              key={ind} 
+              advice={advice}
+            />)}
           </ul> 
           
         </div>
@@ -50,6 +53,10 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let clothingAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
 
       if (grade == "A+") {
           clothingAdvice = Advice.clothing[1];
@@ -65,10 +72,10 @@ class Results extends Component {
           <p>Your clothing expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
           <ul>
-             {clothingAdvice.map((advice, ind) => <AdviceView 
-               key={ind} 
-               advice={advice}
-               />)}
+            {clothingAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+            />)}
            </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
@@ -82,6 +89,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let utilitiesAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           utilitiesAdvice = Advice.utilities[1];
       } else {
@@ -96,11 +108,11 @@ class Results extends Component {
           <p>Your utility expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
           <ul>
-             {utilitiesAdvice.map((advice, ind) => <AdviceView 
-               key={ind} 
-               advice={advice}
-               />)}
-           </ul>
+            {utilitiesAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+            />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -113,6 +125,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let housingAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           housingAdvice = Advice.housing[1];
       } else {
@@ -127,10 +144,10 @@ class Results extends Component {
           <p>Your housing expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
           <ul>
-             {housingAdvice.map((advice, ind) => <AdviceView 
-               key={ind} 
-               advice={advice}
-               />)}
+            {housingAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+            />)}
            </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
@@ -144,6 +161,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let savingsAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           savingsAdvice = Advice.savings[1];
       } else {
@@ -157,12 +179,12 @@ class Results extends Component {
           <p>Your budget: {budget}</p>
           <p>Your savings expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
-           <ul>
-             {savingsAdvice.map((advice, ind) => <AdviceView 
-               key={ind} 
-               advice={advice}
-               />)}
-           </ul>
+          <ul>
+            {savingsAdvice.map((advice, ind) => <AdviceView 
+              key={ind} 
+              advice={advice}
+            />)}
+          </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -175,12 +197,16 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let medicalAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           medicalAdvice = Advice.medical[1];
       } else {
           medicalAdvice = Advice.medical[2];
       }
-
 
       return (
         <div className="container">
@@ -193,7 +219,7 @@ class Results extends Component {
             {medicalAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
-              />)}
+            />)}
           </ul>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
@@ -207,6 +233,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let insuranceAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           insuranceAdvice = Advice.insurance[1];
       } else {
@@ -238,6 +269,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let transportationAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           transportationAdvice = Advice.transportation[1];
       } else {
@@ -269,6 +305,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let personalAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           personalAdvice = Advice.personal[1];
       } else {
@@ -300,6 +341,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let entertainmentAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+
       if (grade == "A+") {
           entertainmentAdvice = Advice.entertainment[1];
       } else {
@@ -331,6 +377,11 @@ class Results extends Component {
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
       let debtAdvice;
+
+      if (grade != undefined) {
+        gradeCallBack(formSection, grade);
+      }
+      
       if (grade == "A+") {
           debtAdvice = Advice.debt[1];
       } else {
@@ -366,7 +417,7 @@ class Results extends Component {
       <div>
         <h1>Results</h1>
         <h2>Advice goes here</h2>
-        {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget)}
+        {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack)}
       </div>
     );
   }

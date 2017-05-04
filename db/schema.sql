@@ -26,8 +26,6 @@ CREATE TABLE types
 
 CREATE TABLE budgets
 (
-
-
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
 	type_id INTEGER NOT NULL,
@@ -52,13 +50,9 @@ CREATE TABLE expenses
 
 CREATE TABLE take_home
 (
-
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
 	month_id INTEGER NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES users(id),
 	FOREIGN KEY (month_id) REFERENCES months(id)
 );
-
-
-
