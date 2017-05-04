@@ -9,10 +9,10 @@ CREATE TABLE users
     password_hash VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE month
+CREATE TABLE months
 (
     id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    month INTEGER NOT NULL,
+    month VARCHAR(35) NOT NULL,
     the_date DATE
 
 );
@@ -26,8 +26,6 @@ CREATE TABLE types
 
 CREATE TABLE budgets
 (
-
-
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
 	type_id INTEGER NOT NULL,
@@ -36,7 +34,7 @@ CREATE TABLE budgets
 	the_date DATE,
 	FOREIGN KEY (user_id) REFERENCES users(id),
 	FOREIGN KEY (type_id) REFERENCES types(id),
-	FOREIGN KEY (month_id) REFERENCES month(id)
+	FOREIGN KEY (month_id) REFERENCES months(id)
 );
 
 CREATE TABLE expenses
@@ -52,13 +50,9 @@ CREATE TABLE expenses
 
 CREATE TABLE take_home
 (
-
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
 	month_id INTEGER NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES users(id),
-	FOREIGN KEY (month_id) REFERENCES month(id)
+	FOREIGN KEY (month_id) REFERENCES months(id)
 );
-
-
-
