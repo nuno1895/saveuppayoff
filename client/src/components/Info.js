@@ -4,9 +4,7 @@ import MonthlyExpenses from './monthlyExpenses'
 class Info extends Component {
   render() {
     return (
-
       
-
       <MonthlyExpenses />
 
     );

@@ -12,11 +12,12 @@ class Footer extends Component {
       render() {
           return (
               <div>
+
               	<div className="footerContainer">
                   <div className='footer'>
                      <Row>
                        <Col xs="6" className="footerLeft">
-                       	<img className="smallLogoImg" src={require('../../public/images/logoSmallest.png')} mode='fit' />
+                       	<img className="whiteLogoImg" src={require('../../public/images/white-supo.png')} mode='fit' />
 
 
                        
