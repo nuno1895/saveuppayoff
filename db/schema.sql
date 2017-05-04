@@ -9,20 +9,11 @@ CREATE TABLE users
 	password_hash VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE income_frequencies
+CREATE TABLE month
 (
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	type VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE incomes
-(
-	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	user_id INTEGER NOT NULL,
-	income_frequency_id INTEGER NOT NULL,
-	income INTEGER NOT NULL,
-	FOREIGN KEY (income_frequency_id) REFERENCES income_frequencies(id),
-	FOREIGN KEY (user_id) REFERENCES users(id)
+	month INTEGER NOT NULL,
+	the_date DATE
 );
 
 CREATE TABLE types
@@ -37,10 +28,12 @@ CREATE TABLE budgets
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
 	type_id INTEGER NOT NULL,
+	month_id INTEGER NOT NULL,
 	threshold INTEGER NOT NULL,
 	the_date DATE,
 	FOREIGN KEY (user_id) REFERENCES users(id),
-	FOREIGN KEY (type_id) REFERENCES types(id)
+	FOREIGN KEY (type_id) REFERENCES types(id),
+	FOREIGN KEY (month_id) REFERENCES month(id)
 );
 
 CREATE TABLE expenses
@@ -54,15 +47,14 @@ CREATE TABLE expenses
 	FOREIGN KEY (type_id) REFERENCES types(id)
 );
 
-CREATE TABLE grades
+CREATE TABLE take_home
 (
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	user_id INTEGER NOT NULL,
-	budget_id INTEGER NOT NULL,
-	type_id INTEGER NOT NULL,
-	grade VARCHAR(1),
-	time_stamp TIMESTAMP,
+	month_id INTEGER NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES users(id),
-	FOREIGN KEY (budget_id) REFERENCES budgets(id),
-	FOREIGN KEY (type_id) REFERENCES types(id)
+	FOREIGN KEY (month_id) REFERENCES month(id)
 );
+
+
+
