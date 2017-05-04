@@ -35,7 +35,7 @@ class HomePage extends Component {
     let important = {
       backgroundImage: `url(./images/girl.jpg)`,
       backgroundRepeat: 'no-repeat',
-      BackgroundSize: 'cover'
+      backgroundSize: 'cover'
     };
 
     return (
@@ -45,7 +45,7 @@ class HomePage extends Component {
         {/*<div id='bkround' className="bkgroun" style={{backgroundImage: `url(./images/girl.jpg)`}}>*/}
           <Flex column>
             <Box className="homeImage" p={3}>
-              <div {...props} style={{...style, ...defaults, ...modes, ...important}}>
+              <div id="backgroundImageId" {...props} style={{...style, ...defaults, ...modes, ...important}}>
                 <Container className="homeContainerOne">
                   <Row>
                     <Col>

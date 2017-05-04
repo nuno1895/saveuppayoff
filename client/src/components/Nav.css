@@ -3,7 +3,7 @@ nav {
 
 }
 .navBar{
-	font-size: 20px;
+	font-size: 20px !important;
 }
 .navigation{
 	font-size: .7em !important;

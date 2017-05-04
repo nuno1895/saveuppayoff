@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import API from './API';
 import './MainForm.css';
 import Input from './Input';
 import Results from './Results';
@@ -139,6 +140,13 @@ class MainForm extends Component {
     this.setState({ budget: this.state.pay.takeHome * this.state.pay.frequency});
   }
 
+  handleButtonClick = () => {
+    this.setState({section: 'food', budget: this.state.pay.takeHome*this.state.pay.frequency});
+    
+    API.getData()
+      .then(data => console.log(data));
+  }
+
   renderPay() {
     return (
       <div className="cardContainer">
@@ -176,7 +184,7 @@ class MainForm extends Component {
         <Input onChange={(event) => this.handleInputChange(event, 'pay', 'frequency') } value={this.state.pay.frequency} />
         <br />
         <br />
-        <Button onClick={() => this.setState({section: 'food', budget: this.state.pay.takeHome*this.state.pay.frequency})} disabled={!this.state.pay.month, !this.state.pay.takeHome, !this.state.pay.frequency}>Next</Button>
+        <Button onClick={this.handleButtonClick} disabled={!this.state.pay.month, !this.state.pay.takeHome, !this.state.pay.frequency}>Next</Button>
       </div>
       </div>
     );
