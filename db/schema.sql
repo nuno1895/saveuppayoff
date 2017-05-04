@@ -14,6 +14,7 @@ CREATE TABLE month
     id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
     month INTEGER NOT NULL,
     the_date DATE
+
 );
 
 CREATE TABLE types
@@ -25,15 +26,17 @@ CREATE TABLE types
 
 CREATE TABLE budgets
 (
-    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    user_id INTEGER NOT NULL,
-    type_id INTEGER NOT NULL,
-    month_id INTEGER NOT NULL,
-    threshold INTEGER NOT NULL,
-    the_date DATE,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (type_id) REFERENCES types(id),
-    FOREIGN KEY (month_id) REFERENCES month(id)
+
+
+	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	user_id INTEGER NOT NULL,
+	type_id INTEGER NOT NULL,
+	month_id INTEGER NOT NULL,
+	threshold INTEGER NOT NULL,
+	the_date DATE,
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (type_id) REFERENCES types(id),
+	FOREIGN KEY (month_id) REFERENCES month(id)
 );
 
 CREATE TABLE expenses
@@ -49,9 +52,13 @@ CREATE TABLE expenses
 
 CREATE TABLE take_home
 (
-    id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    user_id INTEGER NOT NULL,
-    month_id INTEGER NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id),
-    FOREIGN KEY (month_id) REFERENCES month(id)
+
+	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	user_id INTEGER NOT NULL,
+	month_id INTEGER NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (month_id) REFERENCES month(id)
 );
+
+
+
