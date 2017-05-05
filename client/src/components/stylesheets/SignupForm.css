@@ -10,3 +10,11 @@
     background-color: whitesmoke;
     padding: 1em 1em;
 }
+.cardTopSignup{
+    border-bottom: 1px solid;
+    padding: 1em 0 !important;
+    background-color: rgb(52,83,111) !important; 
+    color: white;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 5px;
+}

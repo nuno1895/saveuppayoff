@@ -82,7 +82,7 @@ class LoginForm extends React.Component {
 
         return (
             <div className="logInDiv">
-                <div className="cardTop">
+                <div className="cardTopLogin">
                     <h1>Join Our Community!</h1>
                 </div>
 
