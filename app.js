@@ -61,6 +61,15 @@ app.get('/expenses', function(req, res) {
     });
 });
 
+
+app.post('/users', function(req, res){
+ 
+ var query = "INSERT into users (username, email, password_hash) values ('', 'dummy@dummies.com', '123words')";
+    connection.query(query, function(err, expenses) {
+        res.json(expenses);
+    });
+
+});
 /*insert into users 
 	(username, email, password_hash) values ('dummy', 'dummy@dummies.com', '123words'), ('else', 'else@goons.com', '123goons');*/
 
