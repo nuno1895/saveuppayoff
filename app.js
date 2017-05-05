@@ -6,13 +6,11 @@ var bodyParser = require('body-parser');
 var bcrypt = require('bcryptjs');
 
 //dependacies from older project
-
 var CronJob = require('cron').CronJob;
 var mysql = require("mysql");
 var request = require("request");
 
 var PORT = process.env.PORT || 3001;
-
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -75,15 +73,6 @@ app.get('/expenses', function(req, res) {
         res.json(expenses);
     });
 });
-
-
-// app.post('/users', function(req, res){
- 
-//  var query = "INSERT into users (username, email, password_hash) values ('', 'dummy@dummies.com', '123words')";
-//     connection.query(query, function(err, expenses) {
-//         res.json(expenses);
-//     });
-// });
 
 app.get('/sign-out', function(req,res) {
   req.session.destroy(function(err) {
@@ -162,12 +151,7 @@ app.get("/budget", function(req, res) {
 });
 
 app.post("/formSubmit", function(req, res) {
-  console.log(PORT);
   res.json(req.body);
-});
-
-app.post("/create", function(req, res) {
-  res.json("hi");
 });
 
 // catch 404 and forward to error handler
@@ -192,6 +176,12 @@ app.listen(PORT, function() {
    console.log(':earth_americas: ==> Now listening on PORT %s! Visit http://localhost:%s in your browser!', PORT, PORT);
  });
 
-
-
 module.exports = app;
+
+// app.post('/users', function(req, res){
+ 
+//  var query = "INSERT into users (username, email, password_hash) values ('', 'dummy@dummies.com', '123words')";
+//     connection.query(query, function(err, expenses) {
+//         res.json(expenses);
+//     });
+// });
