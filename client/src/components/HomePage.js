@@ -89,7 +89,7 @@ class HomePage extends Component {
                   <img className="stepImg" src={require('../../public/images/pencil.png')} mode='fit' />
                  
                    <h5> Step: One</h5>
-                   <p>We pay for the items we need in many different ways</p>
+                   <p>It is essential that You have a plan. Create a Budget, every dollar has a purpose</p>
                    <br />
                   </div>
 
@@ -170,11 +170,14 @@ class HomePage extends Component {
             <div className="realSolutionsDiv">
               <div className="realSolutionsHead">
                 <h5>Get REAL Solutions to Pay off Your Debt</h5>
-              </div>
-              <div className="realSolutionsBlurb">
-                <p>impsum lorm blablablablabla bla bla bla. My name is Mr. Big Pants Nuno Man! I am here to Endow you With wisom beyong your wwillldddeeesssttt dreams. bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla bla</p>
-              </div>
+                <br />
+              
+              </div>  
               <img className="stepImg processline" src={require('../../public/images/processline.png')} mode='fit' />
+              
+              <br />
+              <br />
+              <br />
 
               <Flex
               className="stepDivSolutions"

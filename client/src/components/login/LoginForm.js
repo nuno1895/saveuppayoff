@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import {createStore} from 'redux';
+import API from '../API';
+import Input from '../Input';
+import {
+  Button
+} from 'reactstrap';
+
 
 class LoginForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleLoginClick = this.handleLoginClick.bind(this);
+        this.handleSignupClick = this.handleSignupClick.bind(this);
         this.handleLogoutClick = this.handleLogoutClick.bind(this);
         this.state = { 
-            users : [],
-            currentUserId : 0,
+            username : '',
+            email : '',
+            password_hash : '',
             isLoggedIn: false
         };
     }
@@ -22,18 +29,40 @@ class LoginForm extends React.Component {
         });
     }
 
-    handleChange = (event) => {
-        this.setState({currentUserId: event.target.value});
+    handleChangeUsername = (event) => {
+        this.setState({ username : event.target.value });
+    }
+    handleChangeEmail = (event) => {
+        this.setState({ email : event.target.value });
+    }
+    handleChangePassword = (event) => {
+        this.setState({ password_hash : event.target.value });
     }
 
-    handleLoginClick() {
+    handleSignupClick() {
       this.setState({ isLoggedIn: true });
-      let store = createStore(store, this.state.currentUserId);
-      console.log(store.getState());
+      
     }
 
     handleLogoutClick() {
       this.setState({ isLoggedIn : false });
+    }
+
+    handleSubmit(evt){
+        evt.preventDefault();
+ 
+
+        var userEmail = { 
+            email: evt.target.children[1].value
+        }
+        debugger;
+
+        API.logIn(userEmail)
+            .then((email) => {
+                console.log(email);
+
+                debugger;
+            })
     }
 
     render() {
@@ -42,24 +71,45 @@ class LoginForm extends React.Component {
         if (isLoggedIn) {
             button = <button onClick={this.handleLogoutClick}>Log Out</button>;
         } else {
-            button = <button onClick={this.handleLoginClick}>Log In</button>;
+            button = <button onClick={this.handleSignupClick}>Log In</button>;
         }
 
         return (
-            <div>
-            <h1>Who Are You?</h1>
+            <div className="logInDiv">
+                <div className="cardTopLogin">
+                    <h1>Join Our Community!</h1>
+                </div>
 
-            <select value={this.state.currentUserId} onChange={this.handleChange}>
-                {this.state.users.map((user, index) => <option key={index} key={user.id} value={user.id} {...user} > {user.username}</option>)}
-            </select>
-            
-            {button}
+            <form id="loginForm" onSubmit={this.handleSubmit}>
+                <Input 
+                className="signupInput" 
+                name ="username"
+                placeholder="username" />
+
+                <Input 
+
+                className="signupInput" 
+                name="email"
+                placeholder="email" />
+
+                <Input
+                type='password'
+                className="signupInput"
+                name="password" 
+                placeholder="password" />
+                <br />
+                <br />
+
+
+                {/* inline conditional rendering: */}
+                <Button type="submit">Log in</Button>
+              </form>
+
 
             </div>
         );
     }
 }
-
 
 
 export default LoginForm;

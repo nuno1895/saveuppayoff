@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-// import {createStore} from 'redux';
 import Input from '../Input';
-// import signupActions from '../../actions/signupActions'
 import API from '../API';
 import {
-    Button
+  Button
 } from 'reactstrap';
 
 class SignupForm extends React.Component {
@@ -119,7 +117,10 @@ class SignupForm extends React.Component {
 
 
                 {/* inline conditional rendering: */}
+
                 <Button onClick={this.handleSetLocalUser} type="submit">SIGN UP</Button>
+
+
               </form>
 
 
@@ -132,6 +133,7 @@ class SignupForm extends React.Component {
         );
     }
 }
+
 
 
 export default SignupForm;

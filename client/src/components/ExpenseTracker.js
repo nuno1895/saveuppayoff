@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MonthlyExpenses from './MonthlyExpenses'
 
-class Name extends Component {
+class ExpenseTracker extends Component {
   render() {
     return (
       <MonthlyExpenses />
@@ -9,4 +9,4 @@ class Name extends Component {
   }
 }
 
-export default Name;
+export default ExpenseTracker;

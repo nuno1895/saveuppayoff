@@ -1,0 +1,20 @@
+.signupForm{
+    text-align: center;
+}
+.signupForm{
+    border: 1px solid;
+    margin: 10em 0;
+    padding: 0 !important;
+}
+#signupForm{
+    background-color: whitesmoke;
+    padding: 1em 1em;
+}
+.cardTopSignup{
+    border-bottom: 1px solid;
+    padding: 1em 0 !important;
+    background-color: rgb(52,83,111) !important; 
+    color: white;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 5px;
+}
