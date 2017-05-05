@@ -45,7 +45,7 @@ function grader(percent, formSection) {
 			return (
 				"A-"
 			);
-		} else if (percent >= 15) {
+		} else {
 			return (
 				"A+"
 			);
@@ -83,7 +83,7 @@ function grader(percent, formSection) {
 			return (
 				"D-"
 			);
-		} else if (percent > 30) {
+		} else {
 			return (
 				"F"
 			);
@@ -92,51 +92,3 @@ function grader(percent, formSection) {
 }
 
 export default grader;
-
-// class Grader extends Component {
-// 	render() {
-// 		let advice = this.props.adviceOne;
-// 		let adviceRandom = Math.floor((Math.random() * 8)); 
-// 		let percent = this.props.budgetPercent;
-// 		console.log(advice);
-// 		if (percent < 2) {
-// 			return (
-// 				"A+";
-// 			);
-// 		} else if (percent >= 2 && percent <= 4) {
-// 			return (
-// 				"A-";
-// 			);
-// 		} else if (percent >= 5 && percent <= 7) {
-// 			return (
-// 				"B+";
-// 			);
-// 		} else if (percent >= 8 && percent <= 10) {
-// 			return (
-// 				"B-";
-// 			);
-// 		} else if (percent >= 11 && percent <= 15) {
-// 			return (
-// 				"C+";
-// 			);
-// 		} else if (percent >= 16 && percent <= 20) {
-// 			return (
-// 				"C-";
-// 			);
-// 		} else if (percent >= 21 && percent <= 25) {
-// 			return (
-// 				"D";
-// 			);
-// 		} else if (percent >= 26 && percent <= 30) {
-// 			return (
-// 				"D-";
-// 			);
-// 		} else if (percent > 30) {
-// 			return (
-// 				"F";
-// 			);
-// 		}
-// 	}
-// }
-
-// export default Grader;

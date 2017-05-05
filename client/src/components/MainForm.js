@@ -125,11 +125,25 @@ class MainForm extends Component {
         personal: '',
         entertainment: '',
         debt: ''
+      },
+      sectionBudgets: {
+        foodBudget: '',
+        clothingBudget: '',
+        utilitiesBudget: '',
+        housingBudget: '',
+        savingsBudget: '',
+        medicalBudget: '',
+        insuranceBudget: '',
+        transportationBudget: '',
+        personalBudget: '',
+        entertainmentBudget: '',
+        debtBudget: ''
       }
     };
     // binding our methods which get passed as callbacks
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSectionGrade = this.handleSectionGrade.bind(this);
+    this.handleSectionBudget = this.handleSectionBudget.bind(this);
     // this.getSalary = this.getSalary.bind(this);
   }
 
@@ -138,6 +152,18 @@ class MainForm extends Component {
     const newState = Object.assign({}, this.state);
     newState[type][field] = event.target.value;
     this.setState(newState);
+  }
+
+  handleSectionGrade(section, grade) {
+    // this.setState({sectionGrades.section: grade});
+    this.state.sectionGrades[section] = grade;
+    console.log(this.state.sectionGrades);
+  }
+
+  handleSectionBudget(section, budget) {
+    // this.setState({sectionGrades.section: grade});
+    this.state.sectionBudgets[section] = budget;
+    console.log(this.state.sectionBudgets);
   }
   
   // getSalary() {
@@ -726,19 +752,13 @@ class MainForm extends Component {
         <div className="debtContainer">
         <br />
         <br />*/}
-        <Results formSectionTitle={prevFormSection} formSectionData={sectionData} budget={this.state.budget} gradeCallBack={this.handleSectionGrade}/>
+        <Results formSectionTitle={prevFormSection} formSectionData={sectionData} budget={this.state.budget} gradeCallBack={this.handleSectionGrade} sectionBudgetCallBack={this.handleSectionBudget}/>
         <br />
         <br />
         <Button onClick={() => this.setState({section: this.state.prevSection})}>Back</Button>
         <Button onClick={() => this.setState({section: this.state.nextSection})}>Next</Button>
       </div>
     );
-  }
-
-  handleSectionGrade(section, grade) {
-    // this.setState({sectionGrades.section: grade});
-    this.state.sectionGrades[section] = grade;
-    console.log(this.state.sectionGrades);
   }
 
   renderBudgetResults() {
