@@ -183,6 +183,8 @@ class MainForm extends Component {
     //   .then(response => console.log(response));
   }
 
+
+
   renderPay() {
     
     if('isLoggedIn'){

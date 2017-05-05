@@ -10,6 +10,11 @@ export default {
   signUp: function(newUser){
   	return axios.post('/create', newUser);
    },
+
+  setLocalUser: function(data) {
+  	return axios.post('/setLocalUser', data);
+  },
+
    logIn: function(email){
     return axios.get('/login', {
         params: {
@@ -23,5 +28,6 @@ export default {
         console.log(error);
     })
    }
+
 
 };

@@ -46,6 +46,15 @@ class SignupForm extends React.Component {
       this.setState({ isLoggedIn : false });
     }
 
+    handleSetLocalUser = () => {
+      API.setLocalUser({
+        user_id : localStorage.getItem('user_id')})
+      .then(response => console.log(response));
+
+    // API.postForm(this.state)
+    //   .then(response => console.log(response));
+  }
+
     handleSubmit(evt){
     	evt.preventDefault();
         // const nameSubmit = this.state.username;
@@ -70,7 +79,9 @@ class SignupForm extends React.Component {
       			localStorage.setItem('email', newUser.data.email);
       			localStorage.setItem('username', newUser.data.username);
       			console.log(localStorage.getItem("user_id"));
+                localStorage.getItem("user_id");
       			debugger;
+
       		})
     }
 
@@ -106,7 +117,10 @@ class SignupForm extends React.Component {
 
 
                 {/* inline conditional rendering: */}
-                <Button type="submit">SIGN UP</Button>
+
+                <Button onClick={this.handleSetLocalUser} type="submit">SIGN UP</Button>
+
+
               </form>
 
 
@@ -119,7 +133,6 @@ class SignupForm extends React.Component {
         );
     }
 }
-
 
 
 
