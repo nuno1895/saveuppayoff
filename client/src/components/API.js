@@ -5,6 +5,9 @@ export default {
     return axios('/budget');
   },
   postForm: function(data) {
-  	return axios.post('/budget', data);
-  }
+  	return axios.post('/formSubmit', data);
+  },
+  signUp: function(newUser){
+  	return axios.post('/create', newUser);
+   }
 };
