@@ -178,8 +178,8 @@ class MainForm extends Component {
     API.getData()
       .then(data => console.log(data));
 
-    API.postForm(this.state)
-      .then(response => console.log(response));
+    // API.postForm(this.state)
+    //   .then(response => console.log(response));
   }
 
   renderPay() {
