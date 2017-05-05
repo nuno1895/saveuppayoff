@@ -6,7 +6,7 @@ import './Results.css';
 // import Calculations from './Calculations';
 
 class Results extends Component {
-  calculationFunc(formSection, formSectionData, budget, gradeCallBack) {
+  calculationFunc(formSection, formSectionData, budget, gradeCallBack, sectionBudgetCallBack) {
     if (formSection === 'food') {
       // Food: 5-15%
       let totalFoodExpense = parseInt(formSectionData.groceries) + parseInt(formSectionData.eatingOut);
@@ -19,6 +19,8 @@ class Results extends Component {
       if (grade != undefined) {
         gradeCallBack(formSection, grade);
       }
+
+      sectionBudgetCallBack('foodBudget', totalFoodExpense);
 
       if (grade === "A+") {
           foodAdvice = Advice.food[1];
@@ -58,6 +60,8 @@ class Results extends Component {
         gradeCallBack(formSection, grade);
       }
 
+      sectionBudgetCallBack('clothingBudget', totalClothingExpense);
+
       if (grade == "A+") {
           clothingAdvice = Advice.clothing[1];
       } else {
@@ -83,8 +87,8 @@ class Results extends Component {
     }
     else if (formSection === 'utilities') {
       // Utilities: 5-10% 
-      let totalUtilityExpense = parseInt(formSectionData.electricity) + parseInt(formSectionData.mobilePhone) + parseInt(formSectionData.gas) + parseInt(formSectionData.trash) + parseInt(formSectionData.water) + parseInt(formSectionData.internet) + parseInt(formSectionData.cable);
-      let percentOfBudget = (totalUtilityExpense * 100)/parseInt(budget);
+      let totalUtilitiesExpense = parseInt(formSectionData.electricity) + parseInt(formSectionData.mobilePhone) + parseInt(formSectionData.gas) + parseInt(formSectionData.trash) + parseInt(formSectionData.water) + parseInt(formSectionData.internet) + parseInt(formSectionData.cable);
+      let percentOfBudget = (totalUtilitiesExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 10;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
@@ -93,6 +97,8 @@ class Results extends Component {
       if (grade != undefined) {
         gradeCallBack(formSection, grade);
       }
+
+      sectionBudgetCallBack('utilitiesBudget', totalUtilitiesExpense);
 
       if (grade == "A+") {
           utilitiesAdvice = Advice.utilities[1];
@@ -103,7 +109,7 @@ class Results extends Component {
       return (
         <div className="container">
           <h2>Utilities Grade</h2>
-          <p>Your total utility expense: {totalUtilityExpense}</p>
+          <p>Your total utility expense: {totalUtilitiesExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your utility expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
@@ -129,6 +135,8 @@ class Results extends Component {
       if (grade != undefined) {
         gradeCallBack(formSection, grade);
       }
+
+      sectionBudgetCallBack('housingBudget', totalHousingExpense);
 
       if (grade == "A+") {
           housingAdvice = Advice.housing[1];
@@ -166,6 +174,8 @@ class Results extends Component {
         gradeCallBack(formSection, grade);
       }
 
+      sectionBudgetCallBack('savingsBudget', totalSavingsExpense);
+
       if (grade == "A+") {
           savingsAdvice = Advice.savings[1];
       } else {
@@ -201,6 +211,8 @@ class Results extends Component {
       if (grade != undefined) {
         gradeCallBack(formSection, grade);
       }
+
+      sectionBudgetCallBack('medicalBudget', totalMedicalExpense);
 
       if (grade == "A+") {
           medicalAdvice = Advice.medical[1];
@@ -238,6 +250,8 @@ class Results extends Component {
         gradeCallBack(formSection, grade);
       }
 
+      sectionBudgetCallBack('insuranceBudget', totalInsuranceExpense);
+
       if (grade == "A+") {
           insuranceAdvice = Advice.insurance[1];
       } else {
@@ -273,6 +287,8 @@ class Results extends Component {
       if (grade != undefined) {
         gradeCallBack(formSection, grade);
       }
+
+      sectionBudgetCallBack('transportationBudget', totalTransportationExpense);
 
       if (grade == "A+") {
           transportationAdvice = Advice.transportation[1];
@@ -310,6 +326,8 @@ class Results extends Component {
         gradeCallBack(formSection, grade);
       }
 
+      sectionBudgetCallBack('personalBudget', totalPersonalExpense);
+
       if (grade == "A+") {
           personalAdvice = Advice.personal[1];
       } else {
@@ -346,6 +364,8 @@ class Results extends Component {
         gradeCallBack(formSection, grade);
       }
 
+      sectionBudgetCallBack('entertainmentBudget', totalEntertainmentExpense);
+
       if (grade == "A+") {
           entertainmentAdvice = Advice.entertainment[1];
       } else {
@@ -371,8 +391,8 @@ class Results extends Component {
     }
     else if (formSection === 'debt') {
       // Debts: 0% 
-      let debtExpense = parseInt(formSectionData.carPayment1) + parseInt(formSectionData.carPayment2) + parseInt(formSectionData.creditCard1) + parseInt(formSectionData.creditCard2) + parseInt(formSectionData.creditCard3) + parseInt(formSectionData.creditCard4) + parseInt(formSectionData.creditCard5) + parseInt(formSectionData.creditCard6) + parseInt(formSectionData.studentLoan1) + parseInt(formSectionData.studentLoan2) + parseInt(formSectionData.studentLoan3) + parseInt(formSectionData.studentLoan4) + parseInt(formSectionData.debt1) + parseInt(formSectionData.debt2) + parseInt(formSectionData.debt3) + parseInt(formSectionData.debt4);
-      let percentOfBudget = (debtExpense * 100)/parseInt(budget);
+      let totalDebtExpense = parseInt(formSectionData.carPayment1) + parseInt(formSectionData.carPayment2) + parseInt(formSectionData.creditCard1) + parseInt(formSectionData.creditCard2) + parseInt(formSectionData.creditCard3) + parseInt(formSectionData.creditCard4) + parseInt(formSectionData.creditCard5) + parseInt(formSectionData.creditCard6) + parseInt(formSectionData.studentLoan1) + parseInt(formSectionData.studentLoan2) + parseInt(formSectionData.studentLoan3) + parseInt(formSectionData.studentLoan4) + parseInt(formSectionData.debt1) + parseInt(formSectionData.debt2) + parseInt(formSectionData.debt3) + parseInt(formSectionData.debt4);
+      let percentOfBudget = (totalDebtExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 0;
       let percentDifference = percentOfBudget - suggestedBudgetPercent;
       let grade = grader(percentDifference, formSection);
@@ -382,6 +402,8 @@ class Results extends Component {
         gradeCallBack(formSection, grade);
       }
       
+      sectionBudgetCallBack('debtBudget', totalDebtExpense);
+
       if (grade == "A+") {
           debtAdvice = Advice.debt[1];
       } else {
@@ -390,7 +412,7 @@ class Results extends Component {
       return (
         <div className="container">
           <h2>Debt Grade</h2>
-          <p>Your total Debt expense: {debtExpense}</p>
+          <p>Your total Debt expense: {totalDebtExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your Debt expense is {percentOfBudget}% of your budget</p>
           <p>Your current grade is {grade}</p>
@@ -417,7 +439,7 @@ class Results extends Component {
       <div>
         <h1>Results</h1>
         <h2>Advice goes here</h2>
-        {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack)}
+        {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack, this.props.sectionBudgetCallBack)}
       </div>
     );
   }
