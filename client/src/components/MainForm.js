@@ -126,6 +126,7 @@ class MainForm extends Component {
         entertainment: '',
         debt: ''
       },
+      finalGrade: '',
       sectionBudgets: {
         foodBudget: '',
         clothingBudget: '',
