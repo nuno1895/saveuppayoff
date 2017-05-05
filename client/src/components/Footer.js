@@ -30,7 +30,7 @@ class Footer extends Component {
                        <Col xs="2">
                        	<p className="footerTopics"><strong>GET HELP</strong></p>
                        	<p><a href="#">FAQ</a></p>
-                       	<p><a href="#">Debt 101</a></p>
+                       	<p><a href="/debt101">Debt 101</a></p>
                        	<p><a href="#">Pay it off</a></p>
                        	<p><a href="#">General Advice</a></p>
                        </Col>

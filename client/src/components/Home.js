@@ -12,6 +12,7 @@ import LoginForm from './login/LoginForm'
 import SingupPage from './signup/SignupPage'
 import Info from './Info'
 import Footer from './Footer'
+import Debt101 from './Debt101'
 
 const Home = (props) => (
 <Router histroy={history}>
@@ -24,6 +25,7 @@ const Home = (props) => (
 		<Route path="/name" component={Name} />
 		<Route path="/results" component={Results} />
 		<Route path="/info" component={Info} />
+		<Route path="/debt101" component={Debt101} />
 		<Footer />
 	</div>
 </Router>
