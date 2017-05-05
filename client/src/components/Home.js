@@ -12,7 +12,6 @@ import LoginForm from './login/LoginForm'
 import SingupPage from './signup/SignupPage'
 import Info from './Info'
 import Footer from './Footer'
-import './Allcss.css'
 
 const Home = (props) => (
 <Router histroy={history}>

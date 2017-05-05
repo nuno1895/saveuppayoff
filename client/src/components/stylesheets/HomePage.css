@@ -1,0 +1,151 @@
+body{
+	font-family: 'Lato', sans-serif !important;
+}
+.jumboHome{
+	border-radius: 0 !important;
+	background-color: black !important;
+	padding: 0 1em !important;
+	margin-bottom: 0 !important;
+}
+.homeContainerOne{
+	color: white;
+	padding: 15em 10% 0 10% !important;
+	text-align: center;
+}
+.hp-title{
+	font-family: Montserrat, sans-serif;
+	font-size: 4.7em;
+	font-weight: bold;
+}
+.hp-title-p{
+	font-weight: lighter;
+	padding: 0 1em;
+	font-family: Montserrat, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.5em;
+}
+.getStart{
+	margin-top: 2em;
+	padding: .65em 5em !important;
+}
+.filler{
+	margin-top: 15em;
+}
+.stepDiv{
+	border-bottom: 1px solid;
+	text-align: center;
+	padding: 0 1em;
+	margin-left: 10em !important;
+	margin-right: 10em !important;
+}
+.homeImage{
+	padding: 0 !important;
+}
+
+.processline{
+	width: 100%;
+}
+.stepImg{
+	padding-bottom: 1.5em;
+}
+.stepBoxIcons{
+	min-height: 19em;
+	padding: 2em 0 0 !important;
+}
+.stepBoxIcons p{
+	padding-left: 6em !important;
+	padding-right: 6em !important;
+}
+.stepBoxDiv{
+	min-height: 14em;
+}
+.stepBoxIcons a{
+	padding-top: 2em;
+	color: rgb(32,194,84) !important;
+
+}
+.stepBoxIcons:nth-child(-n+2){
+	border-right: 1px solid;
+}
+.whyDiv{
+	padding: 4rem 11rem !important;
+	background-color: white !important;
+}
+.whyChoose h5{
+	font-weight: 600;
+	font-size: 2.3rem !important;;
+	text-align: center;
+	padding-bottom: 1em;
+}
+.whyChooseReasons p{
+	font-size: 1.1rem;
+	margin-bottom: 0 !important;
+	color: rgb(32,194,84);
+}
+.realSolutionsDiv{
+	background-color: rgba(127, 125, 152, .02);
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+.realSolutionsHead h5{
+	font-weight: 600;
+	font-size: 2.3rem !important;;
+	text-align: center;
+	padding-bottom: .5em;
+}
+.realSolutionsHead:after {
+    content:' ';
+    position: absolute;
+    display:block;
+    width: 7em;
+    margin: 0 46%;
+    border:2px solid #d0d0d0;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+.realSolutionsBlurb{
+	margin: auto 20em;
+	padding-top: 2.5em;
+	padding-bottom: 6em;
+	text-align: center;
+	font-size: .85em;
+}
+.stepDivSolutions{
+	padding: 0 1em;
+	margin-left: 13em !important;
+	margin-right: 13em !important;
+}
+.solutionsP{
+	font-size: .85em;
+}
+.youReadyDiv{
+	background-color: rgb(108,108,108);
+	color: white;
+	padding: 7rem 11rem !important;
+}
+.youReady h5{
+	text-shadow: 1px 1px black;
+	letter-spacing: 8px;
+	font-size: 1rem !important;;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.youReadyHead{
+	text-shadow: 1px 1px black;
+	letter-spacing: .5px;
+	font-family: Montserrat, sans-serif;
+	font-size: 3.4em;
+	font-weight: bold;
+}
+.bottomStartBtn{
+	text-align: center;
+}
+.getStart{	
+	box-shadow: 1px 1px rgb(89,87,87);
+}
+

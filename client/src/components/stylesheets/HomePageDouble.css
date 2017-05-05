@@ -49,7 +49,7 @@ body{
 	padding-bottom: 1.5em;
 }
 .stepBoxIcons{
-	padding: 2em 0 !important;
+	padding: 2em 0 0 !important;
 }
 .stepBoxIcons:nth-child(-n+2){
 	border-right: 1px solid;
