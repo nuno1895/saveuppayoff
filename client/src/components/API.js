@@ -9,5 +9,8 @@ export default {
   },
   signUp: function(newUser){
   	return axios.post('/create', newUser);
-   }
+   },
+  setLocalUser: function(data) {
+  	return axios.post('/setLocalUser', data);
+  },
 };

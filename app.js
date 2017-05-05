@@ -141,7 +141,6 @@ app.post('/create', function(req,res) {
             });
           });
       });
-
     }
   });
 });
@@ -150,8 +149,32 @@ app.get("/budget", function(req, res) {
   res.json("hi");
 });
 
+app.post("/setLocalUser", function(req, res) {
+  res.json(req.body);
+  var formData = req.body;
+
+  if(req.session.logged_in = true) {
+    var query = "INSERT INTO budgets (user_id) VALUES ('" + req.body.user_id + "')";
+    console.log(query);
+    connection.query(query, function (err, result) {
+    if (err) throw err;
+      console.log("1 record inserted");
+    });
+  };
+});
+
 app.post("/formSubmit", function(req, res) {
   res.json(req.body);
+  var formData = req.body;
+
+  if(req.session.logged_in = true) {
+    var query = "INSERT INTO budgets (user_id) VALUES ('" + req.body.user_id + "')";
+    console.log(query);
+    connection.query(query, function (err, result) {
+    if (err) throw err;
+      console.log("1 record inserted");
+    });
+  };
 });
 
 // catch 404 and forward to error handler

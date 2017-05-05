@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import Input from '../Input';
 // import signupActions from '../../actions/signupActions'
 import API from '../API';
+import {
+    Button
+} from 'reactstrap';
 
 class SignupForm extends React.Component {
 
@@ -45,6 +48,15 @@ class SignupForm extends React.Component {
       this.setState({ isLoggedIn : false });
     }
 
+    handleSetLocalUser = () => {
+      API.setLocalUser({
+        user_id : localStorage.getItem('user_id')})
+      .then(response => console.log(response));
+
+    // API.postForm(this.state)
+    //   .then(response => console.log(response));
+  }
+
     handleSubmit(evt){
     	evt.preventDefault();
         // const nameSubmit = this.state.username;
@@ -69,68 +81,57 @@ class SignupForm extends React.Component {
       			localStorage.setItem('email', newUser.data.email);
       			localStorage.setItem('username', newUser.data.username);
       			console.log(localStorage.getItem("user_id"));
+                localStorage.getItem("user_id");
       			debugger;
+
       		})
     }
 
     render() {
         const isLoggedIn = this.state.isLoggedIn;
-        let button = null;
-        if (isLoggedIn) {
-            button = <button onClick={this.handleLogoutClick}>Log Out</button>;
-        } else {
-            button = <button onClick={this.handleSignupClick}>Log In</button>;
-        }
+
 
         return (
             <div className="signupFormDiv">
-            <h1>Join Our Community!</h1>
+            <div className="cardTopSignup">
+                <h1>Join Our Community!</h1>
+            </div>
 
             <form id="signupForm" onSubmit={this.handleSubmit}>
-                <input type="text" 
-                name="username"
-                placeholder="username goes here" 
-                 />
+                <Input 
+                className="signupInput" 
+                name ="username"
+                placeholder="username" />
 
-                <input type="text" 
-                name="password"
-                placeholder="password goes here" 
-                 />
 
-                 <input type="text" 
-                 name="email"
-                 placeholder="email goes here" 
-                  />
+                <Input 
+
+                className="signupInput" 
+                name="email"
+                placeholder="email" />
+
+                <Input
+                type='password'
+                className="signupInput"
+                name="password" 
+                placeholder="password" />
+
+
 
                 {/* inline conditional rendering: */}
-                <input type="submit" />
+                <Button onClick={this.handleSetLocalUser} type="submit">SIGN UP</Button>
               </form>
 
-            <br />
-            <br />
+
 
             {/*<select value={this.state.currentUserId} onChange={this.handleChange}>
                             {this.state.users.map((user, index) => <option key={index} key={user.id} value={user.id} {...user} > {user.username}</option>)}
                         </select>*/}
-            
-            {button}
-
+        
             </div>
         );
     }
 }
-
-/*
-	<Input className="signupInput" placeholder="username" onChange={this.handleChangeUsername} value={this.state.username} onSubmit={this.handleSubmit} />
-	<br />
-	<br />
-	<br />
-	<Input className="signupInput" placeholder="email" onChange={this.handleChangeEmail} value={this.state.email} onSubmit={this.handleSubmit} />
-	<br />
-	<br />
-	<br />
-	<Input className="signupInput" placeholder="password" onChange={this.handleChangePassword} value={this.state.password_hash} onSubmit={this.handleSubmit} />
-*/
 
 
 export default SignupForm;
