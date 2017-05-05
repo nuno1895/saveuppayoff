@@ -14,7 +14,7 @@ class MainForm extends Component {
     this.state = {
       isLoggedIn: false,
       pay: {
-        month: '',
+        month: 'January',
         takeHome: '',
         frequency: ''
       },
@@ -149,6 +149,7 @@ class MainForm extends Component {
 
   // this function handles any input changes and updates the state
   handleInputChange(event, type, field) {
+    // console.log("THIS", event.target.value);
     const newState = Object.assign({}, this.state);
     newState[type][field] = event.target.value;
     this.setState(newState);
@@ -157,13 +158,13 @@ class MainForm extends Component {
   handleSectionGrade(section, grade) {
     // this.setState({sectionGrades.section: grade});
     this.state.sectionGrades[section] = grade;
-    console.log(this.state.sectionGrades);
+    // console.log(this.state.sectionGrades);
   }
 
   handleSectionBudget(section, budget) {
     // this.setState({sectionGrades.section: grade});
     this.state.sectionBudgets[section] = budget;
-    console.log(this.state.sectionBudgets);
+    // console.log(this.state.sectionBudgets);
   }
   
   // getSalary() {
@@ -176,6 +177,9 @@ class MainForm extends Component {
     
     API.getData()
       .then(data => console.log(data));
+
+    API.postForm(this.state)
+      .then(response => console.log(response));
   }
 
   renderPay() {
@@ -192,18 +196,18 @@ class MainForm extends Component {
         <label>Current Month:</label>
         <br />
         <select onChange={(event) => this.handleInputChange(event, 'pay', 'month') } value={this.state.pay.month}>
-          <option value="january">January</option>
-          <option value="february">February</option>
-          <option value="march">March</option>
-          <option value="april">April</option>
-          <option value="may">May</option>
-          <option value="june">June</option>
-          <option value="july">July</option>
-          <option value="august">August</option>
-          <option value="september">September</option>
-          <option value="october">October</option>
-          <option value="november">November</option>
-          <option value="december">December</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
         </select>
         <br />
         <br />
@@ -740,9 +744,9 @@ class MainForm extends Component {
 
   renderSectionResults() {
     let prevFormSection = this.state.prevSection;
-    console.log(prevFormSection);
+    // console.log(prevFormSection);
     let sectionData = this.state[prevFormSection];
-    console.log(sectionData);
+    // console.log(sectionData);
 
     return (
       <div className='sectionResults'>
@@ -783,7 +787,9 @@ class MainForm extends Component {
   }
 
   resultRedirect() {
-    window.location = '/results';
+    // window.location = '/results';
+    API.postForm(this.state)
+      .then(response => console.log(response));
   }
 
   renderForm() {
@@ -836,7 +842,7 @@ class MainForm extends Component {
   // renderForm decides what parts of the form to render
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     return (
       <div>
