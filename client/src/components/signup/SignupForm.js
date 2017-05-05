@@ -80,7 +80,7 @@ class SignupForm extends React.Component {
 
         return (
             <div className="signupFormDiv">
-            <div className="cardTop">
+            <div className="cardTopSignup">
                 <h1>Join Our Community!</h1>
             </div>
 
