@@ -50,16 +50,10 @@ class LoginForm extends React.Component {
 
     handleSubmit(evt){
         evt.preventDefault();
-        // const nameSubmit = this.state.username;
-        // const emailSubmit = this.state.email;
-        // const passwordSubmit = this.state.password_hash;
-
-        // signupActions.userSignupRequest(nameSubmit, emailSubmit, passwordSubmit);
-
-        //username, password, email
+ 
 
         var userEmail = { 
-            email: evt.target.children[2].value
+            email: evt.target.children[1].value
         }
         debugger;
 
@@ -91,17 +85,13 @@ class LoginForm extends React.Component {
                 className="signupInput" 
                 name ="username"
                 placeholder="username" />
-                <br />
-                <br />
-                <br />
+
                 <Input 
 
                 className="signupInput" 
                 name="email"
                 placeholder="email" />
-                <br />
-                <br />
-                <br />
+
                 <Input
                 type='password'
                 className="signupInput"
