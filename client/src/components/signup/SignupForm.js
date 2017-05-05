@@ -89,24 +89,20 @@ class SignupForm extends React.Component {
                 className="signupInput" 
                 name ="username"
                 placeholder="username" />
-                <br />
-                <br />
-                <br />
+
+
                 <Input 
 
                 className="signupInput" 
                 name="email"
                 placeholder="email" />
-                <br />
-                <br />
-                <br />
+
                 <Input
                 type='password'
                 className="signupInput"
                 name="password" 
                 placeholder="password" />
-                <br />
-                <br />
+
 
 
                 {/* inline conditional rendering: */}

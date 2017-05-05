@@ -89,7 +89,7 @@ class HomePage extends Component {
                   <img className="stepImg" src={require('../../public/images/pencil.png')} mode='fit' />
                  
                    <h5> Step: One</h5>
-                   <p>We pay for the items we need in many different ways - we spend cash, credit, debit, and we even auto-pay bills.</p>
+                   <p>It is essential that You have a plan. Create a Budget, every dollar has a purpose</p>
                    <br />
                   </div>
 
