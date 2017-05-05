@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import Nav from './Nav'
 import App from '../App'
-import Name from './Name'
+import ExpenseTracker from './ExpenseTracker'
 import Results from './Results'
 import HomePage from './HomePage'
 import LoginForm from './login/LoginForm'
@@ -22,7 +22,7 @@ const Home = (props) => (
 		<Route path="/signup" component={SingupPage} />
 		<Route path="/login" component={LoginForm} />
 		<Route path="/mainform" component={App} />
-		<Route path="/name" component={Name} />
+		<Route path="/expenseTracker" component={ExpenseTracker} />
 		<Route path="/results" component={Results} />
 		<Route path="/info" component={Info} />
 		<Route path="/debt101" component={Debt101} />
