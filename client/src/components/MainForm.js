@@ -759,7 +759,7 @@ class MainForm extends Component {
         <Results formSectionTitle={prevFormSection} formSectionData={sectionData} budget={this.state.budget} gradeCallBack={this.handleSectionGrade} sectionBudgetCallBack={this.handleSectionBudget}/>
         <br />
         <br />
-        <Button onClick={() => this.setState({section: this.state.prevSection})}>Back</Button>
+        <Button className="backBtn" onClick={() => this.setState({section: this.state.prevSection})}>Back</Button>
         <Button onClick={() => this.setState({section: this.state.nextSection})}>Next</Button>
       </div>
     );

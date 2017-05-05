@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-// import {createStore} from 'redux';
 import Input from '../Input';
-// import signupActions from '../../actions/signupActions'
 import API from '../API';
+import {
+  Button
+} from 'reactstrap';
 
 class SignupForm extends React.Component {
 
@@ -75,62 +76,55 @@ class SignupForm extends React.Component {
 
     render() {
         const isLoggedIn = this.state.isLoggedIn;
-        let button = null;
-        if (isLoggedIn) {
-            button = <button onClick={this.handleLogoutClick}>Log Out</button>;
-        } else {
-            button = <button onClick={this.handleSignupClick}>Log In</button>;
-        }
+
 
         return (
             <div className="signupFormDiv">
-            <h1>Join Our Community!</h1>
+            <div className="cardTop">
+                <h1>Join Our Community!</h1>
+            </div>
 
             <form id="signupForm" onSubmit={this.handleSubmit}>
-                <input type="text" 
-                name="username"
-                placeholder="username goes here" 
-                 />
+                <Input 
+                className="signupInput" 
+                name ="username"
+                placeholder="username" />
+                <br />
+                <br />
+                <br />
+                <Input 
 
-                <input type="text" 
-                name="password"
-                placeholder="password goes here" 
-                 />
+                className="signupInput" 
+                name="email"
+                placeholder="email" />
+                <br />
+                <br />
+                <br />
+                <Input
+                type='password'
+                className="signupInput"
+                name="password" 
+                placeholder="password" />
+                <br />
+                <br />
 
-                 <input type="text" 
-                 name="email"
-                 placeholder="email goes here" 
-                  />
 
                 {/* inline conditional rendering: */}
-                <input type="submit" />
+                <Button type="submit">SIGN UP</Button>
               </form>
 
-            <br />
-            <br />
+
 
             {/*<select value={this.state.currentUserId} onChange={this.handleChange}>
                             {this.state.users.map((user, index) => <option key={index} key={user.id} value={user.id} {...user} > {user.username}</option>)}
                         </select>*/}
-            
-            {button}
-
+        
             </div>
         );
     }
 }
 
-/*
-	<Input className="signupInput" placeholder="username" onChange={this.handleChangeUsername} value={this.state.username} onSubmit={this.handleSubmit} />
-	<br />
-	<br />
-	<br />
-	<Input className="signupInput" placeholder="email" onChange={this.handleChangeEmail} value={this.state.email} onSubmit={this.handleSubmit} />
-	<br />
-	<br />
-	<br />
-	<Input className="signupInput" placeholder="password" onChange={this.handleChangePassword} value={this.state.password_hash} onSubmit={this.handleSubmit} />
-*/
+
 
 
 export default SignupForm;

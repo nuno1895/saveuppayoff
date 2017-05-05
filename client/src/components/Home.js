@@ -8,7 +8,7 @@ import App from '../App'
 import Name from './Name'
 import Results from './Results'
 import HomePage from './HomePage'
-import LoginForm from './login/LoginForm'
+import Login from './login/Login'
 import SingupPage from './signup/SignupPage'
 import Info from './Info'
 import Footer from './Footer'
@@ -19,7 +19,7 @@ const Home = (props) => (
 		<Nav />
 		<Route exact path="/" component={HomePage} />
 		<Route path="/signup" component={SingupPage} />
-		<Route path="/login" component={LoginForm} />
+		<Route path="/login" component={Login} />
 		<Route path="/mainform" component={App} />
 		<Route path="/name" component={Name} />
 		<Route path="/results" component={Results} />

@@ -3,9 +3,12 @@ h2 {
 }
 
 .sectionResults{
-	margin-top: 4em;
+	margin: 7em;
 }
 
 .AdviceView {
 	text-align: left;
+}
+.btn:nth-child(1){
+    margin-right: 5em !important;
 }
