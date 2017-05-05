@@ -67,6 +67,10 @@ body{
 .stepBoxIcons:nth-child(-n+2){
 	border-right: 1px solid;
 }
+.arrowImg{
+	padding-left: 1em;
+	padding-bottom: .4em;
+}
 .whyDiv{
 	padding: 4rem 11rem !important;
 	background-color: white !important;

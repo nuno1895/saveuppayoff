@@ -84,6 +84,7 @@ class MonthlyExpenses extends React.Component {
 
     render() {
         return (
+            <div className="pageCont">
             <div className="cardContainer">
                 <div>
                     <div className="cardTop">
@@ -116,6 +117,7 @@ class MonthlyExpenses extends React.Component {
                     </div>
                 </div>
 
+            </div>
 
                 <p>{this.state.spent}</p>
                 <p>{this.state.currentExpenseId}</p>

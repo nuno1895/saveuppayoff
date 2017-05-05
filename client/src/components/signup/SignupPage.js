@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import SignupForm from './SignupForm';
+import '../stylesheets/SignupForm.css';
+
 // import { connect } from 'react-redux';
 // import { userSignupRequest } from '../../actions/signupActions';
 
@@ -8,9 +10,15 @@ class SignupPage extends Component {
 	  render() {
 	    return (
 	    	<div className="row">
-	    		<div className="col-md-4 col-md-offset-4">
+	    		<div className="col-md-2 col-md-offset-4" />
+
+	    		<div className="col-md-8 col-md-offset-4 signupForm" >
+
 	    			<SignupForm />
 	    		</div>
+
+	    		<div className="col-md-2 col-md-offset-4" />
+
 	    	</div>
 
 	    );
