@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MonthlyExpenses from './monthlyExpenses'
+import MonthlyExpenses from './MonthlyExpenses'
 
 class Name extends Component {
   render() {

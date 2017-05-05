@@ -1,5 +1,5 @@
 
-import './Footer.css';
+import './stylesheets/Footer.css';
 import {
   NavLink
 } from 'react-router-dom'

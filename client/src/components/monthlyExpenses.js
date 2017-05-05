@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
-import './monthlyExpenses.css';
+import './stylesheets/MonthlyExpenses.css';
 
 import {
   Button

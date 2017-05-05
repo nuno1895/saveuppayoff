@@ -1,6 +1,6 @@
 
-import './Nav.css';
-import './HomePage.css';
+import './stylesheets/Nav.css';
+import './stylesheets/HomePage.css';
 import { withReflex, Flex, Box } from 'reflexbox'
 import React, { Component } from 'react';
 import {
@@ -85,28 +85,62 @@ class HomePage extends Component {
                 col={4}
                 p={2}
               >
-              <img className="stepImg" src={require('../../public/images/pencil.png')} mode='fit' />
-             
-               <h5> Step: One</h5>
+                <div className="stepBoxDiv">
+                  <img className="stepImg" src={require('../../public/images/pencil.png')} mode='fit' />
+                 
+                   <h5> Step: One</h5>
+                   <p>We pay for the items we need in many different ways</p>
+                   <br />
+                  </div>
+
+                   <div className="learnMoreDiv">
+                   <a href="#" className="learnMoreArrow">
+                   LEARN MORE   
+                    <img className="arrowImg" src={require('../../public/images/right-arrow.png')} mode='fit' />
+                    </a>
+                </div>
+
               </Box>
               <Box
                 className="stepBoxIcons"
                 col={4}
                 p={2}
               >
-              <img className="stepImg" src={require('../../public/images/computer.png')} mode='fit' />
+                <div className="stepBoxDiv">
+                  <img className="stepImg" src={require('../../public/images/computer.png')} mode='fit' />
 
-                <h5>Step: Two</h5>
-              </Box>
+                    <h5>Step: Two</h5>
+                    <p>Now you know where your money is actually going. But is it going where it should?</p>
+                    <br />
+                  </div>
+
+                     <div className="learnMoreDiv">
+                     <a href="#" className="learnMoreArrow">
+                     LEARN MORE   
+                      <img className="arrowImg" src={require('../../public/images/right-arrow.png')} mode='fit' />
+                      </a>
+                  </div>
+                </Box>
               <Box
                 className="stepBoxIcons"
                 col={4}
                 p={2}
               >
-              <img className="stepImg" src={require('../../public/images/horseshoe.png')} mode='fit' />
+                <div className="stepBoxDiv">
+                  <img className="stepImg" src={require('../../public/images/horseshoe.png')} mode='fit' />
 
-              <h5>Step: Three</h5>
-              </Box>
+                  <h5>Step: Three</h5>
+                  <p>Putting together a budget is easy: the harder part is sticking to it.</p>
+                  <br />
+                </div>
+
+                   <div className="learnMoreDiv">
+                   <a href="#" className="learnMoreArrow">
+                   LEARN MORE   
+                    <img className="arrowImg" src={require('../../public/images/right-arrow.png')} mode='fit' />
+                    </a>
+                </div>
+                </Box>
 
             </Flex>
             <div className="whyDiv">

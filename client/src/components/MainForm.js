@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from './API';
-import './MainForm.css';
+import './stylesheets/MainForm.css';
 import Input from './Input';
 import Results from './Results';
 import {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import grader from './Grader';
 import Advice from './Advice';
 import AdviceView from './AdviceView';
-import './Results.css';
+import './stylesheets/Results.css';
 // import Calculations from './Calculations';
 
 class Results extends Component {
