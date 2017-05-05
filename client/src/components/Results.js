@@ -166,7 +166,7 @@ class Results extends Component {
       let totalSavingsExpense = parseInt(formSectionData.emergency) + parseInt(formSectionData.retirement) + parseInt(formSectionData.college);
       let percentOfBudget = (totalSavingsExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 15;
-      let percentDifference = percentOfBudget - suggestedBudgetPercent;
+      let percentDifference = suggestedBudgetPercent - percentOfBudget;
       let grade = grader(percentDifference, formSection);
       let savingsAdvice;
 
