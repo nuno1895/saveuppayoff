@@ -12,36 +12,38 @@ import Advice from './Advice';
 // F: Over 31%
 
 function grader(percent, formSection) {
+	console.log(formSection);
+	console.log(percent);
 	if (formSection === "savings") {
-		if (percent < 0) {
+		if (percent <= 0) {
 			return (
 				"F"
 			);
-		} else if (percent >= 1 && percent <= 2) {
+		} else if (percent > 0 && percent < 3) {
 			return (
 				"D-"
 			);
-		} else if (percent >= 3 && percent <= 4) {
+		} else if (percent >= 3 && percent < 5) {
 			return (
 				"D"
 			);
-		} else if (percent >= 5 && percent <= 6) {
+		} else if (percent >= 5 && percent < 7) {
 			return (
 				"C-"
 			);
-		} else if (percent >= 7 && percent <= 8) {
+		} else if (percent >= 7 && percent < 9) {
 			return (
 				"C+"
 			);
-		} else if (percent >= 9 && percent <= 10) {
+		} else if (percent >= 9 && percent < 11) {
 			return (
 				"B-"
 			);
-		} else if (percent >= 11 && percent <= 12) {
+		} else if (percent >= 11 && percent < 13) {
 			return (
 				"B+"
 			);
-		} else if (percent >= 13 && percent <= 14) {
+		} else if (percent >= 13 && percent < 15) {
 			return (
 				"A-"
 			);
@@ -55,31 +57,31 @@ function grader(percent, formSection) {
 			return (
 				"A+"
 			);
-		} else if (percent >= 2 && percent <= 4) {
+		} else if (percent >= 2 && percent < 5) {
 			return (
 				"A-"
 			);
-		} else if (percent >= 5 && percent <= 7) {
+		} else if (percent >= 5 && percent < 8) {
 			return (
 				"B+"
 			);
-		} else if (percent >= 8 && percent <= 10) {
+		} else if (percent >= 8 && percent < 11) {
 			return (
 				"B-"
 			);
-		} else if (percent >= 11 && percent <= 15) {
+		} else if (percent >= 11 && percent < 15) {
 			return (
 				"C+"
 			);
-		} else if (percent >= 16 && percent <= 20) {
+		} else if (percent >= 15 && percent < 21) {
 			return (
 				"C-"
 			);
-		} else if (percent >= 21 && percent <= 25) {
+		} else if (percent >= 21 && percent < 26) {
 			return (
 				"D"
 			);
-		} else if (percent >= 26 && percent <= 30) {
+		} else if (percent >= 26 && percent < 30) {
 			return (
 				"D-"
 			);
