@@ -745,74 +745,74 @@ class Results extends Component {
     console.log(sectionBudgets);
     console.log(sectionGrades);
     return (
-      <div>
-        <h3>Your Budget: {budget}</h3>
-        <h3>Your Expenses: {totalExpenses}</h3>
-        <br />
         <div>
-          <h4><strong>Food</strong></h4>
-          <h5>Grade: {sectionGrades.food}</h5>
-          <h5>Total Expenses: {sectionBudgets.foodBudget}</h5>
+        <h2>Your Budget: ${budget}.00</h2>
+        <h2>Your Expenses: ${totalExpenses}.00</h2>
+        <br />
+        <div className="bg-success text-white">
+          <h3 className="text-xl"><strong>Food</strong></h3>
+          <h4>Grade: {sectionGrades.food}</h4>
+          <h4>Total Expenses: ${sectionBudgets.foodBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Clothing</strong></h4>
-          <h5>Grade: {sectionGrades.clothing}</h5>
-          <h5>Total Expenses: {sectionBudgets.clothingBudget}</h5>
+        <div className="bg-info text-white">
+          <h3 className="text-xl"><strong>Clothing</strong></h3>
+          <h4>Grade: {sectionGrades.clothing}</h4>
+          <h4>Total Expenses: ${sectionBudgets.clothingBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Utilities</strong></h4>
-          <h5>Grade: {sectionGrades.utilities}</h5>
-          <h5>Total Expenses: {sectionBudgets.utilitiesBudget}</h5>
+        <div className="bg-success text-white">
+          <h3 className="text-xl"><strong>Utilities</strong></h3>
+          <h4>Grade: {sectionGrades.utilities}</h4>
+          <h4>Total Expenses: ${sectionBudgets.utilitiesBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Housing</strong></h4>
-          <h5>Grade: {sectionGrades.housing}</h5>
-          <h5>Total Expenses: {sectionBudgets.housingBudget}</h5>
+        <div className="bg-info text-white">
+          <h3 className="text-xl"><strong>Housing</strong></h3>
+          <h4>Grade: {sectionGrades.housing}</h4>
+          <h4>Total Expenses: ${sectionBudgets.housingBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Savings</strong></h4>
-          <h5>Grade: {sectionGrades.savings}</h5>
-          <h5>Total Expenses: {sectionBudgets.savingsBudget}</h5>
+        <div className="bg-success text-white">
+          <h3 className="text-xl"><strong>Savings</strong></h3>
+          <h4>Grade: {sectionGrades.savings}</h4>
+          <h4>Total Expenses: ${sectionBudgets.savingsBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Medical</strong></h4>
-          <h5>Grade: {sectionGrades.medical}</h5>
-          <h5>Total Expenses: {sectionBudgets.medicalBudget}</h5>
+        <div className="bg-info text-white">
+          <h3 className="text-xl"><strong>Medical</strong></h3>
+          <h4>Grade: {sectionGrades.medical}</h4>
+          <h4>Total Expenses: ${sectionBudgets.medicalBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Insurance</strong></h4>
-          <h5>Grade: {sectionGrades.insurance}</h5>
-          <h5>Total Expenses: {sectionBudgets.insuranceBudget}</h5>
+        <div className="bg-success text-white">
+          <h3 className="text-xl"><strong>Insurance</strong></h3>
+          <h4>Grade: {sectionGrades.insurance}</h4>
+          <h4>Total Expenses: ${sectionBudgets.insuranceBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Transportation</strong></h4>
-          <h5>Grade: {sectionGrades.transportation}</h5>
-          <h5>Total Expenses: {sectionBudgets.transportationBudget}</h5>
+        <div className="bg-info text-white">
+          <h3 className="text-xl"><strong>Transportation</strong></h3>
+          <h4>Grade: {sectionGrades.transportation}</h4>
+          <h4>Total Expenses: ${sectionBudgets.transportationBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Personal</strong></h4>
-          <h5>Grade: {sectionGrades.personal}</h5>
-          <h5>Total Expenses: {sectionBudgets.personalBudget}</h5>
+        <div className="bg-success text-white">
+          <h3 className="text-xl"><strong>Personal</strong></h3>
+          <h4>Grade: {sectionGrades.personal}</h4>
+          <h4>Total Expenses: ${sectionBudgets.personalBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Entertainment</strong></h4>
-          <h5>Grade: {sectionGrades.entertainment}</h5>
-          <h5>Total Expenses: {sectionBudgets.entertainmentBudget}</h5>
+        <div className="bg-info text-white">
+          <h3 className="text-xl"><strong>Entertainment</strong></h3>
+          <h4>Grade: {sectionGrades.entertainment}</h4>
+          <h4>Total Expenses: ${sectionBudgets.entertainmentBudget}.00</h4>
         </div>
         <br />
-        <div>
-          <h4><strong>Debt</strong></h4>
-          <h5>Grade: {sectionGrades.debt}</h5>
-          <h5>Total Expenses: {sectionBudgets.debtBudget}</h5>
+        <div className="bg-success text-white">
+          <h3 className="text-xl"><strong>Debt</strong></h3>
+          <h4>Grade: {sectionGrades.debt}</h4>
+          <h4>Total Expenses: ${sectionBudgets.debtBudget}.00</h4>
         </div>
       </div>
     );
@@ -826,7 +826,7 @@ class Results extends Component {
     if (this.props.formSectionTitle === 'budgetResults') {
       return (
         <div >
-          <h1>Final Results</h1>
+          <h1><strong>Final Results</strong></h1>
           {this.finalCalculationFunc(this.props.budget, this.props.sectionGrades, this.props.sectionBudgets)}
         </div>
       );
