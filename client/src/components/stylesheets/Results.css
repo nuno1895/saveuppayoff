@@ -9,6 +9,9 @@ h2 {
 .AdviceView {
 	text-align: left;
 }
-.btn:nth-child(1){
-    margin-right: 5em !important;
+.resultsHeader h1{
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    font-size: 10.7em !important;
+    font-weight: bold;
 }

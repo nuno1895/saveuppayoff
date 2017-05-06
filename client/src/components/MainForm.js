@@ -776,7 +776,7 @@ class MainForm extends Component {
       <div className="cardContainer">
       <div className='budgetResults'>
         <div className="cardTop">
-        <h1>BudgetResults</h1>
+        <h1>Budget Results</h1>
         </div>
         <div className="debtContainer">
         <br />
