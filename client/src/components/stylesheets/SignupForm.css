@@ -10,7 +10,7 @@
     padding: 0 !important;
 }
 #signupForm{
-    background-color: whitesmoke;
+    background-color: rgba(253, 254, 254, 1);
     padding: 1em 1em;
 }
 .cardTopSignup{
@@ -50,4 +50,7 @@
   padding-left: 12px;
   color: white !important;
   float: right;
+  }
+  .signupLogin{
+    color: rgb(51,82,110);
   }

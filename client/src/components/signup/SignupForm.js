@@ -68,6 +68,8 @@ class SignupForm extends React.Component {
             .then(response => console.log(response)
 
         );
+                    window.location = '/login'
+
 
 
             
@@ -91,7 +93,9 @@ class SignupForm extends React.Component {
 
         return (
             <div className="signupFormDiv">
-            <div className="cardTopSignup">
+            <div className="signupLogin">
+                <img className="stepImg" src={require('../../../public/images/white-s.png')} mode='fit' />
+
                 <h1>Join Our Community!</h1>
             </div>
 

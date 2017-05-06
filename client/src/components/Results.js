@@ -750,67 +750,67 @@ class Results extends Component {
         <h3>Your Expenses: {totalExpenses}</h3>
         <br />
         <div>
-          <h4>Food</h4>
+          <h4><strong>Food</strong></h4>
           <h5>Grade: {sectionGrades.food}</h5>
           <h5>Total Expenses: {sectionBudgets.foodBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Clothing</h4>
+          <h4><strong>Clothing</strong></h4>
           <h5>Grade: {sectionGrades.clothing}</h5>
           <h5>Total Expenses: {sectionBudgets.clothingBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Utilities</h4>
+          <h4><strong>Utilities</strong></h4>
           <h5>Grade: {sectionGrades.utilities}</h5>
           <h5>Total Expenses: {sectionBudgets.utilitiesBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Housing</h4>
+          <h4><strong>Housing</strong></h4>
           <h5>Grade: {sectionGrades.housing}</h5>
           <h5>Total Expenses: {sectionBudgets.housingBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Savings</h4>
+          <h4><strong>Savings</strong></h4>
           <h5>Grade: {sectionGrades.savings}</h5>
           <h5>Total Expenses: {sectionBudgets.savingsBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Medical</h4>
+          <h4><strong>Medical</strong></h4>
           <h5>Grade: {sectionGrades.medical}</h5>
           <h5>Total Expenses: {sectionBudgets.medicalBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Insurance</h4>
+          <h4><strong>Insurance</strong></h4>
           <h5>Grade: {sectionGrades.insurance}</h5>
           <h5>Total Expenses: {sectionBudgets.insuranceBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Transportation</h4>
+          <h4><strong>Transportation</strong></h4>
           <h5>Grade: {sectionGrades.transportation}</h5>
           <h5>Total Expenses: {sectionBudgets.transportationBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Personal</h4>
+          <h4><strong>Personal</strong></h4>
           <h5>Grade: {sectionGrades.personal}</h5>
           <h5>Total Expenses: {sectionBudgets.personalBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Entertainment</h4>
+          <h4><strong>Entertainment</strong></h4>
           <h5>Grade: {sectionGrades.entertainment}</h5>
           <h5>Total Expenses: {sectionBudgets.entertainmentBudget}</h5>
         </div>
         <br />
         <div>
-          <h4>Debt</h4>
+          <h4><strong>Debt</strong></h4>
           <h5>Grade: {sectionGrades.debt}</h5>
           <h5>Total Expenses: {sectionBudgets.debtBudget}</h5>
         </div>

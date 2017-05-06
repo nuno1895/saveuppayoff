@@ -11,7 +11,7 @@
     padding: 0 !important;
 }
 #loginForm{
-    background-color: whitesmoke;
+    background-color: rgba(253, 254, 254, 1);
     padding: 1em 1em;
 }
 .cardTopLogin{
@@ -21,6 +21,9 @@
     color: white;
     font-family: Montserrat, sans-serif;
     letter-spacing: 5px;
+}
+.welcomeBackLogin{
+  color: white;
 }
 .loginInput:nth-child(1){
   margin-top: 2em;
@@ -39,6 +42,15 @@ p span{
   float: left;
 }
 .alreadyLoginSpan{
+  float: right;
+}
+.newToSpan{
+  color: white !important;
+  float: right;
+}
+.newToSpan a{
+  padding-left: 12px;
+  color: white !important;
   float: right;
 }
 

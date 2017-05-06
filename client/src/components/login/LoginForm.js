@@ -87,8 +87,10 @@ class LoginForm extends React.Component {
 
         return (
             <div className="logInDiv">
-                <div className="cardTopLogin">
-                    <h1>SIGN IN</h1>
+                <div className="welcomeBackLogin">
+                <img className="whiteSImg" src={require('../../../public/images/white-s.png')} mode='fit' />
+
+                    <h1>Welcome back!</h1>
                 </div>
 
             <form id="loginForm" onSubmit={this.handleSubmit}>
@@ -115,7 +117,8 @@ class LoginForm extends React.Component {
                 {/* inline conditional rendering: */}
                 <Button className="loginSub" type="submit">LOG IN</Button>
               </form>
-              <p><span>Forgot your password?</span></p>
+              <p><span>Forgot your password?</span><span className="newToSpan">Don't have an account?   <strong><a href="/signup">SIGN UP!</a></strong></span>
+</p>
 
 
             </div>
