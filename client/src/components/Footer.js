@@ -23,9 +23,9 @@ class Footer extends Component {
                        
                        	<p>
                         <img className="emailIcon" src={require('../../public/images/arroba(1).png')} mode='fit' />
-                        <strong>Email: </strong></p>
+                        <strong>Email: admin@supo.com</strong></p>
                        	<br />
-                       	<p>facebook twitter google pinterest instgram incons</p>
+                       	
                        </Col>
                        <Col xs="2">
                        	<p className="footerTopics"><strong>GET HELP</strong></p>

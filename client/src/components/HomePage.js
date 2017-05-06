@@ -186,7 +186,7 @@ class HomePage extends Component {
 
               >
               <Box
-                className="stepBox"
+                className="text-center stepBox"
                 col={4}
                 p={2}
               >
@@ -194,7 +194,7 @@ class HomePage extends Component {
                
               </Box>
               <Box
-                className="stepBox"
+                className="text-center stepBox"
                 col={4}
                 p={2}
               >
@@ -202,7 +202,7 @@ class HomePage extends Component {
                 
               </Box>
               <Box
-                className="stepBox"
+                className="text-center stepBox"
                 col={4}
                 p={2}
               >
@@ -222,7 +222,7 @@ class HomePage extends Component {
                   col={4}
                   p={2}
                 >
-                  <p className="solutionsP">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>             
+                  <p className="solutionsP"></p>             
                  
                 </Box>
                 <Box
@@ -230,7 +230,8 @@ class HomePage extends Component {
                   col={4}
                   p={2}
                 >
-                  <p className="solutionsP">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                  <p className="solutionsP">
+                  </p>
                   
                 </Box>
                 <Box
@@ -238,7 +239,7 @@ class HomePage extends Component {
                   col={4}
                   p={2}
                 >
-                  <p className="solutionsP">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                  <p className="solutionsP"></p>
                 
                 </Box>
 
