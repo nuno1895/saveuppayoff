@@ -747,7 +747,7 @@ class Results extends Component {
 
     if (this.props.formSectionTitle === 'budgetResults') {
       return (
-        <div>
+        <div >
           <h1>Final Results</h1>
           {this.finalCalculationFunc(this.props.budget, this.props.sectionGrades, this.props.sectionBudgets)}
         </div>
@@ -755,9 +755,13 @@ class Results extends Component {
     } else {
       return (
         <div>
-          <h1>Results</h1>
-          <h2>Advice</h2>
-          {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack, this.props.sectionBudgetCallBack)}
+          <div className="resultsHeader">
+            <h1>Results</h1>
+          </div>
+          <div className="adviceHead">
+            <h2>Advice</h2>
+            {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack, this.props.sectionBudgetCallBack)}
+          </div>
         </div>
       );
     }

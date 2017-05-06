@@ -52,7 +52,6 @@ class LoginForm extends React.Component {
     handleSubmit(evt){
         evt.preventDefault();
  
-        debugger;
 
         var emailPassword = {
             password : evt.target.children[2].value,
@@ -70,7 +69,6 @@ class LoginForm extends React.Component {
                       localStorage.getItem("user_id");
                       console.log(emailPassword.data.user_id);
 
-                      debugger;
 
                        window.location = '/'
             })
