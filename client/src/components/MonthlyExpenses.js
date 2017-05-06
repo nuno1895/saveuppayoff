@@ -91,6 +91,7 @@ class MonthlyExpenses extends React.Component {
                     <h1> What are your Expenses This Month?? </h1>
                     </div>
                     <div className="expenseContainer">
+                    <label>Month:</label>
                     <br />
                     <select value={this.state.currentExpenseId || "none"}
                         onChange={this.handleInputCangeExp} value={this.state.currentExpenseId}>
@@ -105,10 +106,10 @@ class MonthlyExpenses extends React.Component {
                     <br />
                     <br />
                     <label>Amount Spent:</label>
+                    <br />
                     <Input onChange={this.handleInputCangeSpent} value={this.state.spent}/>
                     <br />
                     <br />
-                    <h5>Buttons Need Routes and onClick functions</h5>
                     <Button className="btn submitExp" /*onClick={}*/>Submit</Button>
                     <Button className="btn addExp" onClick={this.handleNewExpenses} >Add Another Expense</Button>
                         
@@ -117,17 +118,44 @@ class MonthlyExpenses extends React.Component {
                     </div>
                 </div>
 
+                <br />
+             <div>
+                <br />
+                    <div className="expenesResults">
+                    <h1> Expenses </h1>
+                    <br />
+                    <br />
+                    </div>
+                        <div className="bg-success text-white status">
+                            <h3> Food Budget </h3>
+                            <p>So Far This Month You Spent $40.00</p>
+                            <p>You Have $150.00 Left </p>
+                            <hr />
+                        </div> 
+                        <div className="bg-warning text-white status">
+                            <h3> Entertainment Budget </h3>
+                            <p>So Far This Month You Spent $60.00</p>
+                            <p>You Have $40.00 Left </p>
+                            <p>Please Monitor Your Speading </p>
+                            <hr />
+                        </div> 
+                        <div className="bg-danger text-white status">
+                            <h3> Personal Budget </h3>
+                            <p>So Far This Month You Spent $180.00</p>
+                            <p>You Have $0 Left </p>
+                            <p> You Are Over your Budgeted Amount For The Month By $80.00 </p>
+                            <hr />
+                        </div>
+                        <div className="bg-success text-white status">
+                            <h3> Transportation Budget </h3>
+                            <p>So Far This Month You Spent $40.00</p>
+                            <p>You Have $150.00 Left </p>
+                            <hr />
+                        </div>        
+                    </div>
+                </div>       
             </div>
-
-                <p>{this.state.spent}</p>
-                <p>{this.state.currentExpenseId}</p>
-
-                <p>{this.state.newExp}</p>
-                {this.state.newExp.map((currentExpense, index) => (
-                    <p key={index} key={currentExpense.currentExpenseId} value={currentExpense.currentExpenseId} {...currentExpense}>
-                    {" "} {currentExpense.currentExpenseId} {currentExpense.spent}</p>))}
                 
-            </div>
         );
     }
 }

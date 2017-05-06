@@ -258,7 +258,7 @@ class HomePage extends Component {
                   className="getStart"
                   tag="a"
                   color="success"
-                  href="#"
+                  href="/mainform"
                   target="_blank"
                 >
                   GET STARTED
