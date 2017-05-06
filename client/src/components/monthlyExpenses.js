@@ -43,7 +43,7 @@ class MonthlyExpenses extends React.Component {
 
     handleNewExpenses = (event) => {
         // this.setState({currentExpenseId: event.target.value});
-        // event.preventDefault();
+        // event.preventDefaul();
 
         let newExp = this.state.newExp;
         newExp.push(this.state.currentExpenseId, this.state.spent);
