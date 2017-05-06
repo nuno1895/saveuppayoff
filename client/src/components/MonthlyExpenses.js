@@ -121,11 +121,6 @@ class MonthlyExpenses extends React.Component {
                 <br />
              <div>
                 <br />
-                    <div className="expenesResults">
-                    <h1> Expenses </h1>
-                    <br />
-                    <br />
-                    </div>
                         <div className="bg-success text-white status">
                             <h3> Food Budget </h3>
                             <p>So Far This Month You Spent $40.00</p>
