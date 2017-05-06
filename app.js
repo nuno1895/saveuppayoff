@@ -152,13 +152,15 @@ app.get("/budget", function(req, res) {
 app.post("/setLocalUser", function(req, res) {
   res.json(req.body);
   var formData = req.body;
-
+  console.log(req.body);
+  console.log(req.body.user_id);
   if(req.session.logged_in = true) {
+    console.log("HERE: " + req.body.user_id);
     var query = "INSERT INTO budgets (user_id) VALUES ('" + req.body.user_id + "')";
     console.log(query);
     connection.query(query, function (err, result) {
     if (err) throw err;
-      console.log("1 record inserted");
+    console.log("1 record inserted");
     });
   };
 });
@@ -166,13 +168,14 @@ app.post("/setLocalUser", function(req, res) {
 app.post("/formSubmit", function(req, res) {
   res.json(req.body);
   var formData = req.body;
-
+  console.log(req.body)
   if(req.session.logged_in = true) {
-    var query = "INSERT INTO budgets (user_id) VALUES ('" + req.body.user_id + "')";
+    console.log(req.body.user_id);
+    var query = "UPDATE budgets SET month = '" + formData.pay.month + "' WHERE id = '" + req.body.user_id + "'";
     console.log(query);
     connection.query(query, function (err, result) {
     if (err) throw err;
-      console.log("1 record inserted");
+    console.log("1 record inserted");
     });
   };
 });

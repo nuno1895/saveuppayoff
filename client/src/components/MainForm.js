@@ -179,9 +179,14 @@ class MainForm extends Component {
     API.getData()
       .then(data => console.log(data));
 
+    API.setLocalUser({
+        user_id : localStorage.getItem('user_id')})
+      .then(response => console.log(response));
     // API.postForm(this.state)
     //   .then(response => console.log(response));
   }
+
+  
 
 
 
