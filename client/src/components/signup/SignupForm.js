@@ -69,6 +69,8 @@ class SignupForm extends React.Component {
 
         );
 
+
+            
         // API.signUp(newUser)
       		// .then((newUser) => {
       		// 	console.log(newUser);
@@ -117,6 +119,11 @@ class SignupForm extends React.Component {
                 {/* inline conditional rendering: */}
 
                 <Button type="submit">SIGN UP</Button>
+
+                <div className="alreadyUser">
+                    <h5>Already Have A Sign In?</h5> 
+                        <a href="/login">Go To Login page</a>
+                </div>
 
 
               </form>
