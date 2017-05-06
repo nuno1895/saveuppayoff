@@ -3,7 +3,6 @@ import grader from './Grader';
 import Advice from './Advice';
 import AdviceView from './AdviceView';
 import './stylesheets/Results.css';
-// import Calculations from './Calculations';
 
 class Results extends Component {
   calculationFunc(formSection, formSectionData, budget, gradeCallBack, sectionBudgetCallBack) {
@@ -166,8 +165,7 @@ class Results extends Component {
       let totalSavingsExpense = parseInt(formSectionData.emergency) + parseInt(formSectionData.retirement) + parseInt(formSectionData.college);
       let percentOfBudget = (totalSavingsExpense * 100)/parseInt(budget);
       let suggestedBudgetPercent = 15;
-      let percentDifference = suggestedBudgetPercent - percentOfBudget;
-      let grade = grader(percentDifference, formSection);
+      let grade = grader(percentOfBudget, formSection);
       let savingsAdvice;
 
       if (grade != undefined) {
@@ -426,22 +424,110 @@ class Results extends Component {
         </div>
       );
     }
-    else if (formSection === 'budgetResults') {
-      return (<div><p>hello</p></div>);
-    }
+  }
+
+  finalCalculationFunc(budget, sectionGrades, sectionBudgets) {
+    let totalExpenses = sectionBudgets.foodBudget + sectionBudgets.clothingBudget + sectionBudgets.utilitiesBudget + sectionBudgets.housingBudget + sectionBudgets.savingsBudget + sectionBudgets.medicalBudget + sectionBudgets.insuranceBudget + sectionBudgets.transportationBudget + sectionBudgets.personalBudget + sectionBudgets.entertainmentBudget + sectionBudgets.debtBudget;
+
+     //  + sectionBudgets.transportationBudget + sectionBudgets.personlBudget + sectionBudgets.entertainmentBudget + sectionBudgets.debtBudget;
+    console.log(totalExpenses);
+    console.log(sectionBudgets);
+    console.log(sectionGrades);
+    return (
+      <div>
+        <h3>Your Budget: {budget}</h3>
+        <h3>Your Expenses: {totalExpenses}</h3>
+        <br />
+        <div>
+          <h4>Food</h4>
+          <h5>Grade: {sectionGrades.food}</h5>
+          <h5>Total Expenses: {sectionBudgets.foodBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Clothing</h4>
+          <h5>Grade: {sectionGrades.clothing}</h5>
+          <h5>Total Expenses: {sectionBudgets.clothingBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Utilities</h4>
+          <h5>Grade: {sectionGrades.utilities}</h5>
+          <h5>Total Expenses: {sectionBudgets.utilitiesBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Housing</h4>
+          <h5>Grade: {sectionGrades.housing}</h5>
+          <h5>Total Expenses: {sectionBudgets.housingBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Savings</h4>
+          <h5>Grade: {sectionGrades.savings}</h5>
+          <h5>Total Expenses: {sectionBudgets.savingsBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Medical</h4>
+          <h5>Grade: {sectionGrades.medical}</h5>
+          <h5>Total Expenses: {sectionBudgets.medicalBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Insurance</h4>
+          <h5>Grade: {sectionGrades.insurance}</h5>
+          <h5>Total Expenses: {sectionBudgets.insuranceBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Transportation</h4>
+          <h5>Grade: {sectionGrades.transportation}</h5>
+          <h5>Total Expenses: {sectionBudgets.transportationBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Personal</h4>
+          <h5>Grade: {sectionGrades.personal}</h5>
+          <h5>Total Expenses: {sectionBudgets.personalBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Entertainment</h4>
+          <h5>Grade: {sectionGrades.entertainment}</h5>
+          <h5>Total Expenses: {sectionBudgets.entertainmentBudget}</h5>
+        </div>
+        <br />
+        <div>
+          <h4>Debt</h4>
+          <h5>Grade: {sectionGrades.debt}</h5>
+          <h5>Total Expenses: {sectionBudgets.debtBudget}</h5>
+        </div>
+      </div>
+    );
   }
 
   render() {
     console.log(this.props.formSectionTitle);
     console.log(this.props.formSectionData);
     console.log(this.props.budget);
-    return (
-      <div>
-        <h1>Results</h1>
-        <h2>Advice goes here</h2>
-        {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack, this.props.sectionBudgetCallBack)}
-      </div>
-    );
+
+    if (this.props.formSectionTitle === 'budgetResults') {
+      return (
+        <div>
+          <h1>Final Results</h1>
+          {this.finalCalculationFunc(this.props.budget, this.props.sectionGrades, this.props.sectionBudgets)}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>Results</h1>
+          <h2>Advice</h2>
+          {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack, this.props.sectionBudgetCallBack)}
+        </div>
+      );
+    }
   }
 }
 
