@@ -9,7 +9,7 @@ import '../stylesheets/SignupForm.css';
 class SignupPage extends Component {
 	  render() {
 	    return (
-	    	<div className="row">
+	    	<div className="row signupRow">
 	    		<div className="col-md-2 col-md-offset-4" />
 
 	    		<div className="col-md-8 col-md-offset-4 signupForm" >

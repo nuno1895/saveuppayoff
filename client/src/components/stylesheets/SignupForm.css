@@ -1,8 +1,11 @@
-.signupForm{
-    text-align: center;
+.signupFormDiv{
+    margin: 0 15em;
+}
+.signupRow{
+  background-color: rgb(32,194,84);
 }
 .signupForm{
-    border: 1px solid;
+    text-align: center;
     margin: 10em 0;
     padding: 0 !important;
 }
@@ -29,8 +32,22 @@
   margin-bottom: 0 !important;
 }
 .signupInput {
-    padding: .2em 2em;
+  padding: 1em 8.3em;
     text-align: center;
   display: block;
-  margin: 0 0 2em 40.5%;
+  margin: 0 0 2em 21.5%;
 }
+.loginSub{
+  margin-bottom: 3em;
+  padding: 1.25em 7em !important;
+  background-color: rgb(32,194,84) !important;
+}
+.alreadyLoginSpan{
+  color: white !important;
+  float: right;
+}
+.alreadyLoginSpan a{
+  padding-left: 12px;
+  color: white !important;
+  float: right;
+  }
