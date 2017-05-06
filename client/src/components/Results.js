@@ -22,10 +22,31 @@ class Results extends Component {
       sectionBudgetCallBack('foodBudget', totalFoodExpense);
 
       if (grade === "A+") {
-          foodAdvice = Advice.food[1];
-      } else {
-          foodAdvice = Advice.food[2];
-      }
+                foodAdvice = Advice.food[1];
+            } else if (grade === "A-") {
+                foodAdvice = Advice.food[2].slice(0, 3);
+            }
+            else if (grade === "B+") {
+                foodAdvice = Advice.food[2].slice(0, 6);
+            }
+            else if (grade === "B-") {
+                foodAdvice = Advice.food[2].slice(0, 9);
+            }
+            else if (grade === "C+") {
+                foodAdvice = Advice.food[2].slice(0, 12);       
+            }
+            else if (grade === "C-") {
+                foodAdvice = Advice.food[2].slice(0, 15);       
+            }
+             else if (grade === "D") {
+                foodAdvice = Advice.food[2].slice(0, 18);       
+            }
+             else if (grade === "D-") {
+                foodAdvice = Advice.food[2].slice(0, 21);       
+            }
+              else {
+                foodAdvice = Advice.food[2];
+            }
 
       return (
         <div className="container">
@@ -61,11 +82,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('clothingBudget', totalClothingExpense);
 
-      if (grade == "A+") {
-          clothingAdvice = Advice.clothing[1];
-      } else {
-          clothingAdvice = Advice.clothing[2];
-      }
+     if (grade === "A+") {
+               clothingAdvice = Advice.clothing[1];
+           } else if (grade === "A-") {
+               clothingAdvice = Advice.clothing[2].slice(0, 2);
+           }
+           else if (grade === "B+") {
+               clothingAdvice = Advice.clothing[2].slice(0, 4);
+           }
+           else if (grade === "B-") {
+               clothingAdvice = Advice.clothing[2].slice(0, 6);
+           }
+           else if (grade === "C+") {
+               clothingAdvice = Advice.clothing[2].slice(0, 8);       
+           }
+           else if (grade === "C-") {
+               clothingAdvice = Advice.clothing[2].slice(0, 12);       
+           }
+            else if (grade === "D") {
+               clothingAdvice = Advice.clothing[2].slice(0, 14);       
+           }
+            else if (grade === "D-") {
+               clothingAdvice = Advice.clothing[2].slice(0, 16);       
+           }
+             else {
+               clothingAdvice = Advice.clothing[2];
+           }
 
       return (
         <div className="container">
@@ -99,11 +141,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('utilitiesBudget', totalUtilitiesExpense);
 
-      if (grade == "A+") {
-          utilitiesAdvice = Advice.utilities[1];
-      } else {
-          utilitiesAdvice = Advice.utilities[2];
-      }
+     if (grade === "A+") {
+               utilitiesAdvice = Advice.utilities[1];
+           } else if (grade === "A-") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 2);
+           }
+           else if (grade === "B+") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 4);
+           }
+           else if (grade === "B-") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 6);
+           }
+           else if (grade === "C+") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 8);       
+           }
+           else if (grade === "C-") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 12);       
+           }
+            else if (grade === "D") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 14);       
+           }
+            else if (grade === "D-") {
+               utilitiesAdvice = Advice.utilities[2].slice(0, 16);       
+           }
+             else {
+               utilitiesAdvice = Advice.utilities[2];
+           }
 
       return (
         <div className="container">
@@ -137,11 +200,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('housingBudget', totalHousingExpense);
 
-      if (grade == "A+") {
-          housingAdvice = Advice.housing[1];
-      } else {
-          housingAdvice = Advice.housing[2];
-      }
+     if (grade === "A+") {
+               housingAdvice = Advice.housing[1];
+           } else if (grade === "A-") {
+               housingAdvice = Advice.housing[2].slice(0, 0);
+           }
+           else if (grade === "B+") {
+               housingAdvice = Advice.housing[2].slice(0, 1);
+           }
+           else if (grade === "B-") {
+               housingAdvice = Advice.housing[2].slice(0, 2);
+           }
+           else if (grade === "C+") {
+               housingAdvice = Advice.housing[2].slice(0, 3);       
+           }
+           else if (grade === "C-") {
+               housingAdvice = Advice.housing[2].slice(0, 4);       
+           }
+            else if (grade === "D") {
+               housingAdvice = Advice.housing[2].slice(0, 5);       
+           }
+            else if (grade === "D-") {
+               housingAdvice = Advice.housing[2].slice(0, 5);       
+           }
+             else {
+               housingAdvice = Advice.housing[2];
+           }
 
       return (
         <div className="container">
@@ -174,11 +258,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('savingsBudget', totalSavingsExpense);
 
-      if (grade == "A+") {
-          savingsAdvice = Advice.savings[1];
-      } else {
-          savingsAdvice = Advice.savings[2];
-      }
+     if (grade === "A+") {
+               savingsAdvice = Advice.savings[1];
+           } else if (grade === "A-") {
+               savingsAdvice = Advice.savings[2].slice(0, 1);
+           }
+           else if (grade === "B+") {
+               savingsAdvice = Advice.savings[2].slice(0, 2);
+           }
+           else if (grade === "B-") {
+               savingsAdvice = Advice.savings[2].slice(0, 3);
+           }
+           else if (grade === "C+") {
+               savingsAdvice = Advice.savings[2].slice(0, 4);       
+           }
+           else if (grade === "C-") {
+               savingsAdvice = Advice.savings[2].slice(0, 5);       
+           }
+            else if (grade === "D") {
+               savingsAdvice = Advice.savings[2].slice(0, 6);       
+           }
+            else if (grade === "D-") {
+               savingsAdvice = Advice.savings[2].slice(0, 7);       
+           }
+             else {
+               savingsAdvice = Advice.savings[2];
+           }
 
       return (
         <div className="container">
@@ -212,9 +317,30 @@ class Results extends Component {
 
       sectionBudgetCallBack('medicalBudget', totalMedicalExpense);
 
-      if (grade == "A+") {
+      if (grade === "A+") {
           medicalAdvice = Advice.medical[1];
-      } else {
+      } else if (grade === "A-") {
+          medicalAdvice = Advice.medical[2].slice(0, 2);
+      }
+      else if (grade === "B+") {
+          medicalAdvice = Advice.medical[2].slice(0, 4);
+      }
+      else if (grade === "B-") {
+          medicalAdvice = Advice.medical[2].slice(0, 6);
+      }
+      else if (grade === "C+") {
+          medicalAdvice = Advice.medical[2].slice(0, 8);       
+      }
+      else if (grade === "C-") {
+          medicalAdvice = Advice.medical[2].slice(0, 10);       
+      }
+       else if (grade === "D") {
+          medicalAdvice = Advice.medical[2].slice(0, 12);       
+      }
+       else if (grade === "D-") {
+          medicalAdvice = Advice.medical[2].slice(0, 14);       
+      }
+        else {
           medicalAdvice = Advice.medical[2];
       }
 
@@ -250,11 +376,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('insuranceBudget', totalInsuranceExpense);
 
-      if (grade == "A+") {
-          insuranceAdvice = Advice.insurance[1];
-      } else {
-          insuranceAdvice = Advice.insurance[2];
-      }
+     if (grade === "A+") {
+         insuranceAdvice = Advice.insurance[1];
+     } else if (grade === "A-") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 1);
+     }
+     else if (grade === "B+") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 2);
+     }
+     else if (grade === "B-") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 3);
+     }
+     else if (grade === "C+") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 5);       
+     }
+     else if (grade === "C-") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 7);       
+     }
+      else if (grade === "D") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 8);       
+     }
+      else if (grade === "D-") {
+         insuranceAdvice = Advice.insurance[2].slice(0, 10);       
+     }
+       else {
+         insuranceAdvice = Advice.insurance[2];
+     }
 
       return (
         <div className="container">
@@ -288,11 +435,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('transportationBudget', totalTransportationExpense);
 
-      if (grade == "A+") {
-          transportationAdvice = Advice.transportation[1];
-      } else {
-          transportationAdvice = Advice.transportation[2];
-      }
+     if (grade === "A+") {
+         transportationAdvice = Advice.transportation[1];
+     } else if (grade === "A-") {
+         transportationAdvice = Advice.transportation[2].slice(0, 1);
+     }
+     else if (grade === "B+") {
+         transportationAdvice = Advice.transportation[2].slice(0, 2);
+     }
+     else if (grade === "B-") {
+         transportationAdvice = Advice.transportation[2].slice(0, 3);
+     }
+     else if (grade === "C+") {
+         transportationAdvice = Advice.transportation[2].slice(0, 4);       
+     }
+     else if (grade === "C-") {
+         transportationAdvice = Advice.transportation[2].slice(0, 6);       
+     }
+      else if (grade === "D") {
+         transportationAdvice = Advice.transportation[2].slice(0, 7);       
+     }
+      else if (grade === "D-") {
+         transportationAdvice = Advice.transportation[2].slice(0, 8);       
+     }
+       else {
+         transportationAdvice = Advice.transportation[2];
+     }
 
       return (
         <div className="container">
@@ -326,11 +494,32 @@ class Results extends Component {
 
       sectionBudgetCallBack('personalBudget', totalPersonalExpense);
 
-      if (grade == "A+") {
-          personalAdvice = Advice.personal[1];
-      } else {
-          personalAdvice = Advice.personal[2];
-      }
+    if (grade === "A+") {
+        personalAdvice = Advice.personal[1];
+    } else if (grade === "A-") {
+        personalAdvice = Advice.personal[2].slice(0, 0);
+    }
+    else if (grade === "B+") {
+        personalAdvice = Advice.personal[2].slice(0, 1);
+    }
+    else if (grade === "B-") {
+        personalAdvice = Advice.personal[2].slice(0, 2);
+    }
+    else if (grade === "C+") {
+        personalAdvice = Advice.personal[2].slice(0, 3);       
+    }
+    else if (grade === "C-") {
+        personalAdvice = Advice.personal[2].slice(0, 3);       
+    }
+     else if (grade === "D") {
+        personalAdvice = Advice.personal[2].slice(0, 4);       
+    }
+     else if (grade === "D-") {
+        personalAdvice = Advice.personal[2].slice(0, 4);       
+    }
+      else {
+        personalAdvice = Advice.personal[2];
+    }
 
       return (
         <div className="container">
@@ -364,11 +553,34 @@ class Results extends Component {
 
       sectionBudgetCallBack('entertainmentBudget', totalEntertainmentExpense);
 
-      if (grade == "A+") {
-          entertainmentAdvice = Advice.entertainment[1];
-      } else {
-          entertainmentAdvice = Advice.entertainment[2];
-      }
+ 
+ if (grade === "A+") {
+     entertainmentAdvice = Advice.entertainment[1];
+ } else if (grade === "A-") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 0);
+ }
+ else if (grade === "B+") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 1);
+ }
+ else if (grade === "B-") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 2);
+ }
+ else if (grade === "C+") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 3);       
+ }
+ else if (grade === "C-") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 4);       
+ }
+  else if (grade === "D") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 5);       
+ }
+  else if (grade === "D-") {
+     entertainmentAdvice = Advice.entertainment[2].slice(0, 6);       
+ }
+   else {
+     entertainmentAdvice = Advice.entertainment[2];
+ }
+
 
       return (
         <div className="container">
@@ -402,11 +614,32 @@ class Results extends Component {
       
       sectionBudgetCallBack('debtBudget', totalDebtExpense);
 
-      if (grade == "A+") {
-          debtAdvice = Advice.debt[1];
-      } else {
-          debtAdvice = Advice.debt[2];
-      }
+   if (grade === "A+") {
+             debtAdvice = Advice.debt[1];
+         } else if (grade === "A-") {
+             debtAdvice = Advice.debt[2].slice(0, 3);
+         }
+         else if (grade === "B+") {
+             debtAdvice = Advice.debt[2].slice(0, 6);
+         }
+         else if (grade === "B-") {
+             debtAdvice = Advice.debt[2].slice(0, 9);
+         }
+         else if (grade === "C+") {
+             debtAdvice = Advice.debt[2].slice(0, 12);       
+         }
+         else if (grade === "C-") {
+             debtAdvice = Advice.debt[2].slice(0, 15);       
+         }
+          else if (grade === "D") {
+             debtAdvice = Advice.debt[2].slice(0, 18);       
+         }
+          else if (grade === "D-") {
+             debtAdvice = Advice.debt[2].slice(0, 21);       
+         }
+           else {
+             debtAdvice = Advice.debt[2];
+         }
       return (
         <div className="container">
           <h2>Debt Grade</h2>
