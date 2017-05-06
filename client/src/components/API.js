@@ -15,13 +15,13 @@ export default {
   	return axios.post('/setLocalUser', data);
   },
 
-   logIn: function(email){
-    return axios.get('/login', {
-        params: {
-            email
-        }
-    })
-    .then(function (response){
+   logIn: function(emailPass){
+    debugger;
+  
+    return axios.post('/login', emailPass)
+      .then(function (response){
+        debugger;
+        return response;
         console.log(response);
     })
     .catch(function (error) {

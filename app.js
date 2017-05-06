@@ -84,14 +84,17 @@ app.get('/sign-out', function(req,res) {
 app.post('/login', function(req, res) {
   
   var query = "SELECT * FROM users WHERE email = ?";
+   
+
+    console.log(req.body.email);
 
   connection.query(query, [ req.body.email ], function(err, response) {
       if (response.length == 0){
         res.json({error: 'emailDoesNotExist'})
-      }
-
+      } console.log(response[0].password_hash);
+      console.log(req.body.password);
         bcrypt.compare(req.body.password, response[0].password_hash, function(err, result) {
-            if (result == true){
+            if (result){
 
               req.session.logged_in = true;
               req.session.user_id = response[0].id;
@@ -107,10 +110,10 @@ app.post('/login', function(req, res) {
 });
 
 app.post('/create', function(req,res) {
+
   var query = "SELECT * FROM users WHERE email = ?"
 
   connection.query(query, [ req.body.email ], function(err, response) {
-    console.log(response)
     if (response.length > 0) {
         res.json({error: 'emailExistsAlready'})
     }else{

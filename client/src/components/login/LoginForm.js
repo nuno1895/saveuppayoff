@@ -16,7 +16,7 @@ class LoginForm extends React.Component {
         this.state = { 
             username : '',
             email : '',
-            password_hash : '',
+            password : '',
             isLoggedIn: false
         };
     }
@@ -52,16 +52,22 @@ class LoginForm extends React.Component {
         evt.preventDefault();
  
 
-        var userEmail = { 
+        var emailPassword = {
+            password : evt.target.children[2].value,
             email: evt.target.children[1].value
         }
         debugger;
 
-        API.logIn(userEmail)
-            .then((email) => {
-                console.log(email);
-
-                debugger;
+        API.logIn(emailPassword)
+            .then((emailPassword) => {
+                console.log(emailPassword.data);
+                     localStorage.setItem('user_id', emailPassword.data.user_id);
+                     localStorage.setItem('email', emailPassword.data.email);
+                     localStorage.setItem('username', emailPassword.data.username);
+                     console.log(localStorage.getItem("user_id"));
+                      localStorage.getItem("user_id");
+                      console.log(emailPassword.data.user_id);
+                     debugger;
             })
     }
 
