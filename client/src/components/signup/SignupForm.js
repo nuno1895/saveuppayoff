@@ -80,6 +80,7 @@ class SignupForm extends React.Component {
       			localStorage.setItem('username', newUser.data.username);
       			console.log(localStorage.getItem("user_id"));
                 localStorage.getItem("user_id");
+                console.log(newUser.data.user_id);
       			debugger;
 
       		})
@@ -118,7 +119,7 @@ class SignupForm extends React.Component {
 
                 {/* inline conditional rendering: */}
 
-                <Button onClick={this.handleSetLocalUser} type="submit">SIGN UP</Button>
+                <Button type="submit">SIGN UP</Button>
 
 
               </form>
