@@ -18,3 +18,19 @@
     font-family: Montserrat, sans-serif;
     letter-spacing: 5px;
 }
+.alreadyUser{
+
+}
+
+.signupInput:nth-child(1){
+  margin-top: 2em;
+}
+.signupInput:nth-child(3){
+  margin-bottom: 0 !important;
+}
+.signupInput {
+    padding: .2em 2em;
+    text-align: center;
+  display: block;
+  margin: 0 0 2em 40.5%;
+}

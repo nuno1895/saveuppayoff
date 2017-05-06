@@ -16,11 +16,9 @@ export default {
   },
 
    logIn: function(emailPass){
-    debugger;
   
     return axios.post('/login', emailPass)
       .then(function (response){
-        debugger;
         return response;
         console.log(response);
     })

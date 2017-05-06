@@ -7,6 +7,7 @@ import {
 } from 'reactstrap';
 
 
+
 class LoginForm extends React.Component {
 
     constructor(props) {
@@ -51,12 +52,12 @@ class LoginForm extends React.Component {
     handleSubmit(evt){
         evt.preventDefault();
  
+        debugger;
 
         var emailPassword = {
             password : evt.target.children[2].value,
             email: evt.target.children[1].value
         }
-        debugger;
 
         API.logIn(emailPassword)
             .then((emailPassword) => {
@@ -64,11 +65,17 @@ class LoginForm extends React.Component {
                      localStorage.setItem('user_id', emailPassword.data.user_id);
                      localStorage.setItem('email', emailPassword.data.email);
                      localStorage.setItem('username', emailPassword.data.username);
+                     console.log(localStorage.getItem('username'));
                      console.log(localStorage.getItem("user_id"));
                       localStorage.getItem("user_id");
                       console.log(emailPassword.data.user_id);
-                     debugger;
+
+                      debugger;
+
+                       window.location = '/'
             })
+                    
+            
     }
 
     render() {
@@ -83,24 +90,24 @@ class LoginForm extends React.Component {
         return (
             <div className="logInDiv">
                 <div className="cardTopLogin">
-                    <h1>Join Our Community!</h1>
+                    <h1>SIGN IN</h1>
                 </div>
 
             <form id="loginForm" onSubmit={this.handleSubmit}>
                 <Input 
-                className="signupInput" 
+                className="loginInput" 
                 name ="username"
                 placeholder="username" />
 
                 <Input 
 
-                className="signupInput" 
+                className="loginInput" 
                 name="email"
                 placeholder="email" />
 
                 <Input
                 type='password'
-                className="signupInput"
+                className="loginInput"
                 name="password" 
                 placeholder="password" />
                 <br />

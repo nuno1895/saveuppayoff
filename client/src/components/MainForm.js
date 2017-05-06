@@ -148,6 +148,13 @@ class MainForm extends Component {
     // this.getSalary = this.getSalary.bind(this);
   }
 
+  componentDidMount() {
+       if(!localStorage.getItem("user_id")) {
+        window.location = '/signup'
+       }
+
+  }
+
   // this function handles any input changes and updates the state
   handleInputChange(event, type, field) {
     // console.log("THIS", event.target.value);
