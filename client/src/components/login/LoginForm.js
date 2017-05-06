@@ -113,8 +113,9 @@ class LoginForm extends React.Component {
 
 
                 {/* inline conditional rendering: */}
-                <Button type="submit">Log in</Button>
+                <Button className="loginSub" type="submit">LOG IN</Button>
               </form>
+              <p><span>Forgot your password?</span></p>
 
 
             </div>

@@ -6,14 +6,14 @@ import '../stylesheets/LoginForm.css';
 class LoginPage extends Component {
   render() {
     return (
-            <div className="row">
-                <div className="col-md-2 col-md-offset-4" />
+            <div className="row loginRow">
+                <div className="col-md-2 col-md-offset-2" />
 
-                <div className="col-md-8 col-md-offset-4 loginForm" >
+                <div className="col-md-8 col-md-offset-8 loginForm" >
                     <LoginForm />
                 </div>
 
-                <div className="col-md-2 col-md-offset-4" />
+                <div className="col-md-2 col-md-offset-2" />
 
             </div>
 

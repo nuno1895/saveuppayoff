@@ -49,20 +49,28 @@ class Results extends Component {
             }
 
       return (
-        <div className="container">
-          <h2>Food Grade</h2>
+        <div className="container containerResult">
+          <div className="row rowContainer">
+          <div className="col-md-6 resultsHeader">
+            <h1>Results</h1>
+          </div>
+          <div className="col-md-6 resultsHeader">
+          <h2><strong>Food Grade: {grade}</strong></h2>
+          </div>
+          </div>
+          
           <p>Your total food expense: {totalFoodExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your food expense is {percentOfBudget}% of your budget</p>
           <p>Generally food expenditure should be between 5% - 15%</p>
-          <p>Your current grade is {grade}</p>
           
-          <ul>
+          
+          <p className="adviceMapList">
             {foodAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
             />)}
-          </ul> 
+          </p> 
           
         </div>
       );
@@ -110,18 +118,25 @@ class Results extends Component {
            }
 
       return (
-        <div className="container">
-          <h2>Clothing Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Clothing Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total clothing expense: {totalClothingExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your clothing expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {clothingAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
             />)}
-           </ul>
+           </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -169,18 +184,25 @@ class Results extends Component {
            }
 
       return (
-        <div className="container">
-          <h2>Utilities Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Utilities Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total utility expense: {totalUtilitiesExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your utility expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {utilitiesAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
             />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -228,18 +250,25 @@ class Results extends Component {
            }
 
       return (
-        <div className="container">
-          <h2>Housing Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Housing Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total housing expense: {totalHousingExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your housing expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {housingAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
             />)}
-           </ul>
+           </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -286,18 +315,25 @@ class Results extends Component {
            }
 
       return (
-        <div className="container">
-          <h2>Savings Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Savings Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total savings expense: {totalSavingsExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your savings expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {savingsAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
             />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -345,18 +381,25 @@ class Results extends Component {
       }
 
       return (
-        <div className="container">
-          <h2>Medical Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Medical Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total medical expense: {totalMedicalExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your medical expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {medicalAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
             />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -404,18 +447,25 @@ class Results extends Component {
      }
 
       return (
-        <div className="container">
-          <h2>Insurance Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Insurance Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total insurance expense: {totalInsuranceExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your insurance expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {insuranceAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -463,18 +513,25 @@ class Results extends Component {
      }
 
       return (
-        <div className="container">
-          <h2>Transportation Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Transportation Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total transportation expense: {totalTransportationExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your transportation expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {transportationAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -522,18 +579,25 @@ class Results extends Component {
     }
 
       return (
-        <div className="container">
-          <h2>Personal Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Personal Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total personal expense: {totalPersonalExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your personal expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {personalAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -583,18 +647,25 @@ class Results extends Component {
 
 
       return (
-        <div className="container">
-          <h2>Entertainment Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Entertainment Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total Entertainment expense: {totalEntertainmentExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your Entertainment expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {entertainmentAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -641,18 +712,25 @@ class Results extends Component {
              debtAdvice = Advice.debt[2];
          }
       return (
-        <div className="container">
-          <h2>Debt Grade</h2>
+        <div className="container containerResult">
+        <div className="row rowContainer">
+        <div className="col-md-6 resultsHeader">
+          <h1>Results</h1>
+        </div>
+        <div className="col-md-6 resultsHeader">
+          <h2><strong>Debt Grade: {grade}</strong></h2>
+        </div>
+        </div>
           <p>Your total Debt expense: {totalDebtExpense}</p>
           <p>Your budget: {budget}</p>
           <p>Your Debt expense is {percentOfBudget}% of your budget</p>
-          <p>Your current grade is {grade}</p>
-          <ul>
+          
+          <p className="adviceMapList">
             {debtAdvice.map((advice, ind) => <AdviceView 
               key={ind} 
               advice={advice}
               />)}
-          </ul>
+          </p>
           {/*<Grader percentDifference={percentDifference} />*/}
         </div>
       );
@@ -755,11 +833,9 @@ class Results extends Component {
     } else {
       return (
         <div>
-          <div className="resultsHeader">
-            <h1>Results</h1>
-          </div>
-          <div className="adviceHead">
-            <h2>Advice</h2>
+
+          <div >
+            
             {this.calculationFunc(this.props.formSectionTitle, this.props.formSectionData, this.props.budget, this.props.gradeCallBack, this.props.sectionBudgetCallBack)}
           </div>
         </div>

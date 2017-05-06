@@ -118,12 +118,9 @@ class SignupForm extends React.Component {
 
                 {/* inline conditional rendering: */}
 
-                <Button type="submit">SIGN UP</Button>
+                <Button className="loginSub" type="submit">SIGN UP</Button>
 
-                <div className="alreadyUser">
-                    <h5>Already Have A Sign In?</h5> 
-                        <a href="/login">Go To Login page</a>
-                </div>
+
 
 
               </form>
@@ -133,7 +130,7 @@ class SignupForm extends React.Component {
             {/*<select value={this.state.currentUserId} onChange={this.handleChange}>
                             {this.state.users.map((user, index) => <option key={index} key={user.id} value={user.id} {...user} > {user.username}</option>)}
                         </select>*/}
-        
+            <span className="alreadyLoginSpan">Already have an account?   <strong><a href="/login">  Go To Login page</a></strong></span>
             </div>
         );
     }
