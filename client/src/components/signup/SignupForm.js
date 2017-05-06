@@ -63,20 +63,24 @@ class SignupForm extends React.Component {
         	password: evt.target.children[1].value,
         	email: evt.target.children[2].value
         }
-        debugger;
 
         API.signUp(newUser)
-      		.then((newUser) => {
-      			console.log(newUser);
-      			localStorage.setItem('user_id', newUser.data.user_id);
-      			localStorage.setItem('email', newUser.data.email);
-      			localStorage.setItem('username', newUser.data.username);
-      			console.log(localStorage.getItem("user_id"));
-                localStorage.getItem("user_id");
-                console.log(newUser.data.user_id);
-      			debugger;
+            .then(response => console.log(response)
 
-      		})
+        );
+
+        // API.signUp(newUser)
+      		// .then((newUser) => {
+      		// 	console.log(newUser);
+      		// 	localStorage.setItem('user_id', newUser.data.user_id);
+      		// 	localStorage.setItem('email', newUser.data.email);
+      		// 	localStorage.setItem('username', newUser.data.username);
+      		// 	console.log(localStorage.getItem("user_id"));
+        //         localStorage.getItem("user_id");
+        //         console.log(newUser.data.user_id);
+      		// 	debugger;
+
+      		// })
     }
 
     render() {
