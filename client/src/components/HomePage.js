@@ -171,9 +171,14 @@ class HomePage extends Component {
               <div className="realSolutionsHead">
                 <h5>Get REAL Solutions to Pay off Your Debt</h5>
                 <br />
-              
+
               </div>  
+              <div className="realSolutionsBlurb">
+
+              <p>Being in debt has a lot in common with being on the top of a ladder—you know that tall, intimidating and unstable piece of metal you use to do dangerous things like clean gutters and cut trees. See the connection? We want to come down from that ladder and re-establish some firm financial footing. Not only that, but we want to pay off our debt fast, in the quickest and most efficient way possible, so that we don’t waste any money on extra unnecessary interest. </p>
+              </div>
               <img className="stepImg processline" src={require('../../public/images/processline.png')} mode='fit' />
+
               
               <br />
               <br />
@@ -186,27 +191,27 @@ class HomePage extends Component {
 
               >
               <Box
-                className="text-center stepBox"
+                className="stepBox"
                 col={4}
                 p={2}
               >
-                <p><strong>GET REAL FACTS REGARDING YOUR DEBT AND THE FASTEST WAY TO PAY IT OFF</strong></p>
+                <p className="text-uppercase"><strong>GET REAL FACTS REGARDING YOUR DEBT AND THE FASTEST WAY TO PAY IT OFF. YOU ALSO NEED TO UNDERSTAND WHAT MOTIVATES YOU TO SUCCEED. DO YOU WANT TO PAY DOWN YOUR YOUR DEBT IN THE ABSOLUTE FASTEST AMOUNT OF TIME POSSIBLE that will save more money or do you want to take some little wins along the way to keep yourself motivated?</strong></p>
                
               </Box>
               <Box
-                className="text-center stepBox"
+                className="stepBox"
                 col={4}
                 p={2}
               >
-               <p><strong>GET ALTERNATIVES BASED ON INCOME AND SEVERITY OF DEBT</strong></p>
+               <p><strong>GET ALTERNATIVES BASED ON INCOME AND SEVERITY OF DEBT. DEBT IS A WAY OF LIFE FOR AMERICANS, WITH OVERALL U.S. HOUSEHOLD DEBT INCREASING BY 11% IN THE PAST DECASE. TODAY, THE AVERAGE HOUSEHOLD WITH CREDIT CARD DEBT HAS BALANCES TOTALING $16,799, AND THE AVERAGE HOUSEHOLD WITH ANY KIND OF DEBT OWED $130,000, INCLUDING MORTAGES. 80% OF THE POPULATION IS IN DEBT. LEARN HOW TO BECOME THE ELITE %20.</strong></p>
                 
               </Box>
               <Box
-                className="text-center stepBox"
+                className="stepBox"
                 col={4}
                 p={2}
               >
-               <p><strong>EDUCATE YOURSELF ON YOUR LOAN AND DEBT RATES, TAXES, APR%, APY%, & MORE</strong></p>
+               <p><strong>EDUCATE YOURSELF ON YOUR LOAN AND DEBT RATES, TAXES, APR%, APY%, & MORE. REDUCE YOUR CUSTOMER DEBT TO REDUCE YOUR INTEREST COSTS. DESPITE THE STATISTICS, YOU NEEDN'T GIVE UP YOUR DREAMS OF BECOMING AN ENTREPENEUR OR HITTING A SEX-FIGURE SALARY TO SAVE MONEY ON INTEREST. KNOW HOW MUCH CONSUMER DEBT YOU'RE CARRYING AND THE COSTS THAT COME WITH IT. THEN WORK ON PAYING DOWN YOUR DEBT, AND CHANGE YOUR LIFE.</strong></p>
               
               </Box>
 

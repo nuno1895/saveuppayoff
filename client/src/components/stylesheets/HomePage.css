@@ -82,7 +82,7 @@ body{
 	padding-bottom: 1em;
 }
 .whyChooseReasons p{
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	margin-bottom: 0 !important;
 	color: rgb(32,194,84);
 }
@@ -95,7 +95,7 @@ body{
 	font-weight: 600;
 	font-size: 2.3rem !important;;
 	text-align: center;
-	padding-bottom: .5em;
+	padding-bottom: 1em;
 }
 .realSolutionsHead:after {
     content:' ';
@@ -112,11 +112,11 @@ body{
     -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
 }
 .realSolutionsBlurb{
-	margin: auto 20em;
+	margin: auto 18em;
 	padding-top: 2.5em;
 	padding-bottom: 6em;
 	text-align: center;
-	font-size: .85em;
+	font-size: 1.2rem;
 }
 .stepDivSolutions{
 	padding: 0 1em;
